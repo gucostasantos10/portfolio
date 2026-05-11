@@ -175,6 +175,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .campaign-visual{background:var(--rust-pale);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;border-left:1px solid var(--ink-10)}
 .campaign-big{font-family:var(--fd);font-size:3rem;font-weight:600;color:var(--rust);line-height:1}
 .campaign-small{font-size:0.8rem;color:var(--ink-60);line-height:1.8}
+.campaign-gallery{margin-top:1.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.campaign-gallery img{width:100%;height:100%;min-height:150px;object-fit:cover;border-radius:2px;background:var(--sand-light)}
+.campaign-gallery .wide{grid-column:span 2}
+.campaign-gallery .full{grid-column:1/-1}
 
 /* VALE TUDO */
 .vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
@@ -303,6 +307,8 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .pubs-grid{grid-template-columns:1fr}
   .banners-grid{grid-template-columns:1fr}
   .campaign-list{grid-template-columns:1fr}
+  .campaign-gallery{grid-template-columns:1fr}
+  .campaign-gallery .wide,.campaign-gallery .full{grid-column:auto}
   .proof-row{grid-template-columns:1fr}
   .proof-bar{order:3}
   .proof-val{order:2}
@@ -348,9 +354,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
   <div class="hero-right">
     <div class="hero-photo">
-      <!-- Substitua o conteúdo abaixo pela sua foto: <img src="foto.jpg" alt="Gustavo Costa" style="width:100%;height:100%;object-fit:cover;"> -->
-      <div class="hero-photo-initials">GC</div>
-      <div class="hero-photo-note">Adicione sua foto aqui</div>
+      <img src="imagens/hero-gustavo-costa.webp" alt="Gustavo Costa" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 </div>
@@ -587,6 +591,14 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <span class="campaign-pill">Social</span>
           <span class="campaign-pill">CRM</span>
         </div>
+        <div class="campaign-gallery">
+          <img src="imagens/maes-wolycasa-01.webp" alt="Dia das Mães WolyCasa - Para mãe que ama festejar">
+          <img src="imagens/maes-wolycasa-02.webp" alt="Dia das Mães WolyCasa - Para mãe que ama organizar">
+          <img src="imagens/maes-wolycasa-03.webp" alt="Dia das Mães WolyCasa - Para mãe que ama decorar">
+          <img src="imagens/maes-wolycasa-04.webp" alt="Dia das Mães WolyCasa - Para mãe que ama cuidar">
+          <img src="imagens/maes-wolycasa-05.webp" alt="Dia das Mães WolyCasa - Primeira viagem">
+          <img src="imagens/maes-wolycasa-06.webp" alt="Dia das Mães WolyCasa - Banner principal">
+        </div>
       </div>
     </div>
     <!-- Vale Tudo -->
@@ -605,10 +617,14 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
             </div>
           </div>
           <div class="vt-gallery">
-            <img src="vt4.png" alt="Vale Tudo - Comunicado WolyCasa">
-            <img src="vt5.png" alt="Vale Tudo - Quem é o culpado?">
-            <img src="vt6.png" alt="Vale Tudo - Celina">
-            <img src="vt8.png" alt="Vale Tudo - Cesar">
+            <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
+            <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
+            <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
+            <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
+            <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
+            <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
+            <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
+            <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
           </div>
         </div>
       </div>
@@ -616,32 +632,24 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 
     <div class="banners-grid">
       <div class="banner-item wide reveal">
-        <img src="banner1.jpg" alt="WolyCasa - Campanha Ano Novo">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Campanha Ano Novo · Copy + CTA</div></div>
+        <img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026">
+        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div>
       </div>
       <div class="banner-item reveal d1">
-        <img src="banner2.jpg" alt="WolyCasa - Campanha Ano Novo 2">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Variação de campanha</div></div>
+        <img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo">
+        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div>
       </div>
       <div class="banner-item reveal d2">
-        <img src="banner3.jpg" alt="WolyCasa - Campanha Ano Novo 3">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Campanha sazonal</div></div>
+        <img src="imagens/banner-ano-novo-02.webp" alt="WolyCasa - Campanha Ano Novo 2">
+        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Variação de campanha</div></div>
       </div>
       <div class="banner-item tall reveal">
-        <img src="ana1.png" alt="WolyCasa - Ana Hickmann Collab">
+        <img src="imagens/ana-hickmann-ads-169.webp" alt="WolyCasa - Ana Hickmann Collab">
         <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Branded Content</div></div>
       </div>
       <div class="banner-item tall reveal d1">
-        <img src="ana2.png" alt="WolyCasa - Ana Hickmann Mesa Jantar">
+        <img src="imagens/ana-hickmann-mesa-jantar.webp" alt="WolyCasa - Ana Hickmann Mesa Jantar">
         <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Mesa Posta</div></div>
-      </div>
-      <div class="banner-item reveal d2">
-        <img src="banner4.jpg" alt="WolyCasa - Lembrancinhas">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Lembrancinhas · Copy + CTA</div></div>
-      </div>
-      <div class="banner-item reveal">
-        <img src="banner5.jpg" alt="WolyCasa - Verão">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Campanha Verão</div></div>
       </div>
     </div>
   </div>
