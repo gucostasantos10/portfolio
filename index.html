@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gustavo Costa — Profissional de Marketing com foco em SEO, copywriting e estratégia de conteúdo. Passagem por Westwing, Boticário, MAC, Lexly e WolyCasa. Disponível para CLT.">
+<meta name="description" content="Gustavo Costa — Profissional de Marketing com foco em SEO, copywriting e estratégia de conteúdo. Passagem por Westwing, Boticário, MAC, Lexly e WolyCasa. Aberto a novos projetos e oportunidades.">
 <meta name="keywords" content="redator SEO, copywriter, estratégia de conteúdo, content strategy, GEO, branding, análise de mercado, São Paulo">
 <meta property="og:title" content="Gustavo Costa | SEO · Copywriting · Content Strategy">
 <meta property="og:description" content="Narrativas que equilibram performance e branding.">
@@ -146,6 +146,36 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .metric-val{font-family:var(--fd);font-size:1.9rem;font-weight:600;color:var(--rust);line-height:1;margin-bottom:0.2rem}
 .metric-desc{font-size:0.77rem;color:var(--ink-60)}
 
+
+.case-cta{display:inline-flex;margin-top:1.2rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);text-decoration:none;transition:all 0.2s;align-items:center;gap:0.35rem}
+.case-cta:hover{transform:translateX(3px);color:var(--rust-light)}
+.video-case{display:grid;grid-template-columns:1.15fr 0.85fr;gap:2rem;margin-top:2rem;align-items:start}
+.video-wrapper{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:8px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.22)}
+.video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.youtube-proof{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
+.proof-card{padding:1.2rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:4px}
+.proof-title{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.25rem}
+.proof-total{font-size:0.72rem;color:rgba(255,255,255,0.55);margin-bottom:0.9rem}
+.proof-total strong{color:var(--white);font-weight:500}
+.proof-list{display:flex;flex-direction:column;gap:0.7rem}
+.proof-row{display:grid;grid-template-columns:minmax(90px,1fr) 1.2fr auto;align-items:center;gap:0.7rem}
+.proof-label{font-size:0.75rem;color:var(--white);line-height:1.35}
+.proof-bar{height:6px;background:rgba(255,255,255,0.08);border-radius:999px;overflow:hidden}
+.proof-fill{height:100%;background:linear-gradient(90deg,var(--sand),var(--rust-light));border-radius:999px}
+.proof-val{font-size:0.72rem;color:rgba(255,255,255,0.72);font-weight:500}
+.video-insights{display:flex;flex-direction:column;gap:0.85rem}
+.insight-item{padding:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:2px}
+.insight-item span{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.25rem}
+.insight-item strong{font-family:var(--fd);font-size:1.65rem;font-weight:600;color:var(--white);line-height:1}
+.case-note{font-size:0.72rem;color:rgba(253,252,250,0.38);line-height:1.7;margin-top:0.6rem}
+.campaign-case{margin-bottom:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;display:grid;grid-template-columns:1.05fr 0.95fr;align-items:stretch}
+.campaign-copy{padding:2rem}
+.campaign-list{margin-top:1.1rem;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.campaign-pill{font-size:0.68rem;color:var(--ink-60);background:var(--surface);border:1px solid var(--ink-10);padding:0.45rem 0.65rem;border-radius:100px}
+.campaign-visual{background:var(--rust-pale);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;border-left:1px solid var(--ink-10)}
+.campaign-big{font-family:var(--fd);font-size:3rem;font-weight:600;color:var(--rust);line-height:1}
+.campaign-small{font-size:0.8rem;color:var(--ink-60);line-height:1.8}
+
 /* VALE TUDO */
 .vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
 .vt-inner{display:grid;grid-template-columns:1.1fr 1fr}
@@ -174,8 +204,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 /* PUBLICAÇÕES */
 .pubs{background:var(--bg)}
 .pubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-10);border:1px solid var(--ink-10);margin-top:3.5rem}
-.pub-item{background:var(--surface);padding:1.4rem;transition:background 0.2s}
+.pub-item{background:var(--surface);padding:1.4rem;transition:background 0.2s;text-decoration:none;color:inherit;display:block}
 .pub-item:hover{background:var(--rust-pale)}
+.pub-item:hover .pub-titulo{color:var(--rust)}
 .pub-veiculo{font-size:0.58rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem}
 .pub-titulo{font-size:0.83rem;color:var(--ink);line-height:1.55}
 
@@ -250,6 +281,10 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
   .wa-grid{grid-template-columns:1fr}
   .wa-card.full{grid-column:auto;display:block}
+  .video-case{grid-template-columns:1fr}
+  .youtube-proof{grid-template-columns:1fr}
+  .campaign-case{grid-template-columns:1fr}
+  .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
   .cases-grid{grid-template-columns:1fr}
   .case-card.wide{grid-column:auto}
   .vt-inner{grid-template-columns:1fr}
@@ -267,7 +302,12 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 @media(max-width:600px){
   .pubs-grid{grid-template-columns:1fr}
   .banners-grid{grid-template-columns:1fr}
+  .campaign-list{grid-template-columns:1fr}
+  .proof-row{grid-template-columns:1fr}
+  .proof-bar{order:3}
+  .proof-val{order:2}
 }
+
 </style>
 </head>
 <body>
@@ -278,8 +318,8 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#cases">Cases</a></li>
-    <li><a href="#westwing">Westwing</a></li>
-    <li><a href="#banners">Banners</a></li>
+    <li><a href="#publicacoes">Publicações</a></li>
+    <li><a href="#copies">Copies e campanhas</a></li>
     <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
@@ -289,7 +329,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <div class="eyebrow"><span class="eyebrow-dot"></span> Disponível para CLT</div>
+    <div class="eyebrow"><span class="eyebrow-dot"></span> Aberto a oportunidades</div>
     <h1 class="hero-title">Narrativas que</h1>
     <div class="hero-title2">performam.</div>
     <p class="hero-desc">Profissional de marketing com foco em SEO, copywriting e estratégia de conteúdo — construindo narrativas que equilibram performance e branding em startups e grandes marcas.</p>
@@ -388,7 +428,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
         <div class="ferramentas-wrap reveal">
           <div class="ftag-label">Ferramentas</div>
           <div class="ftags">
-            <span class="ftag">Semrush</span><span class="ftag">Ahrefs</span><span class="ftag">Google Search Console</span><span class="ftag">Google Analytics / GA4</span><span class="ftag">Google Trends</span><span class="ftag">RD Station</span><span class="ftag">Mailchimp</span><span class="ftag">WordPress</span><span class="ftag">Notion</span><span class="ftag">Canva</span><span class="ftag">Meta Ads</span><span class="ftag">ChatGPT / Claude</span>
+            <span class="ftag">Semrush</span><span class="ftag">Ahrefs</span><span class="ftag">Google Search Console</span><span class="ftag">Google Analytics / GA4</span><span class="ftag">Google Trends</span><span class="ftag">WordPress</span><span class="ftag">Notion</span><span class="ftag">Canva</span><span class="ftag">Monday</span><span class="ftag">Trello</span><span class="ftag">Github</span><span class="ftag">Gemini</span><span class="ftag">ChatGPT / Claude</span>
           </div>
         </div>
       </div>
@@ -410,6 +450,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="case-tipo">Redação SEO</div>
           <h3 class="case-title">Recuperação e otimização de conteúdo sobre signos</h3>
           <p class="case-desc">Após análise de dados, identifiquei que os textos sobre signos apresentavam o melhor desempenho. Para reverter uma queda, otimizei o conteúdo com palavra-chave forte e suas variações, ajustando URL, meta title e description.</p>
+          <a href="https://www.westwing.com.br/guiar/signos/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
         </div>
         <div class="case-metric">
           <div class="metric-label">Resultado desde set/24</div>
@@ -424,6 +465,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="case-tipo">PR · Link Building · SEO Off-page · GEO</div>
           <h3 class="case-title">Link building via PR para a Lexly Brasil</h3>
           <p class="case-desc">Criei estratégia de link building via PR com produção e publicação de matérias em portais de notícias — direcionadas a advogados e profissionais de RH. Identifiquei "Semana de 4 Dias Úteis" como pauta de alta relevância e distribuí em veículos com autoridade e alinhamento de público.</p>
+          <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
         </div>
         <div class="case-metric">
           <div class="metric-label">Impacto direto</div>
@@ -434,46 +476,47 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 
       <!-- SMO Westwing -->
       <div class="case-card wide reveal">
-        <div style="display:grid;grid-template-columns:1fr 1fr">
-          <div class="case-head">
-            <div class="case-tipo">SMO · GEO · Estratégia Integrada</div>
-            <h3 class="case-title">Estratégia SMO integrada com SEO e Social — Westwing</h3>
-            <p class="case-desc">A partir de análise de tendências e alinhamento entre times de SEO, conteúdo e social, criei a estratégia de SMO. Com pesquisa de palavras-chave otimizei o conteúdo do vídeo, gerando grande audiência via Google Search — maior fonte de tráfego externo — e potencializando toda a estratégia de GEO.</p>
-          </div>
-          <div class="case-metric" style="display:flex;flex-direction:column;justify-content:center;border-top:none;border-left:1px solid var(--ink-10)">
-            <div class="metric-label">Resultado principal</div>
-            <div class="metric-val">Google Search</div>
-            <div class="metric-desc">Principal canal de tráfego externo gerado pela otimização — estratégia integrada SEO + Social + GEO com impacto direto na performance orgânica da marca</div>
-            <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem">
-              <span class="ftag">Análise de tendências</span>
-              <span class="ftag">Pesquisa de KW</span>
-              <span class="ftag">Otimização de vídeo</span>
-              <span class="ftag">GEO</span>
+        <div class="case-head">
+          <div class="case-tipo">SMO · GEO · Estratégia Integrada</div>
+          <h3 class="case-title">Estratégia SMO integrada com SEO e Social — Westwing</h3>
+          <p class="case-desc">A partir de análise de tendências e alinhamento entre os times de SEO, conteúdo e social, criei a estratégia de SMO para potencializar o alcance orgânico do vídeo. A pesquisa de palavras-chave guiou a otimização do conteúdo, fortaleceu a indexação e fez o Google Search se consolidar como principal origem do tráfego externo.</p>
+          <div class="video-case">
+            <div>
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/IVsQBRstUrE" title="TOUR em CASA DE CAMPO com DECORAÇÃO FARMHOUSE em VALINHOS | Homestories #WestwingBR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="youtube-proof">
+                <div class="proof-card">
+                  <div class="proof-title">Termos de pesquisa do YouTube</div>
+                  <div class="proof-total">Proporção do seu tráfego total: <strong>13,7%</strong></div>
+                  <div class="proof-list">
+                    <div class="proof-row"><span class="proof-label">farmhouse</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">6,8%</span></div>
+                    <div class="proof-row"><span class="proof-label">westwing</span><div class="proof-bar"><div class="proof-fill" style="width:75%"></div></div><span class="proof-val">5,1%</span></div>
+                    <div class="proof-row"><span class="proof-label">decoração de casa</span><div class="proof-bar"><div class="proof-fill" style="width:73.5%"></div></div><span class="proof-val">5,0%</span></div>
+                    <div class="proof-row"><span class="proof-label">casa de campo</span><div class="proof-bar"><div class="proof-fill" style="width:57.4%"></div></div><span class="proof-val">3,9%</span></div>
+                    <div class="proof-row"><span class="proof-label">casa vogue</span><div class="proof-bar"><div class="proof-fill" style="width:38.2%"></div></div><span class="proof-val">2,6%</span></div>
+                  </div>
+                </div>
+                <div class="proof-card">
+                  <div class="proof-title">Sites ou apps externos</div>
+                  <div class="proof-total">Proporção do seu tráfego total: <strong>3,2%</strong></div>
+                  <div class="proof-list">
+                    <div class="proof-row"><span class="proof-label">Google Search</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">48,5%</span></div>
+                    <div class="proof-row"><span class="proof-label">whatsapp.com</span><div class="proof-bar"><div class="proof-fill" style="width:33.8%"></div></div><span class="proof-val">16,4%</span></div>
+                    <div class="proof-row"><span class="proof-label">instagram.com</span><div class="proof-bar"><div class="proof-fill" style="width:26.6%"></div></div><span class="proof-val">12,9%</span></div>
+                    <div class="proof-row"><span class="proof-label">WhatsApp</span><div class="proof-bar"><div class="proof-fill" style="width:23.3%"></div></div><span class="proof-val">11,3%</span></div>
+                    <div class="proof-row"><span class="proof-label">YouTube</span><div class="proof-bar"><div class="proof-fill" style="width:2.3%"></div></div><span class="proof-val">1,1%</span></div>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" rel="noopener" class="case-cta">Visualizar vídeo no YouTube →</a>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vale Tudo -->
-      <div class="vt-card reveal">
-        <div class="vt-inner">
-          <div class="vt-content">
-            <div class="case-tipo">Copywriting · Social · Branded Content em Tempo Real</div>
-            <h3 class="case-title" style="font-family:var(--fd);font-size:1.5rem;font-weight:400;line-height:1.2;margin-bottom:1rem;color:var(--ink)">Campanha Vale Tudo — WolyCasa</h3>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">Aproveitando o hype do último capítulo da novela Vale Tudo, desenvolvi uma campanha de branded content em tempo real para a WolyCasa — conectando cultura pop, storytelling e e-commerce.</p>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">A estratégia associou produtos da loja aos suspeitos do assassinato de Odete Roitman, transformando cenas e personagens em gatilhos de curiosidade e engajamento — sem citar os produtos explicitamente, exigindo copy indireta e referências visuais precisas.</p>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85">Responsável por: conceito criativo, copywriting, curadoria de produtos, criação das peças, publicação, CTAs e análise de resultados.</p>
-            <div class="vt-metric-row">
-              <div class="vt-metric"><div class="vt-metric-val">Real-time</div><div class="vt-metric-lbl">Execução no dia</div></div>
-              <div class="vt-metric"><div class="vt-metric-val">360°</div><div class="vt-metric-lbl">Conceito a resultado</div></div>
-              <div class="vt-metric"><div class="vt-metric-val">5+</div><div class="vt-metric-lbl">Peças criadas</div></div>
+            <div class="video-insights">
+              <div class="insight-item"><span>Principal fonte de tráfego externo</span><strong>Google Search · 48,5%</strong></div>
+              <div class="insight-item"><span>Termo com maior tração</span><strong>farmhouse · 6,8%</strong></div>
+              <div class="insight-item"><span>Impacto da estratégia</span><strong>SEO + Social + GEO</strong></div>
+              <p class="case-note">Esses números evidenciam que a otimização do vídeo não só ampliou a descoberta orgânica, como também conectou intenção de busca, conteúdo e distribuição social de forma integrada. O resultado foi uma audiência qualificada e uma participação expressiva do Google Search como canal de entrada.</p>
             </div>
-          </div>
-          <div class="vt-gallery">
-            <img src="vt4.png" alt="Vale Tudo - Comunicado WolyCasa">
-            <img src="vt5.png" alt="Vale Tudo - Quem é o culpado?">
-            <img src="vt6.png" alt="Vale Tudo - Celina">
-            <img src="vt8.png" alt="Vale Tudo - Cesar">
           </div>
         </div>
       </div>
@@ -518,15 +561,59 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 </section>
 
 <!-- BANNERS -->
-<section class="banners sec" id="banners">
+<section class="banners sec" id="copies">
   <div class="sec-inner">
     <div class="banners-intro">
       <div>
         <div class="slabel">Visual &amp; Copy</div>
-        <h2 class="stitle">Banners e <em>campanhas</em></h2>
+        <h2 class="stitle">Copies e <em>campanhas</em></h2>
       </div>
-      <p class="ssub">Responsável pelas copies, CTAs e direção de conteúdo dos banners da WolyCasa — da campanha sazonal ao collab com influenciadores.</p>
+      <p class="ssub">Responsável por conceito criativo, copywriting, CTAs, CRM e direção de conteúdo em campanhas integradas — da ação sazonal ao branded content com influenciadores.</p>
     </div>
+
+    <div class="campaign-case reveal">
+      <div class="campaign-copy">
+        <div class="case-tipo">CRM · Copywriting · Campanha Sazonal</div>
+        <h3 class="case-title">Dia das Mães WolyCasa 2025</h3>
+        <p class="case-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural, elevando valor percebido e gerando novas ocasiões de consumo. A narrativa conectou memórias afetivas, estilos e personalidades maternas, ressignificando momentos à mesa e posicionando produtos para casa como facilitadores de experiências.</p>
+        <p class="case-desc" style="margin-top:0.85rem">A ativação integrou landing page, blog, social e CRM, com destaque para a mini campanha “Dê mais do que flores, dê lembranças”, incentivando a compra combinada de flores + vaso para aumento de ticket e diferenciação.</p>
+      </div>
+      <div class="campaign-visual">
+        <div class="campaign-big">360°</div>
+        <div class="campaign-small">Estratégia, conceito criativo, copy e direcionamento de comunicação para landing page, blog, e-mail marketing e posts de Instagram.</div>
+        <div class="campaign-list">
+          <span class="campaign-pill">Landing page</span>
+          <span class="campaign-pill">Blog</span>
+          <span class="campaign-pill">Social</span>
+          <span class="campaign-pill">CRM</span>
+        </div>
+      </div>
+    </div>
+    <!-- Vale Tudo -->
+      <div class="vt-card reveal" style="margin-bottom:2rem">
+        <div class="vt-inner">
+          <div class="vt-content">
+            <div class="case-tipo">Copywriting · Social · Branded Content em Tempo Real</div>
+            <h3 class="case-title" style="font-family:var(--fd);font-size:1.5rem;font-weight:400;line-height:1.2;margin-bottom:1rem;color:var(--ink)">Campanha Vale Tudo — WolyCasa</h3>
+            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">Aproveitando o hype do último capítulo da novela Vale Tudo, desenvolvi uma campanha de branded content em tempo real para a WolyCasa — conectando cultura pop, storytelling e e-commerce.</p>
+            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">A estratégia associou produtos da loja aos suspeitos do assassinato de Odete Roitman, transformando cenas e personagens em gatilhos de curiosidade e engajamento — sem citar os produtos explicitamente, exigindo copy indireta e referências visuais precisas.</p>
+            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85">Responsável por: conceito criativo, copywriting, curadoria de produtos, criação das peças, publicação, CTAs e análise de resultados.</p>
+            <div class="vt-metric-row">
+              <div class="vt-metric"><div class="vt-metric-val">Real-time</div><div class="vt-metric-lbl">Execução no dia</div></div>
+              <div class="vt-metric"><div class="vt-metric-val">360°</div><div class="vt-metric-lbl">Conceito a resultado</div></div>
+              <div class="vt-metric"><div class="vt-metric-val">5+</div><div class="vt-metric-lbl">Peças criadas</div></div>
+            </div>
+          </div>
+          <div class="vt-gallery">
+            <img src="vt4.png" alt="Vale Tudo - Comunicado WolyCasa">
+            <img src="vt5.png" alt="Vale Tudo - Quem é o culpado?">
+            <img src="vt6.png" alt="Vale Tudo - Celina">
+            <img src="vt8.png" alt="Vale Tudo - Cesar">
+          </div>
+        </div>
+      </div>
+
+
     <div class="banners-grid">
       <div class="banner-item wide reveal">
         <img src="banner1.jpg" alt="WolyCasa - Campanha Ano Novo">
@@ -567,19 +654,21 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
     <h2 class="stitle">Portais, veículos e <em>blogs</em></h2>
     <p class="ssub">Artigos publicados em portais de imprensa, blogs e e-commerces de grandes marcas.</p>
     <div class="pubs-grid">
-      <div class="pub-item reveal"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">O que levar para um piquenique</div></div>
-      <div class="pub-item reveal d1"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Como montar uma ceia de natal</div></div>
-      <div class="pub-item reveal d2"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Ideias de lembrancinhas: guia criativo para festas e empresas</div></div>
-      <div class="pub-item reveal"><div class="pub-veiculo">Archtrends Portobello</div><div class="pub-titulo">Design feito à mão: mais sustentabilidade e personalidade</div></div>
-      <div class="pub-item reveal d1"><div class="pub-veiculo">BlaBlaCar</div><div class="pub-titulo">Mochila impermeável: viagens com estilo e sem preocupação</div></div>
-      <div class="pub-item reveal d2"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Saiba como fazer um termo de autorização de uso de imagem</div></div>
-      <div class="pub-item reveal"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Multa contrato de aluguel: como calcular</div></div>
-      <div class="pub-item reveal d1"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tipos de granito: beleza e funcionalidade na sua decoração</div></div>
-      <div class="pub-item reveal d2"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Terra diatomácea: o mineral natural que une bem-estar e design</div></div>
-      <div class="pub-item reveal"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Como fazer uma decoração de sala simples e elegante em poucos passos</div></div>
-      <div class="pub-item reveal d1"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Demissões em massa afetam mais de 6 mil brasileiros de janeiro a março</div></div>
-      <div class="pub-item reveal d2"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Empresas abraçam a comunidade LGBTQIAP+ e buscam aumentar a diversidade</div></div>
-    </div>
+      <a class="pub-item reveal" href="https://www.wolycasa.com.br/blogs/news/o-que-levar-para-um-piquenique" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">O que levar para um piquenique</div></a>
+      <a class="pub-item reveal d1" href="https://www.wolycasa.com.br/blogs/news/como-montar-ceia-de-natal" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Como montar uma ceia de natal</div></a>
+      <a class="pub-item reveal d2" href="https://www.wolycasa.com.br/blogs/news/lembrancinhas-e-brindes-corporativos" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Ideias de lembrancinhas e brindes corporativos</div></a>
+      <a class="pub-item reveal" href="https://blog.archtrends.com/design-feito-mao-sustentabilidade/" target="_blank" rel="noopener"><div class="pub-veiculo">Archtrends Portobello</div><div class="pub-titulo">Design feito à mão: mais sustentabilidade e personalidade</div></a>
+      <a class="pub-item reveal d1" href="https://blog.blablacar.com.br/dicas/mochila-impermeavel-viagens-com-estilo-e-sem-preocupacao" target="_blank" rel="noopener"><div class="pub-veiculo">BlaBlaCar</div><div class="pub-titulo">Mochila impermeável: viagens com estilo e sem preocupação</div></a>
+      <a class="pub-item reveal d2" href="https://www.jusbrasil.com.br/artigos/saiba-como-fazer-um-termo-de-autorizacao-de-uso-de-imagem/1862661630" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Saiba como fazer um termo de autorização de uso de imagem</div></a>
+      <a class="pub-item reveal" href="https://www.jusbrasil.com.br/artigos/multa-contrato-de-aluguel-como-calcular/1862581749" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Multa contrato de aluguel: como calcular</div></a>
+      <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/tipos-de-granito/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tipos de granito: beleza e funcionalidade na sua decoração</div></a>
+      <a class="pub-item reveal d2" href="https://meioenegocio.com.br/Demissoes_em_massa_afetam_mais_de_6_mil_brasileiros_de_janeiro_a_marco_deste_ano/#google_vignette" target="_blank" rel="noopener"><div class="pub-veiculo">Meio & Negócio</div><div class="pub-titulo">Demissões em massa afetam mais de 6 mil brasileiros de janeiro a março</div></a>
+      <a class="pub-item reveal" href="https://revistahaus.com.br/sem-categoria/tapete-terra-diatomacea/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tapete de terra diatomácea: o mineral natural que une bem-estar e design</div></a>
+      <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/sala-simples-e-elegante/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Sala simples e elegante: como decorar em poucos passos</div></a>
+      <a class="pub-item reveal d2" href="https://revistahaus.com.br/haus/conteudo-publicitario/posicao-dos-talheres/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Posição dos talheres: como organizar a mesa posta</div></a>
+      <a class="pub-item reveal" href="https://www.folhavitoria.com.br/geral/numero-de-familias-brasileiras-endividadas-aumenta-em-3-3/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Número de famílias brasileiras endividadas aumenta em 3,3%</div></a>
+      <a class="pub-item reveal d1" href="https://www.jusbrasil.com.br/noticias/empresas-abracam-a-comunidade-lgbtqiap-e-buscam-aumentar-a-diversidade/1874044777" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Empresas abraçam a comunidade LGBTQIAP+ e buscam aumentar a diversidade</div></a>
+    </div>    </div>
   </div>
 </section>
 
@@ -689,9 +778,9 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   <div class="sec-inner">
     <div class="contato-grid">
       <div class="reveal">
-        <div class="disponivel"><span class="disponivel-dot"></span> Disponível para CLT</div>
+        <div class="disponivel"><span class="disponivel-dot"></span> Aberto a oportunidades</div>
         <h2 class="contato-title">Pronto para o<br>próximo <em>desafio.</em></h2>
-        <p class="contato-sub">Busco uma oportunidade CLT onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, dados e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
+        <p class="contato-sub">Busco novos desafios onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, dados e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
         <div class="hero-btns">
           <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="btn btn-p">Acessar LinkedIn →</a>
           <a href="mailto:guu_costa10@icloud.com" class="btn btn-g">Enviar E-mail</a>
