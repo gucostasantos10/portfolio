@@ -153,21 +153,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .video-wrapper{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:8px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.22)}
 .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 .youtube-proof{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
-.proof-card{padding:1.2rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:4px}
-.proof-title{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.25rem}
-.proof-total{font-size:0.72rem;color:rgba(255,255,255,0.55);margin-bottom:0.9rem}
-.proof-total strong{color:var(--white);font-weight:500}
+.proof-card{padding:1.2rem;border:1px solid var(--ink-10);background:var(--bg);border-radius:4px}
+.proof-title{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
+.proof-total{font-size:0.72rem;color:var(--ink-60);margin-bottom:0.9rem}
+.proof-total strong{color:var(--ink);font-weight:600}
 .proof-list{display:flex;flex-direction:column;gap:0.7rem}
 .proof-row{display:grid;grid-template-columns:minmax(90px,1fr) 1.2fr auto;align-items:center;gap:0.7rem}
-.proof-label{font-size:0.75rem;color:var(--white);line-height:1.35}
-.proof-bar{height:6px;background:rgba(255,255,255,0.08);border-radius:999px;overflow:hidden}
-.proof-fill{height:100%;background:linear-gradient(90deg,var(--sand),var(--rust-light));border-radius:999px}
-.proof-val{font-size:0.72rem;color:rgba(255,255,255,0.72);font-weight:500}
+.proof-label{font-size:0.75rem;color:var(--ink);line-height:1.35}
+.proof-bar{height:6px;background:var(--ink-10);border-radius:999px;overflow:hidden}
+.proof-fill{height:100%;background:linear-gradient(90deg,var(--rust),var(--rust-light));border-radius:999px}
+.proof-val{font-size:0.72rem;color:var(--ink);font-weight:600}
 .video-insights{display:flex;flex-direction:column;gap:0.85rem}
-.insight-item{padding:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:2px}
-.insight-item span{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.25rem}
-.insight-item strong{font-family:var(--fd);font-size:1.65rem;font-weight:600;color:var(--white);line-height:1}
-.case-note{font-size:0.72rem;color:rgba(253,252,250,0.38);line-height:1.7;margin-top:0.6rem}
+.insight-item{padding:1rem;border:1px solid var(--ink-10);background:var(--bg);border-radius:2px}
+.insight-item span{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
+.insight-item strong{font-family:var(--fd);font-size:1.65rem;font-weight:600;color:var(--ink);line-height:1}
+.case-note{font-size:0.72rem;color:var(--ink-60);line-height:1.7;margin-top:0.6rem}
 .campaign-case{margin-bottom:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;display:grid;grid-template-columns:1.05fr 0.95fr;align-items:stretch}
 .campaign-copy{padding:2rem}
 .campaign-list{margin-top:1.1rem;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
@@ -175,6 +175,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .campaign-visual{background:var(--rust-pale);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;border-left:1px solid var(--ink-10)}
 .campaign-big{font-family:var(--fd);font-size:3rem;font-weight:600;color:var(--rust);line-height:1}
 .campaign-small{font-size:0.8rem;color:var(--ink-60);line-height:1.8}
+.subsection-block{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--ink-10)}
+.subsection-kicker{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.65rem}
+.subsection-title{font-family:var(--fd);font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--ink)}
+.subsection-desc{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:650px;margin-bottom:1.5rem}
+.creative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;align-items:start}
+.creative-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;cursor:zoom-in;transition:transform 0.25s,box-shadow 0.25s}
+.creative-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
+.creative-card img{width:100%;height:auto;max-height:780px;object-fit:contain;display:block;border-radius:2px;background:var(--surface)}
+.creative-card.wide{grid-column:span 2}
+.creative-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
+.lightbox{position:fixed;inset:0;background:rgba(28,25,23,0.92);z-index:999;display:none;align-items:center;justify-content:center;padding:2rem}
+.lightbox.active{display:flex}
+.lightbox img{max-width:94vw;max-height:90vh;object-fit:contain;border-radius:4px;background:var(--surface);box-shadow:0 24px 80px rgba(0,0,0,0.35)}
+.lightbox-close{position:fixed;top:1rem;right:1rem;width:42px;height:42px;border:none;border-radius:50%;background:var(--white);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
 .campaign-gallery{margin-top:1.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .campaign-gallery img{width:100%;height:100%;min-height:150px;object-fit:cover;border-radius:2px;background:var(--sand-light)}
 .campaign-gallery .wide{grid-column:span 2}
@@ -184,9 +198,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
 .vt-inner{display:grid;grid-template-columns:1.1fr 1fr}
 .vt-content{padding:2.5rem}
-.vt-gallery{background:var(--ink);padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:6px;overflow:hidden}
-.vt-gallery img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:1px;transition:opacity 0.2s}
-.vt-gallery img:hover{opacity:0.8}
+.vt-gallery{background:var(--ink);padding:1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.85rem;align-items:start}
+.vt-gallery img{width:100%;height:auto;max-height:680px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:#111;cursor:zoom-in}
+.vt-gallery img:hover{opacity:0.88;transform:translateY(-2px)}
 .vt-metric-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
 .vt-metric{text-align:center;padding:1rem 1.25rem;background:var(--bg);border-radius:2px;flex:1;min-width:120px}
 .vt-metric-val{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--rust)}
@@ -195,12 +209,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 /* BANNERS */
 .banners{background:var(--surface)}
 .banners-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;align-items:end}
-.banners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-10);border:1px solid var(--ink-10)}
-.banner-item{background:var(--surface);overflow:hidden;position:relative;aspect-ratio:16/9;transition:transform 0.3s}
-.banner-item:hover{transform:scale(1.02)}
-.banner-item img{width:100%;height:100%;object-fit:cover;display:block}
-.banner-item.tall{aspect-ratio:9/16}
-.banner-item.wide{grid-column:span 2;aspect-ratio:21/9}
+.banners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;background:transparent;border:none;align-items:start}
+.banner-item{background:var(--bg);border:1px solid var(--ink-10);padding:0.65rem;overflow:hidden;position:relative;transition:transform 0.3s,box-shadow 0.3s;cursor:zoom-in;border-radius:4px}
+.banner-item:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
+.banner-item img{width:100%;height:auto;max-height:680px;object-fit:contain;display:block;border-radius:2px}
+.banner-item.tall{aspect-ratio:auto}
+.banner-item.wide{grid-column:span 2;aspect-ratio:auto}
 .banner-overlay{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(28,25,23,0.85));opacity:0;transition:opacity 0.3s}
 .banner-item:hover .banner-overlay{opacity:1}
 .banner-overlay-text{font-size:0.7rem;color:rgba(255,255,255,0.8);letter-spacing:0.08em;text-transform:uppercase}
@@ -292,11 +306,10 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .cases-grid{grid-template-columns:1fr}
   .case-card.wide{grid-column:auto}
   .vt-inner{grid-template-columns:1fr}
-  .vt-gallery{display:none}
   .banners-intro{grid-template-columns:1fr}
   .banners-grid{grid-template-columns:1fr 1fr}
-  .banner-item.wide{grid-column:auto;aspect-ratio:16/9}
-  .banner-item.tall{aspect-ratio:16/9}
+  .banner-item.wide{grid-column:auto}
+  .creative-card.wide{grid-column:auto}
   .pubs-grid{grid-template-columns:1fr 1fr}
   .esp-grid{grid-template-columns:1fr}
   .deps-grid{grid-template-columns:1fr}
@@ -306,6 +319,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 @media(max-width:600px){
   .pubs-grid{grid-template-columns:1fr}
   .banners-grid{grid-template-columns:1fr}
+  .creative-grid{grid-template-columns:1fr}
   .campaign-list{grid-template-columns:1fr}
   .campaign-gallery{grid-template-columns:1fr}
   .campaign-gallery .wide,.campaign-gallery .full{grid-column:auto}
@@ -591,65 +605,60 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <span class="campaign-pill">Social</span>
           <span class="campaign-pill">CRM</span>
         </div>
-        <div class="campaign-gallery">
-          <img src="imagens/maes-wolycasa-01.webp" alt="Dia das Mães WolyCasa - Para mãe que ama festejar">
-          <img src="imagens/maes-wolycasa-02.webp" alt="Dia das Mães WolyCasa - Para mãe que ama organizar">
-          <img src="imagens/maes-wolycasa-03.webp" alt="Dia das Mães WolyCasa - Para mãe que ama decorar">
-          <img src="imagens/maes-wolycasa-04.webp" alt="Dia das Mães WolyCasa - Para mãe que ama cuidar">
-          <img src="imagens/maes-wolycasa-05.webp" alt="Dia das Mães WolyCasa - Primeira viagem">
-          <img src="imagens/maes-wolycasa-06.webp" alt="Dia das Mães WolyCasa - Banner principal">
-        </div>
       </div>
     </div>
-    <!-- Vale Tudo -->
-      <div class="vt-card reveal" style="margin-bottom:2rem">
-        <div class="vt-inner">
-          <div class="vt-content">
-            <div class="case-tipo">Copywriting · Social · Branded Content em Tempo Real</div>
-            <h3 class="case-title" style="font-family:var(--fd);font-size:1.5rem;font-weight:400;line-height:1.2;margin-bottom:1rem;color:var(--ink)">Campanha Vale Tudo — WolyCasa</h3>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">Aproveitando o hype do último capítulo da novela Vale Tudo, desenvolvi uma campanha de branded content em tempo real para a WolyCasa — conectando cultura pop, storytelling e e-commerce.</p>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85;margin-bottom:1rem">A estratégia associou produtos da loja aos suspeitos do assassinato de Odete Roitman, transformando cenas e personagens em gatilhos de curiosidade e engajamento — sem citar os produtos explicitamente, exigindo copy indireta e referências visuais precisas.</p>
-            <p class="case-desc" style="font-size:0.83rem;color:var(--ink-60);line-height:1.85">Responsável por: conceito criativo, copywriting, curadoria de produtos, criação das peças, publicação, CTAs e análise de resultados.</p>
-            <div class="vt-metric-row">
-              <div class="vt-metric"><div class="vt-metric-val">Real-time</div><div class="vt-metric-lbl">Execução no dia</div></div>
-              <div class="vt-metric"><div class="vt-metric-val">360°</div><div class="vt-metric-lbl">Conceito a resultado</div></div>
-              <div class="vt-metric"><div class="vt-metric-val">5+</div><div class="vt-metric-lbl">Peças criadas</div></div>
-            </div>
-          </div>
-          <div class="vt-gallery">
-            <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
-            <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
-            <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
-            <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
-            <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
-            <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
-            <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
-            <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
-          </div>
-        </div>
-      </div>
 
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">CRM · E-mail marketing</div>
+      <h3 class="subsection-title">Estratégia de CRM e conteúdo para e-mail marketing</h3>
+      <p class="subsection-desc">Atuação como copywriter no direcionamento de conteúdo, criação dos textos, estruturação dos CTAs e validação de tom de voz para campanhas de CRM. As peças conectam datas sazonais, benefícios comerciais e narrativa de marca com foco em clique, compra e recorrência.</p>
+      <div class="creative-grid">
+        <div class="creative-card wide"><img src="imagens/email-dia-dos-pais.webp" alt="E-mail marketing Dia dos Pais WolyCasa"><div class="creative-caption">Dia dos Pais · CRM · Copy + CTA</div></div>
+        <div class="creative-card"><img src="imagens/email-dia-da-pizza.webp" alt="E-mail marketing Dia Mundial da Pizza WolyCasa"><div class="creative-caption">Dia da Pizza · CRM · Conteúdo sazonal</div></div>
+        <div class="creative-card"><img src="imagens/email-namorados.webp" alt="E-mail marketing Dia dos Namorados WolyCasa"><div class="creative-caption">Dia dos Namorados · CRM · Storytelling</div></div>
+        <div class="creative-card"><img src="imagens/email-festa-junina.webp" alt="E-mail marketing Festa Junina WolyCasa"><div class="creative-caption">Festa Junina · CRM · Conteúdo de ocasião</div></div>
+      </div>
+    </div>
 
-    <div class="banners-grid">
-      <div class="banner-item wide reveal">
-        <img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div>
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">Branded content · Social</div>
+      <h3 class="subsection-title">Campanha Vale Tudo — WolyCasa</h3>
+      <p class="subsection-desc">Aproveitando o hype do último capítulo da novela, desenvolvi uma campanha de branded content em tempo real, conectando cultura pop, storytelling e e-commerce. A copy associou produtos aos suspeitos da trama sem depender de venda direta, usando curiosidade, timing e referências visuais como gatilhos de engajamento.</p>
+      <div class="vt-gallery">
+        <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
+        <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
+        <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
+        <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
+        <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
+        <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
+        <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
+        <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
       </div>
-      <div class="banner-item reveal d1">
-        <img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div>
+    </div>
+
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">Anúncios · Ads</div>
+      <h3 class="subsection-title">Copies para anúncios e campanhas de performance</h3>
+      <p class="subsection-desc">Criação de chamadas, CTAs e ângulos criativos para peças de mídia paga, com foco em clareza da oferta, diferenciação visual e aderência ao momento de compra.</p>
+      <div class="creative-grid">
+        <div class="creative-card"><img src="imagens/ads-carrinho-black-friday.webp" alt="Anúncio Black Friday WolyCasa carrinho"><div class="creative-caption">Black Friday · Copy de conversão</div></div>
+        <div class="creative-card wide"><img src="imagens/ads-pmax-mesa-posta.webp" alt="PMAX Mesa Posta WolyCasa"><div class="creative-caption">PMAX · Mesa posta</div></div>
+        <div class="creative-card wide"><img src="imagens/ads-pmax-faqueiros.webp" alt="PMAX Faqueiros WolyCasa"><div class="creative-caption">PMAX · Faqueiros</div></div>
+        <div class="creative-card wide"><img src="imagens/ads-pmax-decoracao.webp" alt="PMAX Decoração WolyCasa"><div class="creative-caption">PMAX · Decoração</div></div>
+        <div class="creative-card wide"><img src="imagens/ads-pmax-bazar.webp" alt="PMAX Bazar WolyCasa"><div class="creative-caption">PMAX · Bazar</div></div>
       </div>
-      <div class="banner-item reveal d2">
-        <img src="imagens/banner-ano-novo-02.webp" alt="WolyCasa - Campanha Ano Novo 2">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Variação de campanha</div></div>
-      </div>
-      <div class="banner-item tall reveal">
-        <img src="imagens/ana-hickmann-ads-169.webp" alt="WolyCasa - Ana Hickmann Collab">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Branded Content</div></div>
-      </div>
-      <div class="banner-item tall reveal d1">
-        <img src="imagens/ana-hickmann-mesa-jantar.webp" alt="WolyCasa - Ana Hickmann Mesa Jantar">
-        <div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Mesa Posta</div></div>
+    </div>
+
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">Banners · Campanhas visuais</div>
+      <h3 class="subsection-title">Direção de copy e CTAs para peças de campanha</h3>
+      <p class="subsection-desc">Peças com foco em campanha sazonal, collabs e comunicação promocional, sempre conectando mensagem, estética e ação esperada do usuário.</p>
+      <div class="banners-grid">
+        <div class="banner-item wide reveal"><img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div></div>
+        <div class="banner-item reveal d1"><img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div></div>
+        <div class="banner-item reveal d2"><img src="imagens/banner-ano-novo-02.webp" alt="WolyCasa - Campanha Ano Novo 2"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Variação de campanha</div></div></div>
+        <div class="banner-item tall reveal"><img src="imagens/ana-hickmann-ads-169.webp" alt="WolyCasa - Ana Hickmann Collab"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Branded Content</div></div></div>
+        <div class="banner-item tall reveal d1"><img src="imagens/ana-hickmann-mesa-jantar.webp" alt="WolyCasa - Ana Hickmann Mesa Jantar"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Mesa Posta</div></div></div>
       </div>
     </div>
   </div>
@@ -818,6 +827,8 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
 </section>
 
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><img src="" alt=""></div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Gustavo Costa</div>
@@ -841,6 +852,30 @@ setTimeout(() => {
     if (r.top < window.innerHeight) b.style.width = b.dataset.w;
   });
 }, 400);
+
+// Lightbox para expandir criativos sem cortar a imagem
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+document.querySelectorAll('.creative-card img, .vt-gallery img, .banner-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+});
+function closeLightbox(){
+  if (!lightbox || !lightboxImg) return;
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImg.src = '';
+}
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
 </script>
 </body>
 </html>
