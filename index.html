@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Gustavo Costa — Profissional de Marketing com foco em SEO, copywriting e estratégia de conteúdo. Passagem por Westwing, Boticário, MAC, Lexly e WolyCasa. Aberto a novos projetos e oportunidades.">
-<meta name="keywords" content="redator SEO, copywriter, estratégia de conteúdo, content strategy, GEO, branding, análise de mercado, São Paulo">
+<meta name="keywords" content="redator SEO, copywriter, estratégia de conteúdo, content strategy, GEO, branding, São Paulo">
 <meta property="og:title" content="Gustavo Costa | SEO · Copywriting · Content Strategy">
 <meta property="og:description" content="Narrativas que equilibram performance e branding.">
 <title>Gustavo Costa | SEO · Copywriting · Content Strategy</title>
@@ -47,7 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero{min-height:100vh;padding-top:68px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:0;top:0;bottom:0;width:50%;background:var(--rust-pale);z-index:0}
 .hero-left{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 3.5rem}
-.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:3rem 3.5rem 0;overflow:hidden}
+.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:5rem 3.5rem;overflow:hidden}
 .eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.67rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-bottom:1.75rem}
 .eyebrow-dot{width:6px;height:6px;background:var(--rust);border-radius:50%;animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
@@ -63,7 +63,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-p:hover{background:var(--rust);transform:translateY(-2px)}
 .btn-g{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
 .btn-g:hover{border-color:var(--ink);transform:translateY(-2px)}
-.hero-photo{width:100%;max-width:320px;aspect-ratio:3/4;border-radius:2px 2px 0 0;overflow:hidden;background:var(--sand-light);display:flex;align-items:center;justify-content:center;position:relative}
+.hero-photo{width:min(72%,330px);aspect-ratio:4/5;border-radius:2px;overflow:hidden;background:var(--sand-light);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 18px 48px rgba(28,25,23,0.1)}
+.hero-photo::before{content:'';position:absolute;inset:0;border:1px solid rgba(28,25,23,0.08);z-index:2;pointer-events:none}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(0.92) contrast(1.02)}
 .hero-photo-initials{font-family:var(--fd);font-size:6rem;font-weight:600;color:var(--sand);letter-spacing:-0.05em}
 .hero-photo-note{position:absolute;bottom:1rem;left:1rem;right:1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-60);text-align:center;background:rgba(255,255,255,0.7);padding:0.5rem}
 
@@ -112,24 +114,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .ftags{display:flex;flex-wrap:wrap;gap:0.4rem}
 .ftag{font-size:0.7rem;padding:0.28rem 0.72rem;background:var(--bg);border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px;letter-spacing:0.03em}
 
-/* WESTWING ANALÍTICA */
-.westwing-analise{background:var(--ink)}
-.westwing-analise .slabel{color:var(--sand)}
-.westwing-analise .slabel::after{background:var(--sand)}
-.westwing-analise .stitle{color:var(--white)}
-.westwing-analise .ssub{color:rgba(253,252,250,0.45)}
-.wa-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);margin-top:3.5rem;border:1px solid rgba(255,255,255,0.06)}
-.wa-card{background:var(--ink);padding:2.25rem;transition:background 0.2s}
-.wa-card:hover{background:#242220}
-.wa-card.full{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.wa-num{font-family:var(--fd);font-size:3rem;font-weight:300;color:rgba(255,255,255,0.05);line-height:1;margin-bottom:1.25rem}
-.wa-icon{font-size:1.4rem;margin-bottom:0.75rem}
-.wa-title{font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:0.65rem;line-height:1.2}
-.wa-desc{font-size:0.81rem;color:rgba(253,252,250,0.4);line-height:1.8}
-.wa-tags{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:0.35rem}
-.wa-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.65rem;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.3);border-radius:100px}
-.wa-quote{font-family:var(--fd);font-size:1.1rem;font-style:italic;line-height:1.7;color:rgba(255,255,255,0.55);padding-left:1.5rem;border-left:2px solid var(--rust)}
-
 /* CASES */
 .cases{background:var(--bg)}
 .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:4rem}
@@ -137,6 +121,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .case-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(28,25,23,0.07)}
 .case-card.wide{grid-column:1/-1}
 .case-head{padding:2rem 2rem 1.5rem}
+.case-visual{background:linear-gradient(135deg,var(--ink),#2b2724);color:var(--white);padding:1.55rem;border-bottom:1px solid var(--ink-10);display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.case-visual.light{background:linear-gradient(135deg,var(--rust-pale),var(--surface));color:var(--ink)}
+.result-tile{min-height:118px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);border-radius:4px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
+.case-visual.light .result-tile{border-color:var(--ink-10);background:rgba(255,255,255,0.55)}
+.result-kicker{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(253,252,250,0.45)}
+.case-visual.light .result-kicker{color:var(--ink-30)}
+.result-number{font-family:var(--fb);font-size:2.25rem;font-weight:500;line-height:1;color:var(--sand);letter-spacing:-0.02em}
+.case-visual.light .result-number{color:var(--rust)}
+.result-copy{font-size:0.72rem;line-height:1.55;color:rgba(253,252,250,0.58)}
+.case-visual.light .result-copy{color:var(--ink-60)}
+.visual-bars{grid-column:1/-1;display:flex;flex-direction:column;gap:0.55rem;margin-top:0.15rem}
+.visual-bar{display:grid;grid-template-columns:110px 1fr auto;gap:0.7rem;align-items:center;font-size:0.68rem;color:rgba(253,252,250,0.58)}
+.case-visual.light .visual-bar{color:var(--ink-60)}
+.visual-track{height:6px;background:rgba(255,255,255,0.12);border-radius:999px;overflow:hidden}
+.case-visual.light .visual-track{background:var(--ink-10)}
+.visual-fill{height:100%;background:linear-gradient(90deg,var(--sand),var(--rust-light));border-radius:999px}
 .case-tipo{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem}
 .case-tipo::before{content:'';width:14px;height:1px;background:var(--rust)}
 .case-title{font-family:var(--fd);font-size:1.4rem;font-weight:400;line-height:1.2;margin-bottom:0.85rem;color:var(--ink)}
@@ -179,27 +179,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .subsection-kicker{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.65rem}
 .subsection-title{font-family:var(--fd);font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--ink)}
 .subsection-desc{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:650px;margin-bottom:1.5rem}
-.creative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;align-items:start}
-.creative-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;cursor:zoom-in;transition:transform 0.25s,box-shadow 0.25s}
+.creative-grid,.vt-gallery,.banners-grid,.campaign-gallery{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
+.creative-grid::-webkit-scrollbar,.vt-gallery::-webkit-scrollbar,.banners-grid::-webkit-scrollbar,.campaign-gallery::-webkit-scrollbar{height:6px}
+.creative-grid::-webkit-scrollbar-thumb,.vt-gallery::-webkit-scrollbar-thumb,.banners-grid::-webkit-scrollbar-thumb,.campaign-gallery::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
+.creative-grid::-webkit-scrollbar-track,.vt-gallery::-webkit-scrollbar-track,.banners-grid::-webkit-scrollbar-track,.campaign-gallery::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
+.gallery-hint{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-30);margin:-0.5rem 0 1rem}
+.creative-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;cursor:zoom-in;transition:transform 0.25s,box-shadow 0.25s;flex:0 0 min(300px,72vw);scroll-snap-align:start}
 .creative-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
-.creative-card img{width:100%;height:auto;max-height:780px;object-fit:contain;display:block;border-radius:2px;background:var(--surface)}
-.creative-card.wide{grid-column:span 2}
+.creative-card img{width:100%;height:360px;object-fit:contain;display:block;border-radius:2px;background:var(--surface)}
+.creative-card.wide{flex-basis:min(430px,84vw)}
 .creative-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
 .lightbox{position:fixed;inset:0;background:rgba(28,25,23,0.92);z-index:999;display:none;align-items:center;justify-content:center;padding:2rem}
 .lightbox.active{display:flex}
 .lightbox img{max-width:94vw;max-height:90vh;object-fit:contain;border-radius:4px;background:var(--surface);box-shadow:0 24px 80px rgba(0,0,0,0.35)}
 .lightbox-close{position:fixed;top:1rem;right:1rem;width:42px;height:42px;border:none;border-radius:50%;background:var(--white);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
-.campaign-gallery{margin-top:1.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.campaign-gallery img{width:100%;height:100%;min-height:150px;object-fit:cover;border-radius:2px;background:var(--sand-light)}
-.campaign-gallery .wide{grid-column:span 2}
-.campaign-gallery .full{grid-column:1/-1}
+.campaign-gallery{margin-top:1rem}
+.campaign-gallery img{width:100%;height:100%;object-fit:contain;border-radius:2px;background:var(--surface)}
 
 /* VALE TUDO */
 .vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
 .vt-inner{display:grid;grid-template-columns:1.1fr 1fr}
 .vt-content{padding:2.5rem}
-.vt-gallery{background:var(--ink);padding:1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.85rem;align-items:start}
-.vt-gallery img{width:100%;height:auto;max-height:680px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:#111;cursor:zoom-in}
+.vt-gallery{background:var(--ink);padding:1rem}
+.vt-gallery img{width:220px;height:330px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:#111;cursor:zoom-in;flex:0 0 auto;scroll-snap-align:start}
 .vt-gallery img:hover{opacity:0.88;transform:translateY(-2px)}
 .vt-metric-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
 .vt-metric{text-align:center;padding:1rem 1.25rem;background:var(--bg);border-radius:2px;flex:1;min-width:120px}
@@ -209,12 +211,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 /* BANNERS */
 .banners{background:var(--surface)}
 .banners-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;align-items:end}
-.banners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;background:transparent;border:none;align-items:start}
-.banner-item{background:var(--bg);border:1px solid var(--ink-10);padding:0.65rem;overflow:hidden;position:relative;transition:transform 0.3s,box-shadow 0.3s;cursor:zoom-in;border-radius:4px}
+.banners-grid{background:transparent;border:none}
+.banner-item{background:var(--bg);border:1px solid var(--ink-10);padding:0.65rem;overflow:hidden;position:relative;transition:transform 0.3s,box-shadow 0.3s;cursor:zoom-in;border-radius:4px;flex:0 0 min(420px,82vw);scroll-snap-align:start}
 .banner-item:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
-.banner-item img{width:100%;height:auto;max-height:680px;object-fit:contain;display:block;border-radius:2px}
+.banner-item img{width:100%;height:260px;object-fit:contain;display:block;border-radius:2px}
 .banner-item.tall{aspect-ratio:auto}
-.banner-item.wide{grid-column:span 2;aspect-ratio:auto}
+.banner-item.wide{flex-basis:min(560px,88vw);aspect-ratio:auto}
 .banner-overlay{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(28,25,23,0.85));opacity:0;transition:opacity 0.3s}
 .banner-item:hover .banner-overlay{opacity:1}
 .banner-overlay-text{font-size:0.7rem;color:rgba(255,255,255,0.8);letter-spacing:0.08em;text-transform:uppercase}
@@ -293,23 +295,20 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .hero::before{display:none}
   .hero-left{padding:4rem 1.5rem 2.5rem}
   .hero-right{align-items:flex-start;padding:0 1.5rem 3rem;background:var(--rust-pale)}
-  .hero-photo{max-width:200px;aspect-ratio:1}
+  .hero-photo{width:min(68%,250px);aspect-ratio:4/5}
   .marcas{padding:2rem 1.5rem;gap:1.5rem}
   .sec{padding:4rem 1.5rem}
   .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
-  .wa-grid{grid-template-columns:1fr}
-  .wa-card.full{grid-column:auto;display:block}
   .video-case{grid-template-columns:1fr}
   .youtube-proof{grid-template-columns:1fr}
   .campaign-case{grid-template-columns:1fr}
   .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
   .cases-grid{grid-template-columns:1fr}
   .case-card.wide{grid-column:auto}
+  .case-visual{grid-template-columns:1fr}
+  .visual-bar{grid-template-columns:1fr}
   .vt-inner{grid-template-columns:1fr}
   .banners-intro{grid-template-columns:1fr}
-  .banners-grid{grid-template-columns:1fr 1fr}
-  .banner-item.wide{grid-column:auto}
-  .creative-card.wide{grid-column:auto}
   .pubs-grid{grid-template-columns:1fr 1fr}
   .esp-grid{grid-template-columns:1fr}
   .deps-grid{grid-template-columns:1fr}
@@ -318,11 +317,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 }
 @media(max-width:600px){
   .pubs-grid{grid-template-columns:1fr}
-  .banners-grid{grid-template-columns:1fr}
-  .creative-grid{grid-template-columns:1fr}
   .campaign-list{grid-template-columns:1fr}
-  .campaign-gallery{grid-template-columns:1fr}
-  .campaign-gallery .wide,.campaign-gallery .full{grid-column:auto}
   .proof-row{grid-template-columns:1fr}
   .proof-bar{order:3}
   .proof-val{order:2}
@@ -358,7 +353,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <span class="tag">Copywriting</span>
       <span class="tag">Content Strategy</span>
       <span class="tag">Branding</span>
-      <span class="tag">Análise de Mercado</span>
       <span class="tag">Social Media</span>
     </div>
     <div class="hero-btns">
@@ -368,7 +362,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
   <div class="hero-right">
     <div class="hero-photo">
-      <img src="imagens/hero-gustavo-costa.webp" alt="Gustavo Costa" style="width:100%;height:100%;object-fit:cover;">
+      <img src="imagens/hero-gustavo-costa.webp" alt="Gustavo Costa">
     </div>
   </div>
 </div>
@@ -416,7 +410,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
             <div class="hab-row"><span class="hab-nome">SEO &amp; GEO</span><div class="hab-bar"><div class="hab-fill" data-w="93%"></div></div><span class="hab-pct">93%</span></div>
             <div class="hab-row"><span class="hab-nome">Copywriting</span><div class="hab-bar"><div class="hab-fill" data-w="91%"></div></div><span class="hab-pct">91%</span></div>
             <div class="hab-row"><span class="hab-nome">Content Strategy</span><div class="hab-bar"><div class="hab-fill" data-w="88%"></div></div><span class="hab-pct">88%</span></div>
-            <div class="hab-row"><span class="hab-nome">Análise de Mercado</span><div class="hab-bar"><div class="hab-fill" data-w="85%"></div></div><span class="hab-pct">85%</span></div>
+            <div class="hab-row"><span class="hab-nome">Social Media</span><div class="hab-bar"><div class="hab-fill" data-w="85%"></div></div><span class="hab-pct">85%</span></div>
             <div class="hab-row"><span class="hab-nome">Branded Content</span><div class="hab-bar"><div class="hab-fill" data-w="89%"></div></div><span class="hab-pct">89%</span></div>
           </div>
         </div>
@@ -424,7 +418,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div>
         <p class="sobre-p reveal">Sou um profissional de marketing com foco em <strong>SEO, copywriting e estratégia de conteúdo</strong> — construindo narrativas que equilibram performance e branding.</p>
         <p class="sobre-p reveal">Minha trajetória passa por startups e grandes marcas, experiências que me deram repertório, visão estratégica e agilidade para atuar em <strong>ambientes dinâmicos</strong>.</p>
-        <p class="sobre-p reveal">Além de produzir conteúdo, tenho forte atuação em <strong>análise de mercado e inteligência de dados</strong>: na Westwing, fui responsável por relatórios estratégicos de SEO, comportamento de busca e tendências estéticas, distribuídos para os times de criação, marketing e comercial.</p>
+        <p class="sobre-p reveal">Atuo da pauta ao CTA: transformo intenção de busca, contexto cultural e objetivo de marca em conteúdos, campanhas e peças que fazem sentido para quem lê e para o negócio.</p>
         <p class="sobre-p reveal">Estou em constante evolução no uso de <strong>IA e ferramentas de marketing</strong> para ganhar eficiência, testar hipóteses e escalar resultados. Sou movido por comunicação com storytelling, curiosidade e senso crítico.</p>
         <div class="tl reveal">
           <div class="tl-item">
@@ -439,8 +433,8 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           </div>
           <div class="tl-item">
             <div class="tl-period">Marketing · Atual</div>
-            <div class="tl-title">SEO, Copywriting, Estratégia e Análise de Mercado</div>
-            <div class="tl-desc">Iniciou em startup sueca e desde então vem construindo narrativas, estratégias 360º e relatórios de inteligência para marcas como Westwing, WolyCasa, Lexly e Grupo Rojemac.</div>
+            <div class="tl-title">SEO, Copywriting, Estratégia e Conteúdo</div>
+            <div class="tl-desc">Iniciou em startup sueca e desde então vem construindo narrativas, estratégias 360º e campanhas para marcas como Westwing, WolyCasa, Lexly e Grupo Rojemac.</div>
           </div>
         </div>
         <div class="ferramentas-wrap reveal">
@@ -459,15 +453,31 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   <div class="sec-inner">
     <div class="slabel">Portfólio</div>
     <h2 class="stitle">Cases e <em>resultados</em></h2>
-    <p class="ssub">Estratégias reais, métricas concretas. Cada case com contexto, abordagem e impacto mensurável.</p>
+    <p class="ssub">Resultados em formato mais direto: contexto enxuto, métrica em destaque e prova visual sempre que disponível.</p>
     <div class="cases-grid">
 
       <!-- SEO -->
       <div class="case-card reveal">
+        <div class="case-visual">
+          <div class="result-tile">
+            <div class="result-kicker">Posição no site</div>
+            <div class="result-number">#1</div>
+            <div class="result-copy">Artigo mais clicado desde set/24</div>
+          </div>
+          <div class="result-tile">
+            <div class="result-kicker">Keywords</div>
+            <div class="result-number">3/5</div>
+            <div class="result-copy">Entre as principais palavras de tráfego</div>
+          </div>
+          <div class="visual-bars">
+            <div class="visual-bar"><span>Cliques</span><div class="visual-track"><div class="visual-fill" style="width:100%"></div></div><strong>#1</strong></div>
+            <div class="visual-bar"><span>Impressões</span><div class="visual-track"><div class="visual-fill" style="width:82%"></div></div><strong>#2</strong></div>
+          </div>
+        </div>
         <div class="case-head">
           <div class="case-tipo">Redação SEO</div>
           <h3 class="case-title">Recuperação e otimização de conteúdo sobre signos</h3>
-          <p class="case-desc">Após análise de dados, identifiquei que os textos sobre signos apresentavam o melhor desempenho. Para reverter uma queda, otimizei o conteúdo com palavra-chave forte e suas variações, ajustando URL, meta title e description.</p>
+          <p class="case-desc">Reotimização de um conteúdo estratégico para recuperar performance orgânica, fortalecendo palavra-chave principal, variações, URL, meta title e description.</p>
           <a href="https://www.westwing.com.br/guiar/signos/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
         </div>
         <div class="case-metric">
@@ -479,10 +489,26 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 
       <!-- PR Lexly -->
       <div class="case-card reveal d1">
+        <div class="case-visual light">
+          <div class="result-tile">
+            <div class="result-kicker">Tráfego</div>
+            <div class="result-number">+120%</div>
+            <div class="result-copy">Crescimento direto no site</div>
+          </div>
+          <div class="result-tile">
+            <div class="result-kicker">Autoridade</div>
+            <div class="result-number">PR</div>
+            <div class="result-copy">Backlinks qualificados em portais</div>
+          </div>
+          <div class="visual-bars">
+            <div class="visual-bar"><span>Relevância da pauta</span><div class="visual-track"><div class="visual-fill" style="width:92%"></div></div><strong>Alta</strong></div>
+            <div class="visual-bar"><span>Aderência ao público</span><div class="visual-track"><div class="visual-fill" style="width:88%"></div></div><strong>B2B</strong></div>
+          </div>
+        </div>
         <div class="case-head">
           <div class="case-tipo">PR · Link Building · SEO Off-page · GEO</div>
           <h3 class="case-title">Link building via PR para a Lexly Brasil</h3>
-          <p class="case-desc">Criei estratégia de link building via PR com produção e publicação de matérias em portais de notícias — direcionadas a advogados e profissionais de RH. Identifiquei "Semana de 4 Dias Úteis" como pauta de alta relevância e distribuí em veículos com autoridade e alinhamento de público.</p>
+          <p class="case-desc">Estratégia de link building via PR com pauta sobre “Semana de 4 Dias Úteis”, conectando tema de alta busca a veículos com autoridade e público alinhado.</p>
           <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
         </div>
         <div class="case-metric">
@@ -497,7 +523,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
         <div class="case-head">
           <div class="case-tipo">SMO · GEO · Estratégia Integrada</div>
           <h3 class="case-title">Estratégia SMO integrada com SEO e Social — Westwing</h3>
-          <p class="case-desc">A partir de análise de tendências e alinhamento entre os times de SEO, conteúdo e social, criei a estratégia de SMO para potencializar o alcance orgânico do vídeo. A pesquisa de palavras-chave guiou a otimização do conteúdo, fortaleceu a indexação e fez o Google Search se consolidar como principal origem do tráfego externo.</p>
+          <p class="case-desc">Estratégia de SMO para ampliar descoberta orgânica do vídeo, conectando busca, otimização de conteúdo e distribuição social.</p>
           <div class="video-case">
             <div>
               <div class="video-wrapper">
@@ -543,41 +569,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
 </section>
 
-<!-- WESTWING ANALÍTICA -->
-<section class="westwing-analise sec" id="westwing">
-  <div class="sec-inner">
-    <div class="slabel">Inteligência &amp; Dados</div>
-    <h2 class="stitle" style="color:var(--white)">Além do conteúdo:<br><em style="color:var(--sand)">visão estratégica</em></h2>
-    <p class="ssub">Na Westwing, fui responsável por relatórios de SEO, análise de tendências e inteligência de mercado — distribuídos para os times de criação, marketing e comercial, com destaque interno pela profundidade das entregas.</p>
-    <div class="wa-grid">
-      <div class="wa-card reveal">
-        <div class="wa-num">01</div>
-        <div class="wa-icon">📊</div>
-        <div class="wa-title">Análise de SEO Sazonal</div>
-        <div class="wa-desc">Relatórios de keywords, volume de busca, comportamento de compra e posicionamento da concorrência para datas sazonais como Dia dos Pais — com dados do Semrush, Google Trends e GA4.</div>
-        <div class="wa-tags"><span class="wa-tag">Semrush</span><span class="wa-tag">Google Trends</span><span class="wa-tag">GA4</span><span class="wa-tag">Search Console</span></div>
-      </div>
-      <div class="wa-card reveal d1">
-        <div class="wa-num">02</div>
-        <div class="wa-icon">🔮</div>
-        <div class="wa-title">Trends &amp; Aesthetics</div>
-        <div class="wa-desc">Identificação e análise de novas tendências estéticas emergentes (Witchcore, Mushroomcore, Retro Sci-Fi, Dystopiacore) com aplicação prática para o time de design e editorial — conectando cultura digital com oportunidades de conteúdo.</div>
-        <div class="wa-tags"><span class="wa-tag">Instagram</span><span class="wa-tag">Pinterest</span><span class="wa-tag">TikTok</span><span class="wa-tag">SEO editorial</span></div>
-      </div>
-      <div class="wa-card full reveal">
-        <div>
-          <div class="wa-num">03</div>
-          <div class="wa-icon">🎯</div>
-          <div class="wa-title">Inteligência competitiva e insights para o negócio</div>
-          <div class="wa-desc">Mapeamento do posicionamento de concorrentes (Mobly, Camicado, Tok&amp;Stok, Boticário, Mercado Livre), análise de comportamento de compra e identificação de oportunidades editoriais — com recomendações acionáveis para toda a empresa.</div>
-          <div class="wa-tags" style="margin-top:1.1rem"><span class="wa-tag">Análise competitiva</span><span class="wa-tag">Comportamento do consumidor</span><span class="wa-tag">Insights editoriais</span><span class="wa-tag">Business intelligence</span></div>
-        </div>
-        <div class="wa-quote">"Destaco seu forte senso analítico e profundo domínio em SEO e Inteligência Artificial, o que faz com que sua atuação como redator vá muito além da produção de textos. Suas entregas são sempre orientadas por estratégia, dados e objetivos claros de negócio." <br><br><span style="font-size:0.72rem;color:rgba(255,255,255,0.3);font-style:normal;letter-spacing:0.06em">— Thalita Real, Gerente de Marketing · Grupo Rojemac</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- BANNERS -->
 <section class="banners sec" id="copies">
   <div class="sec-inner">
@@ -609,9 +600,25 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
     </div>
 
     <div class="subsection-block reveal">
+      <div class="subsection-kicker">Campanha 360° · Dia das Mães</div>
+      <h3 class="subsection-title">Peças da campanha Dia das Mães WolyCasa</h3>
+      <p class="subsection-desc">Seleção visual da campanha com desdobramentos para comunicação digital, mantendo conceito, texto e direção criativa alinhados ao posicionamento da marca.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
+      <div class="creative-grid">
+        <div class="creative-card wide"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Peça 1"><div class="creative-caption">Dia das Mães · Conceito de campanha</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Peça 2"><div class="creative-caption">Dia das Mães · Desdobramento visual</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Peça 3"><div class="creative-caption">Dia das Mães · Produto + narrativa</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Peça 4"><div class="creative-caption">Dia das Mães · Social</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Peça 5"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-06.webp" alt="Campanha Dia das Mães WolyCasa - Peça 6"><div class="creative-caption">Dia das Mães · Fechamento</div></div>
+      </div>
+    </div>
+
+    <div class="subsection-block reveal">
       <div class="subsection-kicker">CRM · E-mail marketing</div>
       <h3 class="subsection-title">Estratégia de CRM e conteúdo para e-mail marketing</h3>
       <p class="subsection-desc">Atuação como copywriter no direcionamento de conteúdo, criação dos textos, estruturação dos CTAs e validação de tom de voz para campanhas de CRM. As peças conectam datas sazonais, benefícios comerciais e narrativa de marca com foco em clique, compra e recorrência.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
       <div class="creative-grid">
         <div class="creative-card wide"><img src="imagens/email-dia-dos-pais.webp" alt="E-mail marketing Dia dos Pais WolyCasa"><div class="creative-caption">Dia dos Pais · CRM · Copy + CTA</div></div>
         <div class="creative-card"><img src="imagens/email-dia-da-pizza.webp" alt="E-mail marketing Dia Mundial da Pizza WolyCasa"><div class="creative-caption">Dia da Pizza · CRM · Conteúdo sazonal</div></div>
@@ -624,6 +631,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div class="subsection-kicker">Branded content · Social</div>
       <h3 class="subsection-title">Campanha Vale Tudo — WolyCasa</h3>
       <p class="subsection-desc">Aproveitando o hype do último capítulo da novela, desenvolvi uma campanha de branded content em tempo real, conectando cultura pop, storytelling e e-commerce. A copy associou produtos aos suspeitos da trama sem depender de venda direta, usando curiosidade, timing e referências visuais como gatilhos de engajamento.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
       <div class="vt-gallery">
         <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
         <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
@@ -640,6 +648,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div class="subsection-kicker">Anúncios · Ads</div>
       <h3 class="subsection-title">Copies para anúncios e campanhas de performance</h3>
       <p class="subsection-desc">Criação de chamadas, CTAs e ângulos criativos para peças de mídia paga, com foco em clareza da oferta, diferenciação visual e aderência ao momento de compra.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
       <div class="creative-grid">
         <div class="creative-card"><img src="imagens/ads-carrinho-black-friday.webp" alt="Anúncio Black Friday WolyCasa carrinho"><div class="creative-caption">Black Friday · Copy de conversão</div></div>
         <div class="creative-card wide"><img src="imagens/ads-pmax-mesa-posta.webp" alt="PMAX Mesa Posta WolyCasa"><div class="creative-caption">PMAX · Mesa posta</div></div>
@@ -653,6 +662,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div class="subsection-kicker">Banners · Campanhas visuais</div>
       <h3 class="subsection-title">Direção de copy e CTAs para peças de campanha</h3>
       <p class="subsection-desc">Peças com foco em campanha sazonal, collabs e comunicação promocional, sempre conectando mensagem, estética e ação esperada do usuário.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
       <div class="banners-grid">
         <div class="banner-item wide reveal"><img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div></div>
         <div class="banner-item reveal d1"><img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div></div>
@@ -698,9 +708,9 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
     <div class="esp-grid">
       <div class="esp-item reveal">
         <div class="esp-num">01</div>
-        <h3 class="esp-title">SEO, GEO &amp; Análise</h3>
-        <p class="esp-desc">Pesquisa de palavras-chave, otimização on-page, SMO e estratégias de GEO. Relatórios de inteligência de mercado e análise de concorrência para orientar decisões editoriais e de negócio.</p>
-        <div class="esp-tags"><span class="esp-tag">SEO on-page</span><span class="esp-tag">GEO</span><span class="esp-tag">SMO</span><span class="esp-tag">Análise de mercado</span><span class="esp-tag">Inteligência competitiva</span></div>
+        <h3 class="esp-title">SEO, GEO &amp; SMO</h3>
+        <p class="esp-desc">Pesquisa de palavras-chave, otimização on-page e estratégias de GEO e SMO para melhorar descoberta orgânica, relevância editorial e distribuição de conteúdo.</p>
+        <div class="esp-tags"><span class="esp-tag">SEO on-page</span><span class="esp-tag">GEO</span><span class="esp-tag">SMO</span><span class="esp-tag">Keywords</span><span class="esp-tag">Otimização editorial</span></div>
       </div>
       <div class="esp-item reveal d1">
         <div class="esp-num">02</div>
@@ -797,7 +807,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div class="reveal">
         <div class="disponivel"><span class="disponivel-dot"></span> Aberto a oportunidades</div>
         <h2 class="contato-title">Pronto para o<br>próximo <em>desafio.</em></h2>
-        <p class="contato-sub">Busco novos desafios onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, dados e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
+        <p class="contato-sub">Busco novos desafios onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, criatividade e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
         <div class="hero-btns">
           <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="btn btn-p">Acessar LinkedIn →</a>
           <a href="mailto:guu_costa10@icloud.com" class="btn btn-g">Enviar E-mail</a>
@@ -832,7 +842,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Gustavo Costa</div>
-  <div class="footer-text">SEO · Copywriting · Content Strategy · Análise de Mercado · São Paulo, SP</div>
+  <div class="footer-text">SEO · Copywriting · Content Strategy · Branding · São Paulo, SP</div>
 </footer>
 
 <script>
