@@ -47,7 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero{min-height:100vh;padding-top:68px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:0;top:0;bottom:0;width:50%;background:var(--rust-pale);z-index:0}
 .hero-left{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 3.5rem}
-.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:5rem 3.5rem;overflow:hidden}
+.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:0;overflow:hidden;background:var(--rust-pale)}
 .eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.67rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-bottom:1.75rem}
 .eyebrow-dot{width:6px;height:6px;background:var(--rust);border-radius:50%;animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
@@ -63,9 +63,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-p:hover{background:var(--rust);transform:translateY(-2px)}
 .btn-g{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
 .btn-g:hover{border-color:var(--ink);transform:translateY(-2px)}
-.hero-photo{width:min(72%,330px);aspect-ratio:4/5;border-radius:2px;overflow:hidden;background:var(--sand-light);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 18px 48px rgba(28,25,23,0.1)}
-.hero-photo::before{content:'';position:absolute;inset:0;border:1px solid rgba(28,25,23,0.08);z-index:2;pointer-events:none}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(0.92) contrast(1.02)}
+.hero-photo{width:100%;height:100%;min-height:calc(100vh - 68px);border-radius:0;overflow:hidden;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:none}
+.hero-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--rust-pale) 0%,rgba(242,232,227,0.36) 22%,rgba(242,232,227,0.05) 58%,rgba(242,232,227,0.22) 100%);z-index:2;pointer-events:none}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(242,232,227,0.18),rgba(242,232,227,0.02) 42%,rgba(242,232,227,0.28));z-index:3;pointer-events:none}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(0.86) contrast(1.02)}
 .hero-photo-initials{font-family:var(--fd);font-size:6rem;font-weight:600;color:var(--sand);letter-spacing:-0.05em}
 .hero-photo-note{position:absolute;bottom:1rem;left:1rem;right:1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-60);text-align:center;background:rgba(255,255,255,0.7);padding:0.5rem}
 
@@ -121,20 +122,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .case-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(28,25,23,0.07)}
 .case-card.wide{grid-column:1/-1}
 .case-head{padding:2rem 2rem 1.5rem}
-.case-visual{background:linear-gradient(135deg,var(--ink),#2b2724);color:var(--white);padding:1.55rem;border-bottom:1px solid var(--ink-10);display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.case-visual{background:linear-gradient(135deg,var(--rust-pale),var(--surface));color:var(--ink);padding:1.55rem;border-bottom:1px solid var(--ink-10);display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
 .case-visual.light{background:linear-gradient(135deg,var(--rust-pale),var(--surface));color:var(--ink)}
-.result-tile{min-height:118px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);border-radius:4px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
+.result-tile{min-height:118px;border:1px solid var(--ink-10);background:rgba(255,255,255,0.55);border-radius:4px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
 .case-visual.light .result-tile{border-color:var(--ink-10);background:rgba(255,255,255,0.55)}
-.result-kicker{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(253,252,250,0.45)}
+.result-kicker{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-30)}
 .case-visual.light .result-kicker{color:var(--ink-30)}
-.result-number{font-family:var(--fb);font-size:2.25rem;font-weight:500;line-height:1;color:var(--sand);letter-spacing:-0.02em}
+.result-number{font-family:var(--fb);font-size:2.25rem;font-weight:500;line-height:1;color:var(--rust);letter-spacing:-0.02em}
 .case-visual.light .result-number{color:var(--rust)}
-.result-copy{font-size:0.72rem;line-height:1.55;color:rgba(253,252,250,0.58)}
+.result-copy{font-size:0.72rem;line-height:1.55;color:var(--ink-60)}
 .case-visual.light .result-copy{color:var(--ink-60)}
 .visual-bars{grid-column:1/-1;display:flex;flex-direction:column;gap:0.55rem;margin-top:0.15rem}
-.visual-bar{display:grid;grid-template-columns:110px 1fr auto;gap:0.7rem;align-items:center;font-size:0.68rem;color:rgba(253,252,250,0.58)}
+.visual-bar{display:grid;grid-template-columns:110px 1fr auto;gap:0.7rem;align-items:center;font-size:0.68rem;color:var(--ink-60)}
 .case-visual.light .visual-bar{color:var(--ink-60)}
-.visual-track{height:6px;background:rgba(255,255,255,0.12);border-radius:999px;overflow:hidden}
+.visual-track{height:6px;background:var(--ink-10);border-radius:999px;overflow:hidden}
 .case-visual.light .visual-track{background:var(--ink-10)}
 .visual-fill{height:100%;background:linear-gradient(90deg,var(--sand),var(--rust-light));border-radius:999px}
 .case-tipo{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem}
@@ -168,21 +169,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .insight-item span{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
 .insight-item strong{font-family:var(--fd);font-size:1.65rem;font-weight:600;color:var(--ink);line-height:1}
 .case-note{font-size:0.72rem;color:var(--ink-60);line-height:1.7;margin-top:0.6rem}
-.campaign-case{margin-bottom:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;display:grid;grid-template-columns:1.05fr 0.95fr;align-items:stretch}
+.campaign-case{margin-bottom:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
 .campaign-copy{padding:2rem}
-.campaign-list{margin-top:1.1rem;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
-.campaign-pill{font-size:0.68rem;color:var(--ink-60);background:var(--surface);border:1px solid var(--ink-10);padding:0.45rem 0.65rem;border-radius:100px}
 .campaign-visual{background:var(--rust-pale);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;border-left:1px solid var(--ink-10)}
 .campaign-big{font-family:var(--fd);font-size:3rem;font-weight:600;color:var(--rust);line-height:1}
 .campaign-small{font-size:0.8rem;color:var(--ink-60);line-height:1.8}
+.campaign-textbox{margin-top:1.5rem;background:var(--surface);border:1px solid var(--ink-10);padding:1.35rem 1.5rem}
+.campaign-textbox p{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:850px}
+.campaign-textbox p + p{margin-top:0.8rem}
+.campaign-textbox strong{color:var(--ink);font-weight:500}
+.campaign-showcase{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--ink-10)}
+.collab-card{margin-top:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;padding:2rem}
+.collab-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.1rem}
+.collab-tag{font-size:0.68rem;color:var(--ink-60);background:var(--surface);border:1px solid var(--ink-10);padding:0.45rem 0.75rem;border-radius:100px}
 .subsection-block{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--ink-10)}
 .subsection-kicker{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.65rem}
 .subsection-title{font-family:var(--fd);font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--ink)}
 .subsection-desc{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:650px;margin-bottom:1.5rem}
-.creative-grid,.vt-gallery,.banners-grid,.campaign-gallery{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
-.creative-grid::-webkit-scrollbar,.vt-gallery::-webkit-scrollbar,.banners-grid::-webkit-scrollbar,.campaign-gallery::-webkit-scrollbar{height:6px}
-.creative-grid::-webkit-scrollbar-thumb,.vt-gallery::-webkit-scrollbar-thumb,.banners-grid::-webkit-scrollbar-thumb,.campaign-gallery::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
-.creative-grid::-webkit-scrollbar-track,.vt-gallery::-webkit-scrollbar-track,.banners-grid::-webkit-scrollbar-track,.campaign-gallery::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
+.creative-grid,.vt-gallery,.banners-grid,.campaign-gallery,.video-gallery{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
+.creative-grid::-webkit-scrollbar,.vt-gallery::-webkit-scrollbar,.banners-grid::-webkit-scrollbar,.campaign-gallery::-webkit-scrollbar,.video-gallery::-webkit-scrollbar{height:6px}
+.creative-grid::-webkit-scrollbar-thumb,.vt-gallery::-webkit-scrollbar-thumb,.banners-grid::-webkit-scrollbar-thumb,.campaign-gallery::-webkit-scrollbar-thumb,.video-gallery::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
+.creative-grid::-webkit-scrollbar-track,.vt-gallery::-webkit-scrollbar-track,.banners-grid::-webkit-scrollbar-track,.campaign-gallery::-webkit-scrollbar-track,.video-gallery::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
 .gallery-hint{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-30);margin:-0.5rem 0 1rem}
 .creative-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;cursor:zoom-in;transition:transform 0.25s,box-shadow 0.25s;flex:0 0 min(300px,72vw);scroll-snap-align:start}
 .creative-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
@@ -200,8 +207,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
 .vt-inner{display:grid;grid-template-columns:1.1fr 1fr}
 .vt-content{padding:2.5rem}
-.vt-gallery{background:var(--ink);padding:1rem}
-.vt-gallery img{width:220px;height:330px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:#111;cursor:zoom-in;flex:0 0 auto;scroll-snap-align:start}
+.vt-gallery{background:var(--surface);padding:1rem;border:1px solid var(--ink-10);border-radius:4px}
+.vt-gallery img{width:220px;height:330px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:var(--surface);cursor:zoom-in;flex:0 0 auto;scroll-snap-align:start;border:1px solid var(--ink-10)}
 .vt-gallery img:hover{opacity:0.88;transform:translateY(-2px)}
 .vt-metric-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
 .vt-metric{text-align:center;padding:1rem 1.25rem;background:var(--bg);border-radius:2px;flex:1;min-width:120px}
@@ -229,6 +236,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .pub-item:hover .pub-titulo{color:var(--rust)}
 .pub-veiculo{font-size:0.58rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem}
 .pub-titulo{font-size:0.83rem;color:var(--ink);line-height:1.55}
+.pr{background:var(--surface)}
+.pubs + .pr{padding-top:5rem}
+.instagram-wrap{margin-top:2rem;display:grid;grid-template-columns:repeat(2,minmax(280px,430px));gap:1rem;align-items:start}
+.instagram-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:4px;padding:0.75rem;max-width:430px}
+.instagram-embed{position:relative;width:100%;height:min(680px,78vh);min-height:520px;overflow:hidden;border-radius:3px;background:var(--bg)}
+.instagram-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none;background:var(--bg)}
+.instagram-note{grid-column:1/-1;font-size:0.82rem;color:var(--ink-60);line-height:1.85;padding-top:0.5rem;max-width:760px}
+.vsl-highlight{margin:1.5rem 0 2rem;padding:1.25rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:4px}
+.vsl-highlight-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.vsl-highlight-head p{font-size:0.8rem;color:var(--ink-60);line-height:1.7;max-width:560px}
+.video-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;flex:0 0 min(360px,82vw);scroll-snap-align:start}
+.video-card.featured{flex-basis:min(520px,88vw);background:var(--surface)}
+.video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;background:var(--ink)}
+.video-card.reel{flex-basis:min(280px,76vw)}
+.video-card.reel video{aspect-ratio:9/16}
+.video-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
 
 /* ESPECIALIDADES */
 .esp{background:var(--ink)}
@@ -295,7 +318,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .hero::before{display:none}
   .hero-left{padding:4rem 1.5rem 2.5rem}
   .hero-right{align-items:flex-start;padding:0 1.5rem 3rem;background:var(--rust-pale)}
-  .hero-photo{width:min(68%,250px);aspect-ratio:4/5}
+  .hero-photo{width:100%;max-width:320px;min-height:360px;aspect-ratio:4/5}
   .marcas{padding:2rem 1.5rem;gap:1.5rem}
   .sec{padding:4rem 1.5rem}
   .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
@@ -303,6 +326,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .youtube-proof{grid-template-columns:1fr}
   .campaign-case{grid-template-columns:1fr}
   .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
+  .instagram-wrap{grid-template-columns:1fr}
   .cases-grid{grid-template-columns:1fr}
   .case-card.wide{grid-column:auto}
   .case-visual{grid-template-columns:1fr}
@@ -317,7 +341,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 }
 @media(max-width:600px){
   .pubs-grid{grid-template-columns:1fr}
-  .campaign-list{grid-template-columns:1fr}
   .proof-row{grid-template-columns:1fr}
   .proof-bar{order:3}
   .proof-val{order:2}
@@ -362,7 +385,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
   <div class="hero-right">
     <div class="hero-photo">
-      <img src="imagens/hero-gustavo-costa.webp" alt="Gustavo Costa">
+      <img src="imagens/hero-gustavo-costa-4k.jpeg" alt="Gustavo Costa">
     </div>
   </div>
 </div>
@@ -414,6 +437,12 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
             <div class="hab-row"><span class="hab-nome">Branded Content</span><div class="hab-bar"><div class="hab-fill" data-w="89%"></div></div><span class="hab-pct">89%</span></div>
           </div>
         </div>
+        <div class="sobre-card reveal d2">
+          <div class="sobre-card-label">Ferramentas</div>
+          <div class="ftags">
+            <span class="ftag">Semrush</span><span class="ftag">Ahrefs</span><span class="ftag">Google Search Console</span><span class="ftag">Google Analytics / GA4</span><span class="ftag">Google Trends</span><span class="ftag">WordPress</span><span class="ftag">Notion</span><span class="ftag">Canva</span><span class="ftag">Monday</span><span class="ftag">Trello</span><span class="ftag">Github</span><span class="ftag">Gemini</span><span class="ftag">ChatGPT / Claude</span>
+          </div>
+        </div>
       </div>
       <div>
         <p class="sobre-p reveal">Sou um profissional de marketing com foco em <strong>SEO, copywriting e estratégia de conteúdo</strong> — construindo narrativas que equilibram performance e branding.</p>
@@ -435,12 +464,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
             <div class="tl-period">Marketing · Atual</div>
             <div class="tl-title">SEO, Copywriting, Estratégia e Conteúdo</div>
             <div class="tl-desc">Iniciou em startup sueca e desde então vem construindo narrativas, estratégias 360º e campanhas para marcas como Westwing, WolyCasa, Lexly e Grupo Rojemac.</div>
-          </div>
-        </div>
-        <div class="ferramentas-wrap reveal">
-          <div class="ftag-label">Ferramentas</div>
-          <div class="ftags">
-            <span class="ftag">Semrush</span><span class="ftag">Ahrefs</span><span class="ftag">Google Search Console</span><span class="ftag">Google Analytics / GA4</span><span class="ftag">Google Trends</span><span class="ftag">WordPress</span><span class="ftag">Notion</span><span class="ftag">Canva</span><span class="ftag">Monday</span><span class="ftag">Trello</span><span class="ftag">Github</span><span class="ftag">Gemini</span><span class="ftag">ChatGPT / Claude</span>
           </div>
         </div>
       </div>
@@ -584,34 +607,46 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <div class="campaign-copy">
         <div class="case-tipo">CRM · Copywriting · Campanha Sazonal</div>
         <h3 class="case-title">Dia das Mães WolyCasa 2025</h3>
-        <p class="case-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural, elevando valor percebido e gerando novas ocasiões de consumo. A narrativa conectou memórias afetivas, estilos e personalidades maternas, ressignificando momentos à mesa e posicionando produtos para casa como facilitadores de experiências.</p>
-        <p class="case-desc" style="margin-top:0.85rem">A ativação integrou landing page, blog, social e CRM, com destaque para a mini campanha “Dê mais do que flores, dê lembranças”, incentivando a compra combinada de flores + vaso para aumento de ticket e diferenciação.</p>
-      </div>
-      <div class="campaign-visual">
-        <div class="campaign-big">360°</div>
-        <div class="campaign-small">Estratégia, conceito criativo, copy e direcionamento de comunicação para landing page, blog, e-mail marketing e posts de Instagram.</div>
-        <div class="campaign-list">
-          <span class="campaign-pill">Landing page</span>
-          <span class="campaign-pill">Blog</span>
-          <span class="campaign-pill">Social</span>
-          <span class="campaign-pill">CRM</span>
+        <p class="case-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural: itens para casa. O objetivo era elevar valor percebido, gerar novas ocasiões de consumo e posicionar mesa posta, decoração e utilidades como presentes com memória, afeto e uso recorrente.</p>
+        <div class="campaign-textbox">
+          <p>O desafio foi transformar produtos funcionais em uma escolha de presente com valor emocional. A estratégia partiu de memórias afetivas, estilos e personalidades maternas para ressignificar momentos à mesa e posicionar os produtos como facilitadores de experiências.</p>
+          <p>A ativação conectou landing page, blog, social e CRM com foco em mesa posta, café da manhã na cama e recorrência de uso. Como destaque, a mini campanha <strong>“Dê mais do que flores, dê lembranças”</strong> incentivou a compra combinada de flores + vaso para aumentar ticket e diferenciação. Meu papel envolveu estratégia, conceito criativo, copywriting e direcionamento de comunicação.</p>
+        </div>
+        <div class="campaign-showcase">
+          <div class="subsection-kicker">Campanha 360° · Dia das Mães</div>
+          <h3 class="subsection-title">Peças da campanha Dia das Mães WolyCasa</h3>
+          <p class="subsection-desc">Seleção visual usada para ilustrar a campanha em landing page, comunicação digital e redes sociais, mantendo conceito, texto e direção criativa alinhados ao posicionamento da marca.</p>
+          <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
+          <div class="creative-grid">
+            <div class="creative-card wide"><img src="imagens/maes-wolycasa-06.webp" alt="Banner da landing page Dia das Mães WolyCasa"><div class="creative-caption">Dia das Mães · Banner da LP</div></div>
+            <div class="creative-card wide"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Storytelling"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
+            <div class="creative-card"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama festejar"><div class="creative-caption">Estilos de mãe · Festejar</div></div>
+            <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama organizar"><div class="creative-caption">Estilos de mãe · Organizar</div></div>
+            <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama decorar"><div class="creative-caption">Estilos de mãe · Decorar</div></div>
+            <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Estilo de mãe"><div class="creative-caption">Estilos de mãe · Inspiração</div></div>
+          </div>
+          <div class="instagram-wrap">
+            <div class="instagram-card">
+              <div class="instagram-embed">
+                <iframe src="https://www.instagram.com/reel/DJRcC2cxeLD/embed/captioned/" title="Reel da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="instagram-card">
+              <div class="instagram-embed">
+                <iframe src="https://www.instagram.com/p/DJKBksrO_Ax/embed/captioned/" title="Post da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="instagram-note">Desdobramentos sociais da campanha em formatos complementares, preservando capa, legenda e contexto original dos posts.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">Campanha 360° · Dia das Mães</div>
-      <h3 class="subsection-title">Peças da campanha Dia das Mães WolyCasa</h3>
-      <p class="subsection-desc">Seleção visual da campanha com desdobramentos para comunicação digital, mantendo conceito, texto e direção criativa alinhados ao posicionamento da marca.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="creative-grid">
-        <div class="creative-card wide"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Peça 1"><div class="creative-caption">Dia das Mães · Conceito de campanha</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Peça 2"><div class="creative-caption">Dia das Mães · Desdobramento visual</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Peça 3"><div class="creative-caption">Dia das Mães · Produto + narrativa</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Peça 4"><div class="creative-caption">Dia das Mães · Social</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Peça 5"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-06.webp" alt="Campanha Dia das Mães WolyCasa - Peça 6"><div class="creative-caption">Dia das Mães · Fechamento</div></div>
-      </div>
+    <div class="collab-card reveal">
+      <div class="case-tipo">PR · Social · CRM · Branding</div>
+      <h3 class="case-title">WolyCasa &amp; iCasei</h3>
+      <p class="case-desc">Campanha de collab que uniu WolyCasa e iCasei para aproximar uma marca de utilidades domésticas e enxoval de casamento de uma plataforma especializada em listas e sites de casamento. A estratégia conectou PR, social, CRM e branding para construir relevância em um momento de alta intenção: a montagem da casa nova.</p>
+      <div class="collab-tags"><span class="collab-tag">Enxoval de casamento</span><span class="collab-tag">Lista de presentes</span><span class="collab-tag">PR</span><span class="collab-tag">Social</span><span class="collab-tag">CRM</span><span class="collab-tag">Branding</span></div>
     </div>
 
     <div class="subsection-block reveal">
@@ -624,6 +659,31 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
         <div class="creative-card"><img src="imagens/email-dia-da-pizza.webp" alt="E-mail marketing Dia Mundial da Pizza WolyCasa"><div class="creative-caption">Dia da Pizza · CRM · Conteúdo sazonal</div></div>
         <div class="creative-card"><img src="imagens/email-namorados.webp" alt="E-mail marketing Dia dos Namorados WolyCasa"><div class="creative-caption">Dia dos Namorados · CRM · Storytelling</div></div>
         <div class="creative-card"><img src="imagens/email-festa-junina.webp" alt="E-mail marketing Festa Junina WolyCasa"><div class="creative-caption">Festa Junina · CRM · Conteúdo de ocasião</div></div>
+      </div>
+    </div>
+
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">VSL · Copy para vídeo</div>
+      <h3 class="subsection-title">Variações de copy, ganchos e CTAs para vídeo</h3>
+      <p class="subsection-desc">Desenvolvimento de copies para vídeos comerciais em diferentes formatos, explorando aberturas, argumentos e chamadas para ação de acordo com objetivo, produto e canal.</p>
+      <div class="vsl-highlight">
+        <div class="vsl-highlight-head">
+          <div>
+            <div class="case-tipo">Linha Siciliano · 3 variações</div>
+            <h3 class="case-title">Mesmo vídeo, três caminhos de copy</h3>
+          </div>
+          <p>Para a Linha Siciliano, trabalhei três versões do mesmo material em 16:9, mudando gancho, ritmo de leitura e CTA para testar diferentes pontos de entrada da audiência.</p>
+        </div>
+        <div class="video-gallery">
+          <div class="video-card featured"><video src="videos/linha-siciliano-copy-01.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 1 · Gancho de produto</div></div>
+          <div class="video-card featured"><video src="videos/linha-siciliano-copy-02.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 2 · Gancho de ocasião</div></div>
+          <div class="video-card featured"><video src="videos/linha-siciliano-copy-03.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 3 · CTA alternativo</div></div>
+        </div>
+      </div>
+      <div class="gallery-hint">Arraste para ver mais vídeos</div>
+      <div class="video-gallery">
+        <div class="video-card reel"><video src="videos/woly-mesa-posta-mist-reels.mp4" controls preload="metadata"></video><div class="video-caption">Reels · Mesa posta Mist</div></div>
+        <div class="video-card reel"><video src="videos/woly-top3-produtos-reels.mp4" controls preload="metadata"></video><div class="video-caption">Reels · Top 3 produtos</div></div>
       </div>
     </div>
 
@@ -664,6 +724,10 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <p class="subsection-desc">Peças com foco em campanha sazonal, collabs e comunicação promocional, sempre conectando mensagem, estética e ação esperada do usuário.</p>
       <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
       <div class="banners-grid">
+        <div class="banner-item wide reveal"><img src="imagens/banner-blog-black-friday.png" alt="WolyCasa - Banner Black Friday blog"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Black Friday · CTA promocional</div></div></div>
+        <div class="banner-item wide reveal d1"><img src="imagens/banner-blog-whatsapp.png" alt="WolyCasa - Banner Canal WhatsApp"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Canal WhatsApp · Copy + CTA</div></div></div>
+        <div class="banner-item wide reveal d2"><img src="imagens/banner-blog-halloween.png" alt="WolyCasa - Banner Halloween"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Halloween · Campanha sazonal</div></div></div>
+        <div class="banner-item wide reveal"><img src="imagens/banner-blog-promocional.png" alt="WolyCasa - Banner promocional blog"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Blog · Banner promocional</div></div></div>
         <div class="banner-item wide reveal"><img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div></div>
         <div class="banner-item reveal d1"><img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div></div>
         <div class="banner-item reveal d2"><img src="imagens/banner-ano-novo-02.webp" alt="WolyCasa - Campanha Ano Novo 2"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Variação de campanha</div></div></div>
@@ -678,8 +742,8 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 <section class="pubs sec" id="publicacoes">
   <div class="sec-inner">
     <div class="slabel">Publicações</div>
-    <h2 class="stitle">Portais, veículos e <em>blogs</em></h2>
-    <p class="ssub">Artigos publicados em portais de imprensa, blogs e e-commerces de grandes marcas.</p>
+    <h2 class="stitle">Posts de <em>blog</em> e conteúdo editorial</h2>
+    <p class="ssub">Conteúdos publicados em blogs, e-commerces e portais editoriais, com foco em SEO, utilidade e linguagem de marca.</p>
     <div class="pubs-grid">
       <a class="pub-item reveal" href="https://www.wolycasa.com.br/blogs/news/o-que-levar-para-um-piquenique" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">O que levar para um piquenique</div></a>
       <a class="pub-item reveal d1" href="https://www.wolycasa.com.br/blogs/news/como-montar-ceia-de-natal" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Como montar uma ceia de natal</div></a>
@@ -689,13 +753,34 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <a class="pub-item reveal d2" href="https://www.jusbrasil.com.br/artigos/saiba-como-fazer-um-termo-de-autorizacao-de-uso-de-imagem/1862661630" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Saiba como fazer um termo de autorização de uso de imagem</div></a>
       <a class="pub-item reveal" href="https://www.jusbrasil.com.br/artigos/multa-contrato-de-aluguel-como-calcular/1862581749" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Multa contrato de aluguel: como calcular</div></a>
       <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/tipos-de-granito/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tipos de granito: beleza e funcionalidade na sua decoração</div></a>
-      <a class="pub-item reveal d2" href="https://meioenegocio.com.br/Demissoes_em_massa_afetam_mais_de_6_mil_brasileiros_de_janeiro_a_marco_deste_ano/#google_vignette" target="_blank" rel="noopener"><div class="pub-veiculo">Meio & Negócio</div><div class="pub-titulo">Demissões em massa afetam mais de 6 mil brasileiros de janeiro a março</div></a>
       <a class="pub-item reveal" href="https://revistahaus.com.br/sem-categoria/tapete-terra-diatomacea/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tapete de terra diatomácea: o mineral natural que une bem-estar e design</div></a>
       <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/sala-simples-e-elegante/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Sala simples e elegante: como decorar em poucos passos</div></a>
       <a class="pub-item reveal d2" href="https://revistahaus.com.br/haus/conteudo-publicitario/posicao-dos-talheres/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Posição dos talheres: como organizar a mesa posta</div></a>
-      <a class="pub-item reveal" href="https://www.folhavitoria.com.br/geral/numero-de-familias-brasileiras-endividadas-aumenta-em-3-3/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Número de famílias brasileiras endividadas aumenta em 3,3%</div></a>
-      <a class="pub-item reveal d1" href="https://www.jusbrasil.com.br/noticias/empresas-abracam-a-comunidade-lgbtqiap-e-buscam-aumentar-a-diversidade/1874044777" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Empresas abraçam a comunidade LGBTQIAP+ e buscam aumentar a diversidade</div></a>
-    </div>    </div>
+    </div>
+  </div>
+</section>
+
+<!-- PR -->
+<section class="pr sec" id="pr">
+  <div class="sec-inner">
+    <div class="slabel">Notícias &amp; PR</div>
+    <h2 class="stitle">Portais de notícia e <em>link building</em></h2>
+    <p class="ssub">Publicações em veículos de imprensa e portais parceiros, conectando pautas de negócio, comportamento e dados a estratégias de PR e SEO off-page.</p>
+    <div class="pubs-grid">
+      <a class="pub-item reveal" href="https://meioenegocio.com.br/Demissoes_em_massa_afetam_mais_de_6_mil_brasileiros_de_janeiro_a_marco_deste_ano/#google_vignette" target="_blank" rel="noopener"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Demissões em massa afetam mais de 6 mil brasileiros de janeiro a março</div></a>
+      <a class="pub-item reveal d1" href="https://www.folhavitoria.com.br/geral/numero-de-familias-brasileiras-endividadas-aumenta-em-3-3/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Número de famílias brasileiras endividadas aumenta em 3,3%</div></a>
+      <a class="pub-item reveal d2" href="https://abefin.org.br/problemas-financeiros-do-colaborador-impactam-a-produtividade-no-trabalho/" target="_blank" rel="noopener"><div class="pub-veiculo">Abefin</div><div class="pub-titulo">Problemas financeiros do colaborador impactam a produtividade no trabalho</div></a>
+      <a class="pub-item reveal" href="https://horacampinas.com.br/stf-aprova-projeto-de-revisao-de-aposentadoria-para-beneficiar-aposentados/" target="_blank" rel="noopener"><div class="pub-veiculo">Hora Campinas</div><div class="pub-titulo">STF aprova projeto de revisão de aposentadoria para beneficiar aposentados</div></a>
+      <a class="pub-item reveal d1" href="https://portalfnt.com.br/278433-numero-de-divorcios-diminuiu-apos-o-periodo-de-pandemia/" target="_blank" rel="noopener"><div class="pub-veiculo">Portal FNT</div><div class="pub-titulo">Número de divórcios diminuiu após o período de pandemia</div></a>
+      <a class="pub-item reveal d2" href="https://www.conquistadefato.com.br/noticia/31116/empresas-brasileiras-utilizam-tecnologia-para-melhorar-o-setor-juridico" target="_blank" rel="noopener"><div class="pub-veiculo">Conquista de Fato</div><div class="pub-titulo">Empresas brasileiras utilizam tecnologia para melhorar o setor jurídico</div></a>
+      <a class="pub-item reveal" href="https://saopaulosao.com.br/Mulheres_sao_maioria_no_setor_juridico_mas_ainda_ganham_menos_que_homens/" target="_blank" rel="noopener"><div class="pub-veiculo">São Paulo São</div><div class="pub-titulo">Mulheres são maioria no setor jurídico mas ainda ganham menos que homens</div></a>
+      <a class="pub-item reveal d1" href="https://www.folhauberaba.com.br/Estrategias_de_ESG_impactam_empresas_e_os_recursos_humanos/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Uberaba</div><div class="pub-titulo">Estratégias de ESG impactam empresas e os recursos humanos</div></a>
+      <a class="pub-item reveal d2" href="https://www.folhavitoria.com.br/geral/lei-14-45722-empresas-com-cipa-sao-obrigadas-a-dar-treinamentos-sobre-assedio/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Empresas com CIPA são obrigadas a dar treinamentos sobre assédio</div></a>
+      <a class="pub-item reveal" href="https://meioenegocio.com.br/Empresas_buscam_ampliar_a_diversidade_atraves_de_vagas_afirmativas/" target="_blank" rel="noopener"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Empresas buscam ampliar a diversidade através de vagas afirmativas</div></a>
+      <a class="pub-item reveal d1" href="https://www.dmanapolis.com.br/noticia/43089/sudeste-lidera-ranking-de-incidencia-de-cancer-de-mama" target="_blank" rel="noopener"><div class="pub-veiculo">DM Anápolis</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
+      <a class="pub-item reveal d2" href="https://www.agenciaoglobo.com.br/dinonews/Default.aspx?idnot=95833&amp;tit=Sudeste+lidera+ranking+de+incid%C3%AAncia+de+c%C3%A2ncer+de+mama" target="_blank" rel="noopener"><div class="pub-veiculo">Agência O Globo</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
+      <a class="pub-item reveal" href="https://tjcc.com.br/acontece-tjcc/sudeste-lidera-ranking-de-incidencia-de-cancer-de-mama/" target="_blank" rel="noopener"><div class="pub-veiculo">TJCC</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
+    </div>
   </div>
 </section>
 
