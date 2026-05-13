@@ -56,6 +56,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-desc{font-size:0.9rem;color:var(--ink-60);max-width:400px;line-height:1.9;margin-bottom:2.5rem;border-left:2px solid var(--rust);padding-left:1rem}
 .hero-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:2.75rem}
 .tag{font-size:0.64rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.32rem 0.8rem;border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px;transition:all 0.2s}
+.tag:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
 .tag.hi{background:var(--rust);color:var(--white);border-color:var(--rust)}
 .hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
 .btn{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.82rem 1.7rem;border-radius:1px;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem}
@@ -64,9 +65,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-g{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
 .btn-g:hover{border-color:var(--ink);transform:translateY(-2px)}
 .hero-photo{width:100%;height:100%;min-height:calc(100vh - 68px);border-radius:0;overflow:hidden;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:none}
-.hero-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--rust-pale) 0%,rgba(242,232,227,0.36) 22%,rgba(242,232,227,0.05) 58%,rgba(242,232,227,0.22) 100%);z-index:2;pointer-events:none}
-.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(242,232,227,0.18),rgba(242,232,227,0.02) 42%,rgba(242,232,227,0.28));z-index:3;pointer-events:none}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(0.86) contrast(1.02)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:none}
 .hero-photo-initials{font-family:var(--fd);font-size:6rem;font-weight:600;color:var(--sand);letter-spacing:-0.05em}
 .hero-photo-note{position:absolute;bottom:1rem;left:1rem;right:1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-60);text-align:center;background:rgba(255,255,255,0.7);padding:0.5rem}
 
@@ -117,27 +116,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* CASES */
 .cases{background:var(--bg)}
-.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:4rem}
-.case-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:4rem;align-items:stretch}
+.case-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}
 .case-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(28,25,23,0.07)}
-.case-card.wide{grid-column:1/-1}
-.case-head{padding:2rem 2rem 1.5rem}
-.case-visual{background:linear-gradient(135deg,var(--rust-pale),var(--surface));color:var(--ink);padding:1.55rem;border-bottom:1px solid var(--ink-10);display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
-.case-visual.light{background:linear-gradient(135deg,var(--rust-pale),var(--surface));color:var(--ink)}
-.result-tile{min-height:118px;border:1px solid var(--ink-10);background:rgba(255,255,255,0.55);border-radius:4px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
-.case-visual.light .result-tile{border-color:var(--ink-10);background:rgba(255,255,255,0.55)}
-.result-kicker{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-30)}
-.case-visual.light .result-kicker{color:var(--ink-30)}
-.result-number{font-family:var(--fb);font-size:2.25rem;font-weight:500;line-height:1;color:var(--rust);letter-spacing:-0.02em}
-.case-visual.light .result-number{color:var(--rust)}
-.result-copy{font-size:0.72rem;line-height:1.55;color:var(--ink-60)}
-.case-visual.light .result-copy{color:var(--ink-60)}
-.visual-bars{grid-column:1/-1;display:flex;flex-direction:column;gap:0.55rem;margin-top:0.15rem}
-.visual-bar{display:grid;grid-template-columns:110px 1fr auto;gap:0.7rem;align-items:center;font-size:0.68rem;color:var(--ink-60)}
-.case-visual.light .visual-bar{color:var(--ink-60)}
-.visual-track{height:6px;background:var(--ink-10);border-radius:999px;overflow:hidden}
-.case-visual.light .visual-track{background:var(--ink-10)}
-.visual-fill{height:100%;background:linear-gradient(90deg,var(--sand),var(--rust-light));border-radius:999px}
+.case-top{padding:1.7rem 2rem;background:linear-gradient(135deg,var(--rust-pale),var(--surface));border-bottom:1px solid var(--ink-10)}
+.result-number{font-family:var(--fb);font-size:3rem;font-weight:500;line-height:1;color:var(--rust);letter-spacing:-0.02em}
+.result-copy{font-size:0.78rem;line-height:1.55;color:var(--ink-60);margin-top:0.45rem}
+.case-head{padding:2rem;display:flex;flex-direction:column;gap:0.9rem;min-height:320px}
 .case-tipo{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem}
 .case-tipo::before{content:'';width:14px;height:1px;background:var(--rust)}
 .case-title{font-family:var(--fd);font-size:1.4rem;font-weight:400;line-height:1.2;margin-bottom:0.85rem;color:var(--ink)}
@@ -146,6 +131,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .metric-label{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-30);margin-bottom:0.4rem}
 .metric-val{font-family:var(--fd);font-size:1.9rem;font-weight:600;color:var(--rust);line-height:1;margin-bottom:0.2rem}
 .metric-desc{font-size:0.77rem;color:var(--ink-60)}
+.results-toggle{display:inline-flex;margin-top:0.8rem;align-items:center;gap:0.45rem;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink-30);background:transparent;padding:0.65rem 0.9rem;border-radius:2px;cursor:pointer}
+.results-toggle:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.case-results{display:none}
+.case-card.results-open .case-results{display:block}
 
 
 .case-cta{display:inline-flex;margin-top:1.2rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);text-decoration:none;transition:all 0.2s;align-items:center;gap:0.35rem}
@@ -182,6 +171,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .collab-card{margin-top:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;padding:2rem}
 .collab-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.1rem}
 .collab-tag{font-size:0.68rem;color:var(--ink-60);background:var(--surface);border:1px solid var(--ink-10);padding:0.45rem 0.75rem;border-radius:100px}
+.collab-gallery{margin-top:1.5rem}
 .subsection-block{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--ink-10)}
 .subsection-kicker{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.65rem}
 .subsection-title{font-family:var(--fd);font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--ink)}
@@ -254,24 +244,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .video-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
 
 /* ESPECIALIDADES */
-.esp{background:var(--ink)}
-.esp .slabel{color:var(--sand)}
-.esp .slabel::after{background:var(--sand)}
-.esp .stitle{color:var(--white)}
-.esp .ssub{color:rgba(253,252,250,0.45)}
-.esp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:3.5rem;border:1px solid rgba(255,255,255,0.06)}
-.esp-item{background:var(--ink);padding:2.25rem;transition:background 0.25s}
-.esp-item:hover{background:#242220}
-.esp-num{font-family:var(--fd);font-size:3.5rem;font-weight:300;color:rgba(255,255,255,0.04);line-height:1;margin-bottom:1.25rem}
-.esp-title{font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:0.65rem;line-height:1.2}
-.esp-desc{font-size:0.8rem;color:rgba(253,252,250,0.4);line-height:1.8;margin-bottom:1.1rem}
+.esp{background:var(--surface)}
+.esp .slabel{color:var(--rust)}
+.esp .slabel::after{background:var(--rust)}
+.esp .stitle{color:var(--ink)}
+.esp .ssub{color:var(--ink-60)}
+.esp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-10);margin-top:3.5rem;border:1px solid var(--ink-10)}
+.esp-item{background:var(--bg);padding:2.25rem;transition:background 0.25s}
+.esp-item:hover{background:var(--rust-pale)}
+.esp-num{font-family:var(--fd);font-size:3.5rem;font-weight:300;color:rgba(28,25,23,0.14);line-height:1;margin-bottom:1.25rem}
+.esp-title{font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.65rem;line-height:1.2}
+.esp-desc{font-size:0.8rem;color:var(--ink-60);line-height:1.8;margin-bottom:1.1rem}
 .esp-tags{display:flex;flex-wrap:wrap;gap:0.35rem}
-.esp-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.65rem;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.3);border-radius:100px}
+.esp-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.65rem;border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px}
 
 /* DEPOIMENTOS */
 .deps{background:var(--surface)}
-.deps-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3.5rem}
+.deps-grid{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;margin-top:3.5rem;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
+.deps-grid::-webkit-scrollbar{height:6px}
+.deps-grid::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
+.deps-grid::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
 .dep-card{padding:2rem;border:1px solid var(--ink-10);border-radius:2px;transition:box-shadow 0.3s;position:relative}
+.dep-card{flex:0 0 min(460px,85vw);scroll-snap-align:start}
 .dep-card:hover{box-shadow:0 8px 32px rgba(28,25,23,0.06)}
 .dep-card::before{content:'"';font-family:var(--fd);font-size:4rem;color:var(--rust);opacity:0.2;position:absolute;top:0.5rem;left:1.5rem;line-height:1}
 .dep-text{font-family:var(--fd);font-size:0.97rem;font-style:italic;line-height:1.75;color:var(--ink);margin-bottom:1.5rem;padding-top:1.5rem}
@@ -328,9 +322,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
   .instagram-wrap{grid-template-columns:1fr}
   .cases-grid{grid-template-columns:1fr}
-  .case-card.wide{grid-column:auto}
-  .case-visual{grid-template-columns:1fr}
-  .visual-bar{grid-template-columns:1fr}
+  .case-head{min-height:auto}
   .vt-inner{grid-template-columns:1fr}
   .banners-intro{grid-template-columns:1fr}
   .pubs-grid{grid-template-columns:1fr 1fr}
@@ -471,39 +463,58 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   </div>
 </section>
 
+<!-- ESPECIALIDADES -->
+<section class="esp sec" id="especialidades">
+  <div class="sec-inner">
+    <div class="slabel">O que faço</div>
+    <h2 class="stitle">Especialidades</h2>
+    <p class="ssub">Domínio profundo nos pilares que fazem uma estratégia de conteúdo funcionar de verdade — do dado à narrativa.</p>
+    <div class="esp-grid">
+      <div class="esp-item reveal">
+        <div class="esp-num">01</div>
+        <h3 class="esp-title">SEO, GEO &amp; SMO</h3>
+        <p class="esp-desc">Pesquisa de palavras-chave, otimização on-page e estratégias de GEO e SMO para melhorar descoberta orgânica, relevância editorial e distribuição de conteúdo.</p>
+        <div class="esp-tags"><span class="esp-tag">SEO on-page</span><span class="esp-tag">GEO</span><span class="esp-tag">SMO</span><span class="esp-tag">Keywords</span><span class="esp-tag">Otimização editorial</span></div>
+      </div>
+      <div class="esp-item reveal d1">
+        <div class="esp-num">02</div>
+        <h3 class="esp-title">Copywriting &amp; Branded Content</h3>
+        <p class="esp-desc">Copy para redes sociais, anúncios e campanhas integradas. Narrativas que conectam cultura pop, produto e audiência com criatividade, intenção estratégica e CTA orientado a resultado.</p>
+        <div class="esp-tags"><span class="esp-tag">Copy de anúncio</span><span class="esp-tag">Social media</span><span class="esp-tag">Branded content</span><span class="esp-tag">Real-time marketing</span><span class="esp-tag">Tom de voz</span></div>
+      </div>
+      <div class="esp-item reveal d2">
+        <div class="esp-num">03</div>
+        <h3 class="esp-title">Content Strategy &amp; Branding</h3>
+        <p class="esp-desc">Planejamento editorial, pesquisa de tendências, collabs com marcas e influenciadores. Estratégias 360º que alinham performance e identidade com repertório para mudar o ponteiro do negócio.</p>
+        <div class="esp-tags"><span class="esp-tag">Pauta editorial</span><span class="esp-tag">Branding</span><span class="esp-tag">Influência</span><span class="esp-tag">PR &amp; Link building</span><span class="esp-tag">Trends</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CASES -->
 <section class="cases sec" id="cases">
   <div class="sec-inner">
     <div class="slabel">Portfólio</div>
     <h2 class="stitle">Cases e <em>resultados</em></h2>
-    <p class="ssub">Resultados em formato mais direto: contexto enxuto, métrica em destaque e prova visual sempre que disponível.</p>
+    <p class="ssub">Primeiro, o contexto estratégico de cada case. Os resultados ficam disponíveis no botão “ver números”.</p>
     <div class="cases-grid">
 
       <!-- SEO -->
       <div class="case-card reveal">
-        <div class="case-visual">
-          <div class="result-tile">
-            <div class="result-kicker">Posição no site</div>
-            <div class="result-number">#1</div>
-            <div class="result-copy">Artigo mais clicado desde set/24</div>
-          </div>
-          <div class="result-tile">
-            <div class="result-kicker">Keywords</div>
-            <div class="result-number">3/5</div>
-            <div class="result-copy">Entre as principais palavras de tráfego</div>
-          </div>
-          <div class="visual-bars">
-            <div class="visual-bar"><span>Cliques</span><div class="visual-track"><div class="visual-fill" style="width:100%"></div></div><strong>#1</strong></div>
-            <div class="visual-bar"><span>Impressões</span><div class="visual-track"><div class="visual-fill" style="width:82%"></div></div><strong>#2</strong></div>
-          </div>
+        <div class="case-top">
+          <div class="result-number">#1</div>
+          <div class="result-copy">Case de redação SEO com melhor resultado no período</div>
         </div>
         <div class="case-head">
           <div class="case-tipo">Redação SEO</div>
-          <h3 class="case-title">Recuperação e otimização de conteúdo sobre signos</h3>
-          <p class="case-desc">Reotimização de um conteúdo estratégico para recuperar performance orgânica, fortalecendo palavra-chave principal, variações, URL, meta title e description.</p>
+          <h3 class="case-title">Reestruturação SEO de conteúdo sobre signos</h3>
+          <p class="case-desc">Na minha passagem como redator no e-commerce Westwing, identifiquei que os textos sobre signos tinham o melhor desempenho no blog. Após uma queda de performance, reestruturei o conteúdo com foco em uma palavra-chave forte e ajustes técnicos de SEO, incluindo URL, meta title e meta description.</p>
+          <p class="case-desc">Desde a publicação em setembro/24, o artigo se tornou o mais clicado no site, o segundo em impressões e ainda gerou 3 das 5 principais palavras-chave de entrada orgânica.</p>
           <a href="https://www.westwing.com.br/guiar/signos/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
+          <button class="results-toggle" type="button" data-target="seo-results">Ver números</button>
         </div>
-        <div class="case-metric">
+        <div class="case-metric case-results" id="seo-results">
           <div class="metric-label">Resultado desde set/24</div>
           <div class="metric-val">#1</div>
           <div class="metric-desc">Artigo mais clicado do site · 2º em impressões · gerou 3 das 5 principais palavras-chave de tráfego</div>
@@ -512,82 +523,24 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
 
       <!-- PR Lexly -->
       <div class="case-card reveal d1">
-        <div class="case-visual light">
-          <div class="result-tile">
-            <div class="result-kicker">Tráfego</div>
-            <div class="result-number">+120%</div>
-            <div class="result-copy">Crescimento direto no site</div>
-          </div>
-          <div class="result-tile">
-            <div class="result-kicker">Autoridade</div>
-            <div class="result-number">PR</div>
-            <div class="result-copy">Backlinks qualificados em portais</div>
-          </div>
-          <div class="visual-bars">
-            <div class="visual-bar"><span>Relevância da pauta</span><div class="visual-track"><div class="visual-fill" style="width:92%"></div></div><strong>Alta</strong></div>
-            <div class="visual-bar"><span>Aderência ao público</span><div class="visual-track"><div class="visual-fill" style="width:88%"></div></div><strong>B2B</strong></div>
-          </div>
+        <div class="case-top">
+          <div class="result-number">+120%</div>
+          <div class="result-copy">Aumento de tráfego com estratégia de PR + backlinks</div>
         </div>
         <div class="case-head">
           <div class="case-tipo">PR · Link Building · SEO Off-page · GEO</div>
           <h3 class="case-title">Link building via PR para a Lexly Brasil</h3>
-          <p class="case-desc">Estratégia de link building via PR com pauta sobre “Semana de 4 Dias Úteis”, conectando tema de alta busca a veículos com autoridade e público alinhado.</p>
+          <p class="case-desc">Na Lexly Brasil, legaltech focada em públicos B2C, B2B e SaaS, redigi matérias e publicações em portais de notícia como parte da estratégia de backlinks. O objetivo era alcançar advogados e profissionais de RH com pautas de interesse real para essas audiências.</p>
+          <p class="case-desc">A partir de pesquisas de tendência, escolhi o tema “Semana de 4 Dias Úteis”, que estava em alta no período. A publicação ajudou a ampliar alcance e autoridade, contribuindo para um aumento de mais de 120% no tráfego do site.</p>
           <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
+          <button class="results-toggle" type="button" data-target="pr-results">Ver números</button>
         </div>
-        <div class="case-metric">
+        <div class="case-metric case-results" id="pr-results">
           <div class="metric-label">Impacto direto</div>
           <div class="metric-val">+120%</div>
           <div class="metric-desc">Crescimento no tráfego do site · backlinks qualificados em portais de autoridade</div>
         </div>
       </div>
-
-      <!-- SMO Westwing -->
-      <div class="case-card wide reveal">
-        <div class="case-head">
-          <div class="case-tipo">SMO · GEO · Estratégia Integrada</div>
-          <h3 class="case-title">Estratégia SMO integrada com SEO e Social — Westwing</h3>
-          <p class="case-desc">Estratégia de SMO para ampliar descoberta orgânica do vídeo, conectando busca, otimização de conteúdo e distribuição social.</p>
-          <div class="video-case">
-            <div>
-              <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/IVsQBRstUrE" title="TOUR em CASA DE CAMPO com DECORAÇÃO FARMHOUSE em VALINHOS | Homestories #WestwingBR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-              <div class="youtube-proof">
-                <div class="proof-card">
-                  <div class="proof-title">Termos de pesquisa do YouTube</div>
-                  <div class="proof-total">Proporção do seu tráfego total: <strong>13,7%</strong></div>
-                  <div class="proof-list">
-                    <div class="proof-row"><span class="proof-label">farmhouse</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">6,8%</span></div>
-                    <div class="proof-row"><span class="proof-label">westwing</span><div class="proof-bar"><div class="proof-fill" style="width:75%"></div></div><span class="proof-val">5,1%</span></div>
-                    <div class="proof-row"><span class="proof-label">decoração de casa</span><div class="proof-bar"><div class="proof-fill" style="width:73.5%"></div></div><span class="proof-val">5,0%</span></div>
-                    <div class="proof-row"><span class="proof-label">casa de campo</span><div class="proof-bar"><div class="proof-fill" style="width:57.4%"></div></div><span class="proof-val">3,9%</span></div>
-                    <div class="proof-row"><span class="proof-label">casa vogue</span><div class="proof-bar"><div class="proof-fill" style="width:38.2%"></div></div><span class="proof-val">2,6%</span></div>
-                  </div>
-                </div>
-                <div class="proof-card">
-                  <div class="proof-title">Sites ou apps externos</div>
-                  <div class="proof-total">Proporção do seu tráfego total: <strong>3,2%</strong></div>
-                  <div class="proof-list">
-                    <div class="proof-row"><span class="proof-label">Google Search</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">48,5%</span></div>
-                    <div class="proof-row"><span class="proof-label">whatsapp.com</span><div class="proof-bar"><div class="proof-fill" style="width:33.8%"></div></div><span class="proof-val">16,4%</span></div>
-                    <div class="proof-row"><span class="proof-label">instagram.com</span><div class="proof-bar"><div class="proof-fill" style="width:26.6%"></div></div><span class="proof-val">12,9%</span></div>
-                    <div class="proof-row"><span class="proof-label">WhatsApp</span><div class="proof-bar"><div class="proof-fill" style="width:23.3%"></div></div><span class="proof-val">11,3%</span></div>
-                    <div class="proof-row"><span class="proof-label">YouTube</span><div class="proof-bar"><div class="proof-fill" style="width:2.3%"></div></div><span class="proof-val">1,1%</span></div>
-                  </div>
-                </div>
-              </div>
-              <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" rel="noopener" class="case-cta">Visualizar vídeo no YouTube →</a>
-            </div>
-            <div class="video-insights">
-              <div class="insight-item"><span>Principal fonte de tráfego externo</span><strong>Google Search · 48,5%</strong></div>
-              <div class="insight-item"><span>Termo com maior tração</span><strong>farmhouse · 6,8%</strong></div>
-              <div class="insight-item"><span>Impacto da estratégia</span><strong>SEO + Social + GEO</strong></div>
-              <p class="case-note">Esses números evidenciam que a otimização do vídeo não só ampliou a descoberta orgânica, como também conectou intenção de busca, conteúdo e distribuição social de forma integrada. O resultado foi uma audiência qualificada e uma participação expressiva do Google Search como canal de entrada.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -613,10 +566,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <p>A ativação conectou landing page, blog, social e CRM com foco em mesa posta, café da manhã na cama e recorrência de uso. Como destaque, a mini campanha <strong>“Dê mais do que flores, dê lembranças”</strong> incentivou a compra combinada de flores + vaso para aumentar ticket e diferenciação. Meu papel envolveu estratégia, conceito criativo, copywriting e direcionamento de comunicação.</p>
         </div>
         <div class="campaign-showcase">
-          <div class="subsection-kicker">Campanha 360° · Dia das Mães</div>
-          <h3 class="subsection-title">Peças da campanha Dia das Mães WolyCasa</h3>
-          <p class="subsection-desc">Seleção visual usada para ilustrar a campanha em landing page, comunicação digital e redes sociais, mantendo conceito, texto e direção criativa alinhados ao posicionamento da marca.</p>
-          <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
           <div class="creative-grid">
             <div class="creative-card wide"><img src="imagens/maes-wolycasa-06.webp" alt="Banner da landing page Dia das Mães WolyCasa"><div class="creative-caption">Dia das Mães · Banner da LP</div></div>
             <div class="creative-card wide"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Storytelling"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
@@ -645,8 +594,18 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
     <div class="collab-card reveal">
       <div class="case-tipo">PR · Social · CRM · Branding</div>
       <h3 class="case-title">WolyCasa &amp; iCasei</h3>
-      <p class="case-desc">Campanha de collab que uniu WolyCasa e iCasei para aproximar uma marca de utilidades domésticas e enxoval de casamento de uma plataforma especializada em listas e sites de casamento. A estratégia conectou PR, social, CRM e branding para construir relevância em um momento de alta intenção: a montagem da casa nova.</p>
-      <div class="collab-tags"><span class="collab-tag">Enxoval de casamento</span><span class="collab-tag">Lista de presentes</span><span class="collab-tag">PR</span><span class="collab-tag">Social</span><span class="collab-tag">CRM</span><span class="collab-tag">Branding</span></div>
+      <p class="case-desc">A parceria entre WolyCasa e iCasei foi desenhada para fortalecer o branding da WolyCasa ao lado de uma marca consolidada no universo bridal, conectando o momento do casamento ao início da vida em casa nova. A ação combinou troca de benefícios entre marcas, cupons de desconto, ativações digitais, posts collab, régua de CRM e release para imprensa.</p>
+      <p class="case-desc">Com base no relatório de outubro/2025, os conteúdos da collab alcançaram alta visibilidade e boa resposta da audiência: o primeiro post registrou 30.055 visualizações e o terceiro 26.279, reforçando aderência do tema para o público da marca.</p>
+      <div class="collab-tags"><span class="collab-tag">Enxoval de casamento</span><span class="collab-tag">Lista de presentes</span><span class="collab-tag">Cupons cruzados</span><span class="collab-tag">Social collab</span><span class="collab-tag">CRM</span><span class="collab-tag">PR</span></div>
+      <div class="creative-grid collab-gallery">
+        <div class="creative-card"><img src="imagens/icasei-collab-post-01.png" alt="Post collab WolyCasa e iCasei"><div class="creative-caption">Post collab · anúncio da parceria</div></div>
+        <div class="creative-card"><img src="imagens/icasei-divulgacao-grupo-vip.png" alt="Divulgação da parceria iCasei e WolyCasa"><div class="creative-caption">Ativação digital · grupo VIP</div></div>
+        <div class="creative-card wide"><img src="imagens/icasei-banner-blog.png" alt="Banner iCasei no blog WolyCasa"><div class="creative-caption">Blog banner · benefício cruzado</div></div>
+        <div class="video-card reel"><video src="videos/icasei-collab-instagram.mp4" controls preload="metadata"></video><div class="video-caption">Vídeo collab · Instagram</div></div>
+      </div>
+      <div class="hero-btns" style="margin-top:1rem">
+        <a href="https://portal.saladanoticia.com.br/noticia/15379/icasei-e-wolycasa-lancam-collab-para-noivos-e-recem-casados" target="_blank" rel="noopener" class="btn btn-g">Ver release →</a>
+      </div>
     </div>
 
     <div class="subsection-block reveal">
@@ -672,18 +631,13 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
             <div class="case-tipo">Linha Siciliano · 3 variações</div>
             <h3 class="case-title">Mesmo vídeo, três caminhos de copy</h3>
           </div>
-          <p>Para a Linha Siciliano, trabalhei três versões do mesmo material em 16:9, mudando gancho, ritmo de leitura e CTA para testar diferentes pontos de entrada da audiência.</p>
+          <p>Para o lançamento da linha de louças Limão Siciliano da Lyor, trabalhei copies para VSLs com diferentes ganchos. No último vídeo, o gancho segue uma abordagem mais comercial, com CTA direto de conversão.</p>
         </div>
         <div class="video-gallery">
           <div class="video-card featured"><video src="videos/linha-siciliano-copy-01.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 1 · Gancho de produto</div></div>
           <div class="video-card featured"><video src="videos/linha-siciliano-copy-02.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 2 · Gancho de ocasião</div></div>
-          <div class="video-card featured"><video src="videos/linha-siciliano-copy-03.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 3 · CTA alternativo</div></div>
+          <div class="video-card featured"><video src="videos/linha-siciliano-copy-03.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 3 · Gancho comercial + CTA</div></div>
         </div>
-      </div>
-      <div class="gallery-hint">Arraste para ver mais vídeos</div>
-      <div class="video-gallery">
-        <div class="video-card reel"><video src="videos/woly-mesa-posta-mist-reels.mp4" controls preload="metadata"></video><div class="video-caption">Reels · Mesa posta Mist</div></div>
-        <div class="video-card reel"><video src="videos/woly-top3-produtos-reels.mp4" controls preload="metadata"></video><div class="video-caption">Reels · Top 3 produtos</div></div>
       </div>
     </div>
 
@@ -718,23 +672,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">Banners · Campanhas visuais</div>
-      <h3 class="subsection-title">Direção de copy e CTAs para peças de campanha</h3>
-      <p class="subsection-desc">Peças com foco em campanha sazonal, collabs e comunicação promocional, sempre conectando mensagem, estética e ação esperada do usuário.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="banners-grid">
-        <div class="banner-item wide reveal"><img src="imagens/banner-blog-black-friday.png" alt="WolyCasa - Banner Black Friday blog"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Black Friday · CTA promocional</div></div></div>
-        <div class="banner-item wide reveal d1"><img src="imagens/banner-blog-whatsapp.png" alt="WolyCasa - Banner Canal WhatsApp"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Canal WhatsApp · Copy + CTA</div></div></div>
-        <div class="banner-item wide reveal d2"><img src="imagens/banner-blog-halloween.png" alt="WolyCasa - Banner Halloween"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Halloween · Campanha sazonal</div></div></div>
-        <div class="banner-item wide reveal"><img src="imagens/banner-blog-promocional.png" alt="WolyCasa - Banner promocional blog"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Blog · Banner promocional</div></div></div>
-        <div class="banner-item wide reveal"><img src="imagens/banner-verao-2026.webp" alt="WolyCasa - Verão 2026"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Verão 2026 · Copy + CTA</div></div></div>
-        <div class="banner-item reveal d1"><img src="imagens/banner-ano-novo-01.webp" alt="WolyCasa - Campanha Ano Novo"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Campanha sazonal</div></div></div>
-        <div class="banner-item reveal d2"><img src="imagens/banner-ano-novo-02.webp" alt="WolyCasa - Campanha Ano Novo 2"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa · Ano Novo · Variação de campanha</div></div></div>
-        <div class="banner-item tall reveal"><img src="imagens/ana-hickmann-ads-169.webp" alt="WolyCasa - Ana Hickmann Collab"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Branded Content</div></div></div>
-        <div class="banner-item tall reveal d1"><img src="imagens/ana-hickmann-mesa-jantar.webp" alt="WolyCasa - Ana Hickmann Mesa Jantar"><div class="banner-overlay"><div class="banner-overlay-text">WolyCasa × Ana Hickmann · Mesa Posta</div></div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -756,6 +693,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <a class="pub-item reveal" href="https://revistahaus.com.br/sem-categoria/tapete-terra-diatomacea/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tapete de terra diatomácea: o mineral natural que une bem-estar e design</div></a>
       <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/sala-simples-e-elegante/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Sala simples e elegante: como decorar em poucos passos</div></a>
       <a class="pub-item reveal d2" href="https://revistahaus.com.br/haus/conteudo-publicitario/posicao-dos-talheres/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Posição dos talheres: como organizar a mesa posta</div></a>
+      <a class="pub-item reveal" href="https://blog.blablacar.com.br/dicas/viagens-de-carro-dicas-para-economizar-e-aproveitar-o-trajeto" target="_blank" rel="noopener"><div class="pub-veiculo">BlaBlaCar</div><div class="pub-titulo">Viagens de carro: dicas para economizar e aproveitar o trajeto</div></a>
     </div>
   </div>
 </section>
@@ -779,36 +717,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <a class="pub-item reveal" href="https://meioenegocio.com.br/Empresas_buscam_ampliar_a_diversidade_atraves_de_vagas_afirmativas/" target="_blank" rel="noopener"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Empresas buscam ampliar a diversidade através de vagas afirmativas</div></a>
       <a class="pub-item reveal d1" href="https://www.dmanapolis.com.br/noticia/43089/sudeste-lidera-ranking-de-incidencia-de-cancer-de-mama" target="_blank" rel="noopener"><div class="pub-veiculo">DM Anápolis</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
       <a class="pub-item reveal d2" href="https://www.agenciaoglobo.com.br/dinonews/Default.aspx?idnot=95833&amp;tit=Sudeste+lidera+ranking+de+incid%C3%AAncia+de+c%C3%A2ncer+de+mama" target="_blank" rel="noopener"><div class="pub-veiculo">Agência O Globo</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
-      <a class="pub-item reveal" href="https://tjcc.com.br/acontece-tjcc/sudeste-lidera-ranking-de-incidencia-de-cancer-de-mama/" target="_blank" rel="noopener"><div class="pub-veiculo">TJCC</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- ESPECIALIDADES -->
-<section class="esp sec" id="especialidades">
-  <div class="sec-inner">
-    <div class="slabel">O que faço</div>
-    <h2 class="stitle">Especialidades</h2>
-    <p class="ssub">Domínio profundo nos pilares que fazem uma estratégia de conteúdo funcionar de verdade — do dado à narrativa.</p>
-    <div class="esp-grid">
-      <div class="esp-item reveal">
-        <div class="esp-num">01</div>
-        <h3 class="esp-title">SEO, GEO &amp; SMO</h3>
-        <p class="esp-desc">Pesquisa de palavras-chave, otimização on-page e estratégias de GEO e SMO para melhorar descoberta orgânica, relevância editorial e distribuição de conteúdo.</p>
-        <div class="esp-tags"><span class="esp-tag">SEO on-page</span><span class="esp-tag">GEO</span><span class="esp-tag">SMO</span><span class="esp-tag">Keywords</span><span class="esp-tag">Otimização editorial</span></div>
-      </div>
-      <div class="esp-item reveal d1">
-        <div class="esp-num">02</div>
-        <h3 class="esp-title">Copywriting &amp; Branded Content</h3>
-        <p class="esp-desc">Copy para redes sociais, anúncios e campanhas integradas. Narrativas que conectam cultura pop, produto e audiência com criatividade, intenção estratégica e CTA orientado a resultado.</p>
-        <div class="esp-tags"><span class="esp-tag">Copy de anúncio</span><span class="esp-tag">Social media</span><span class="esp-tag">Branded content</span><span class="esp-tag">Real-time marketing</span><span class="esp-tag">Tom de voz</span></div>
-      </div>
-      <div class="esp-item reveal d2">
-        <div class="esp-num">03</div>
-        <h3 class="esp-title">Content Strategy &amp; Branding</h3>
-        <p class="esp-desc">Planejamento editorial, pesquisa de tendências, collabs com marcas e influenciadores. Estratégias 360º que alinham performance e identidade — com repertório para mudar o ponteiro de qualquer negócio.</p>
-        <div class="esp-tags"><span class="esp-tag">Pauta editorial</span><span class="esp-tag">Branding</span><span class="esp-tag">Influência</span><span class="esp-tag">PR &amp; Link building</span><span class="esp-tag">Trends</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -869,7 +777,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
         </div>
       </div>
 
-      <div class="dep-card reveal" style="grid-column:1/-1">
+      <div class="dep-card reveal">
         <p class="dep-text">"Tive o privilégio de aprender sobre copywriting com Gustavo e a principal lição que ficou para mim foi entender que escrever vai muito além de um texto bonito. Ele é extremamente dedicado e estratégico. Com ele aprendi a importância do SEO e, principalmente, de comunicar a marca com clareza, intenção e nos detalhes certos exatamente da forma que queremos ser percebidos. Recomendo para qualquer empresa ou profissional que queira transformar comunicação em posicionamento e resultado."</p>
         <div class="dep-author">
           <div class="dep-avatar">GP</div>
@@ -952,7 +860,7 @@ setTimeout(() => {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
 const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
-document.querySelectorAll('.creative-card img, .vt-gallery img, .banner-item img').forEach(img => {
+document.querySelectorAll('.creative-card img, .vt-gallery img').forEach(img => {
   img.addEventListener('click', () => {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = img.src;
@@ -970,6 +878,18 @@ function closeLightbox(){
 if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Toggle de resultados por case
+document.querySelectorAll('.results-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('data-target');
+    const result = id ? document.getElementById(id) : null;
+    const card = btn.closest('.case-card');
+    if (!result || !card) return;
+    card.classList.toggle('results-open');
+    btn.textContent = card.classList.contains('results-open') ? 'Ocultar números' : 'Ver números';
+  });
+});
 
 </script>
 </body>
