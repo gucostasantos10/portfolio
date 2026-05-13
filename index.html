@@ -40,8 +40,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:0.7rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--rust)}
+.nav-actions{display:flex;align-items:center;gap:0.45rem}
 .nav-cta{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);background:var(--rust);padding:0.55rem 1.3rem;border-radius:1px;text-decoration:none;transition:background 0.2s}
 .nav-cta:hover{background:var(--rust-light)}
+.nav-cta.alt{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
+.nav-cta.alt:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
 
 /* HERO */
 .hero{min-height:100vh;padding-top:68px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
@@ -123,6 +126,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .result-number{font-family:var(--fb);font-size:3rem;font-weight:500;line-height:1;color:var(--rust);letter-spacing:-0.02em}
 .result-copy{font-size:0.78rem;line-height:1.55;color:var(--ink-60);margin-top:0.45rem}
 .case-head{padding:2rem;display:flex;flex-direction:column;gap:0.9rem;min-height:320px}
+.case-brand{display:flex;justify-content:flex-end;margin-bottom:0.1rem}
+.case-brand-pill{display:inline-flex;align-items:center;justify-content:center;min-width:122px;height:34px;padding:0 0.8rem;border:1px solid var(--ink-10);background:var(--bg);font-size:0.67rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-60)}
 .case-tipo{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem}
 .case-tipo::before{content:'';width:14px;height:1px;background:var(--rust)}
 .case-title{font-family:var(--fd);font-size:1.4rem;font-weight:400;line-height:1.2;margin-bottom:0.85rem;color:var(--ink)}
@@ -135,24 +140,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .results-toggle:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
 .case-results{display:none}
 .case-card.results-open .case-results{display:block}
-.smo-geo-block{margin-top:1.5rem;background:var(--surface);border:1px solid var(--ink-10)}
-.smo-geo-head{font-family:var(--fb);background:var(--rust);color:var(--white);font-size:1.25rem;line-height:1;padding:0.85rem 1.25rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase}
-.smo-geo-body{display:grid;grid-template-columns:1.05fr 0.95fr;gap:1.25rem;padding:1.25rem}
-.smo-geo-embed{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border:1px solid var(--ink-10);background:#000}
-.smo-geo-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.smo-geo-copy{font-family:var(--fb);font-size:0.92rem;line-height:1.85;color:var(--ink-60);align-self:start}
-.smo-geo-copy strong{color:var(--ink);font-weight:500}
-.smo-geo-kpis{display:grid;grid-template-columns:1fr;gap:0.7rem;margin-top:1rem}
-.smo-geo-kpi{padding:0.8rem 0.9rem;background:var(--bg);border:1px solid var(--ink-10)}
-.smo-geo-kpi span{display:block;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-bottom:0.2rem}
-.smo-geo-kpi strong{font-family:var(--fd);font-size:1.3rem;line-height:1;color:var(--ink)}
-.smo-geo-copy a{color:var(--rust);font-weight:500;text-decoration:none}
-.smo-geo-copy a:hover{text-decoration:underline}
-.smo-geo-more{display:none}
-.smo-geo-more.open{display:block}
-.smo-geo-more-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:0.8rem}
-.smo-geo-more .metric-label{margin-bottom:0.2rem}
-.smo-geo-more .metric-desc{font-size:0.74rem}
 
 
 .case-cta{display:inline-flex;margin-top:1.2rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);text-decoration:none;transition:all 0.2s;align-items:center;gap:0.35rem}
@@ -160,6 +147,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .video-case{display:grid;grid-template-columns:1.15fr 0.85fr;gap:2rem;margin-top:2rem;align-items:start}
 .video-wrapper{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:8px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.22)}
 .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.video-wrapper video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none}
 .youtube-proof{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
 .proof-card{padding:1.2rem;border:1px solid var(--ink-10);background:var(--bg);border-radius:4px}
 .proof-title{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
@@ -336,10 +324,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
   .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
   .video-case{grid-template-columns:1fr}
   .youtube-proof{grid-template-columns:1fr}
-  .smo-geo-body{grid-template-columns:1fr}
-  .smo-geo-copy{font-size:0.9rem}
-  .smo-geo-head{font-size:1.1rem}
-  .smo-geo-more-grid{grid-template-columns:1fr}
   .campaign-case{grid-template-columns:1fr}
   .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
   .instagram-wrap{grid-template-columns:1fr}
@@ -375,7 +359,10 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
     <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="nav-cta">LinkedIn →</a>
+  <div class="nav-actions">
+    <a href="docs/Gustavo-Costa-Curriculo-ATS.pdf" target="_blank" download class="nav-cta alt">Baixar CV</a>
+    <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="nav-cta">LinkedIn →</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -529,6 +516,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="result-copy">Case de redação SEO com melhor resultado no período</div>
         </div>
         <div class="case-head">
+          <div class="case-brand"><span class="case-brand-pill">Westwing</span></div>
           <div class="case-tipo">Redação SEO</div>
           <h3 class="case-title">Reestruturação SEO de conteúdo sobre signos</h3>
           <p class="case-desc">Na minha passagem como redator no e-commerce Westwing, identifiquei que os textos sobre signos tinham o melhor desempenho no blog. Após uma queda de performance, reestruturei o conteúdo com foco em uma palavra-chave forte e ajustes técnicos de SEO, incluindo URL, meta title e meta description.</p>
@@ -550,6 +538,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="result-copy">Aumento de tráfego com estratégia de PR + backlinks</div>
         </div>
         <div class="case-head">
+          <div class="case-brand"><span class="case-brand-pill">Lexly</span></div>
           <div class="case-tipo">PR · Link Building · SEO Off-page · GEO</div>
           <h3 class="case-title">Link building via PR para a Lexly Brasil</h3>
           <p class="case-desc">Na Lexly Brasil, legaltech focada em públicos B2C, B2B e SaaS, redigi matérias e publicações em portais de notícia como parte da estratégia de backlinks. O objetivo era alcançar advogados e profissionais de RH com pautas de interesse real para essas audiências.</p>
@@ -563,44 +552,84 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="metric-desc">Crescimento no tráfego do site · backlinks qualificados em portais de autoridade</div>
         </div>
       </div>
-    </div>
 
-    <div class="smo-geo-block reveal">
-      <div class="smo-geo-head">SMO - GEO</div>
-      <div class="smo-geo-body">
-        <div class="smo-geo-embed">
-          <iframe width="1455" height="818" src="https://www.youtube.com/embed/IVsQBRstUrE" title="TOUR em CASA DE CAMPO com DECORAÇÃO FARMHOUSE em VALINHOS | Homestories #WestwingBR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="case-card reveal d2">
+        <div class="case-top">
+          <div class="result-number">48,5%</div>
+          <div class="result-copy">Google Search como principal fonte externa no case de SMO/GEO</div>
         </div>
-        <p class="smo-geo-copy">
-          Em minha passagem no time de SEO da Westwing, a partir de análise de tendências e do alinhamento entre SEO, conteúdo e social, construí a estratégia de SMO para ampliar a descoberta orgânica do vídeo. Com base em pesquisas de palavras-chave, otimizei estrutura e contexto do conteúdo, o que aumentou a audiência e fortaleceu o papel do Google Search como principal canal externo.
-          <span class="smo-geo-kpis">
-            <span class="smo-geo-kpi"><span>Termos de pesquisa no YouTube</span><strong>13,7% do tráfego total</strong></span>
-            <span class="smo-geo-kpi"><span>Sites e apps externos</span><strong>Google Search liderando com 48,5%</strong></span>
-          </span>
-          <button class="results-toggle smo-toggle" type="button" data-target="smo-results">Ver números</button>
-          <div class="case-metric smo-geo-more" id="smo-results">
-            <div class="metric-label">Detalhamento de números</div>
-            <div class="smo-geo-more-grid">
-              <div>
-                <div class="metric-val">6,8%</div>
-                <div class="metric-desc">Termo “farmhouse” no YouTube Search</div>
+        <div class="case-head">
+          <div class="case-brand"><span class="case-brand-pill">Westwing</span></div>
+          <div class="case-tipo">SMO · GEO · SEO + Social</div>
+          <h3 class="case-title">Westwing: descoberta orgânica em vídeo</h3>
+          <p class="case-desc">Estruturei a estratégia de SMO com base em tendências e pesquisa de palavras-chave para conectar SEO, conteúdo e social no YouTube.</p>
+          <p class="case-desc">A otimização ampliou descoberta orgânica e consolidou Google Search como principal canal externo do vídeo.</p>
+          <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" rel="noopener" class="case-cta">Visualizar vídeo no YouTube →</a>
+          <button class="results-toggle" type="button" data-target="smo-results">Ver números</button>
+        </div>
+        <div class="case-metric case-results" id="smo-results">
+          <div class="metric-label">Detalhamento do case</div>
+          <div class="metric-val">13,7%</div>
+          <div class="metric-desc">Proporção do tráfego total via pesquisa no YouTube.</div>
+          <div class="youtube-proof">
+            <div class="proof-card">
+              <div class="proof-title">Termos de pesquisa do YouTube</div>
+              <div class="proof-total">Proporção do seu tráfego total: <strong>13,7%</strong></div>
+              <div class="proof-list">
+                <div class="proof-row"><span class="proof-label">farmhouse</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">6,8%</span></div>
+                <div class="proof-row"><span class="proof-label">westwing</span><div class="proof-bar"><div class="proof-fill" style="width:75%"></div></div><span class="proof-val">5,1%</span></div>
+                <div class="proof-row"><span class="proof-label">decoração de casa</span><div class="proof-bar"><div class="proof-fill" style="width:73.5%"></div></div><span class="proof-val">5,0%</span></div>
+                <div class="proof-row"><span class="proof-label">casa de campo</span><div class="proof-bar"><div class="proof-fill" style="width:57.4%"></div></div><span class="proof-val">3,9%</span></div>
+                <div class="proof-row"><span class="proof-label">casa vogue</span><div class="proof-bar"><div class="proof-fill" style="width:38.2%"></div></div><span class="proof-val">2,6%</span></div>
               </div>
-              <div>
-                <div class="metric-val">5,1%</div>
-                <div class="metric-desc">Termo “westwing” no YouTube Search</div>
-              </div>
-              <div>
-                <div class="metric-val">16,4%</div>
-                <div class="metric-desc">Tráfego externo via whatsapp.com</div>
-              </div>
-              <div>
-                <div class="metric-val">12,9%</div>
-                <div class="metric-desc">Tráfego externo via instagram.com</div>
+            </div>
+            <div class="proof-card">
+              <div class="proof-title">Sites ou apps externos</div>
+              <div class="proof-total">Proporção do seu tráfego total: <strong>3,2%</strong></div>
+              <div class="proof-list">
+                <div class="proof-row"><span class="proof-label">Google Search</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">48,5%</span></div>
+                <div class="proof-row"><span class="proof-label">whatsapp.com</span><div class="proof-bar"><div class="proof-fill" style="width:33.8%"></div></div><span class="proof-val">16,4%</span></div>
+                <div class="proof-row"><span class="proof-label">instagram.com</span><div class="proof-bar"><div class="proof-fill" style="width:26.6%"></div></div><span class="proof-val">12,9%</span></div>
+                <div class="proof-row"><span class="proof-label">WhatsApp</span><div class="proof-bar"><div class="proof-fill" style="width:23.3%"></div></div><span class="proof-val">11,3%</span></div>
+                <div class="proof-row"><span class="proof-label">YouTube</span><div class="proof-bar"><div class="proof-fill" style="width:2.3%"></div></div><span class="proof-val">1,1%</span></div>
               </div>
             </div>
           </div>
-          <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" rel="noopener">Ver vídeo no YouTube →</a>
-        </p>
+          <p class="case-note">A partir de análise de tendências e alinhamento entre SEO, conteúdo e social, a estratégia de SMO ampliou a audiência e potencializou a descoberta via Google Search.</p>
+          <div class="video-wrapper" style="margin-top:1rem">
+            <iframe width="1455" height="818" src="https://www.youtube.com/embed/IVsQBRstUrE" title="TOUR em CASA DE CAMPO com DECORAÇÃO FARMHOUSE em VALINHOS | Homestories #WestwingBR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal d3">
+        <div class="case-top">
+          <div class="result-number">10 PDPs</div>
+          <div class="result-copy">Otimização semântica e arquitetura da informação em produtos prioritários</div>
+        </div>
+        <div class="case-head">
+          <div class="case-brand"><span class="case-brand-pill">WolyCasa</span></div>
+          <div class="case-tipo">SEO Semântico · Arquitetura da Informação · CRO</div>
+          <h3 class="case-title">Wolff 131 anos: orgânico + conversão comercial</h3>
+          <p class="case-desc">Otimizei textos de venda, descrições e FAQ dos 10 principais produtos da campanha para elevar tráfego orgânico e persuasão comercial.</p>
+          <p class="case-desc">A estratégia separou KWs transacionais no e-commerce e informacionais no blog, com links internos para categorias.</p>
+          <a href="https://www.wolycasa.com.br/blogs/news/garrafa-termica-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Garrafa térmica Wolff →</a>
+          <a href="https://www.wolycasa.com.br/blogs/news/faqueiros-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Faqueiros Wolff →</a>
+          <a href="https://www.wolycasa.com.br/blogs/news/colecoes-e-linhas-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Coleções e linhas Wolff →</a>
+          <button class="results-toggle" type="button" data-target="wolff-results">Ver números</button>
+        </div>
+        <div class="case-metric case-results" id="wolff-results">
+          <div class="metric-label">Impacto direto</div>
+          <div class="metric-val">Sell-out</div>
+          <div class="metric-desc">PDP do Faqueiro Croise (high ticket) voltou a vender e esgotou estoque, com 2 vendas vindas de Google Search (Shopify).</div>
+          <div class="creative-grid" style="margin-top:1rem">
+            <div class="creative-card wide"><img src="imagens/banner-wolff-131-1.webp" alt="Banner aniversário Wolff 131 anos - seleção"><div class="creative-caption">Wolff 131 anos · Banner de seleção</div></div>
+            <div class="creative-card wide"><img src="imagens/banner-wolff-131-2.webp" alt="Banner aniversário Wolff 131 anos - oportunidades"><div class="creative-caption">Wolff 131 anos · Banner de oportunidades</div></div>
+          </div>
+          <div class="video-wrapper" style="margin-top:1rem">
+            <video src="videos/otimizacao-pdp-faqueiro-wolff.mp4" controls preload="metadata"></video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -617,56 +646,62 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
       <p class="ssub">Responsável por conceito criativo, copywriting, CTAs, CRM e direção de conteúdo em campanhas integradas — da ação sazonal ao branded content com influenciadores.</p>
     </div>
 
-    <div class="campaign-case reveal">
-      <div class="campaign-copy">
-        <div class="case-tipo">CRM · Copywriting · Campanha Sazonal</div>
-        <h3 class="case-title">Dia das Mães WolyCasa 2025</h3>
-        <p class="case-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural: itens para casa. O objetivo era elevar valor percebido, gerar novas ocasiões de consumo e posicionar mesa posta, decoração e utilidades como presentes com memória, afeto e uso recorrente.</p>
-        <div class="campaign-textbox">
-          <p>O desafio foi transformar produtos funcionais em uma escolha de presente com valor emocional. A estratégia partiu de memórias afetivas, estilos e personalidades maternas para ressignificar momentos à mesa e posicionar os produtos como facilitadores de experiências.</p>
-          <p>A ativação conectou landing page, blog, social e CRM com foco em mesa posta, café da manhã na cama e recorrência de uso. Como destaque, a mini campanha <strong>“Dê mais do que flores, dê lembranças”</strong> incentivou a compra combinada de flores + vaso para aumentar ticket e diferenciação. Meu papel envolveu estratégia, conceito criativo, copywriting e direcionamento de comunicação.</p>
-        </div>
-        <div class="campaign-showcase">
-          <div class="creative-grid">
-            <div class="creative-card wide"><img src="imagens/maes-wolycasa-06.webp" alt="Banner da landing page Dia das Mães WolyCasa"><div class="creative-caption">Dia das Mães · Banner da LP</div></div>
-            <div class="creative-card wide"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Storytelling"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
-            <div class="creative-card"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama festejar"><div class="creative-caption">Estilos de mãe · Festejar</div></div>
-            <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama organizar"><div class="creative-caption">Estilos de mãe · Organizar</div></div>
-            <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama decorar"><div class="creative-caption">Estilos de mãe · Decorar</div></div>
-            <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Estilo de mãe"><div class="creative-caption">Estilos de mãe · Inspiração</div></div>
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">Branded content · Social</div>
+      <h3 class="subsection-title">Campanha Vale Tudo — WolyCasa</h3>
+      <p class="subsection-desc">Aproveitando o hype do último capítulo da novela, desenvolvi uma campanha de branded content em tempo real, conectando cultura pop, storytelling e e-commerce. A copy associou produtos aos suspeitos da trama sem depender de venda direta, usando curiosidade, timing e referências visuais como gatilhos de engajamento.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
+      <div class="vt-gallery">
+        <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
+        <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
+        <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
+        <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
+        <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
+        <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
+        <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
+        <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
+      </div>
+    </div>
+
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">CRM · Copywriting · Campanha Sazonal</div>
+      <h3 class="subsection-title">Dia das Mães WolyCasa 2025</h3>
+      <p class="subsection-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural: itens para casa. O objetivo foi elevar valor percebido e gerar novas ocasiões de consumo com narrativa emocional, desdobrada em landing page, blog, social e CRM.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
+      <div class="creative-grid">
+        <div class="creative-card wide"><img src="imagens/maes-wolycasa-06.webp" alt="Banner da landing page Dia das Mães WolyCasa"><div class="creative-caption">Dia das Mães · Banner da LP</div></div>
+        <div class="creative-card wide"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Storytelling"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama festejar"><div class="creative-caption">Estilos de mãe · Festejar</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama organizar"><div class="creative-caption">Estilos de mãe · Organizar</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama decorar"><div class="creative-caption">Estilos de mãe · Decorar</div></div>
+        <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Estilo de mãe"><div class="creative-caption">Estilos de mãe · Inspiração</div></div>
+      </div>
+      <div class="instagram-wrap">
+        <div class="instagram-card">
+          <div class="instagram-embed">
+            <iframe src="https://www.instagram.com/reel/DJRcC2cxeLD/embed/captioned/" title="Reel da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
           </div>
-          <div class="instagram-wrap">
-            <div class="instagram-card">
-              <div class="instagram-embed">
-                <iframe src="https://www.instagram.com/reel/DJRcC2cxeLD/embed/captioned/" title="Reel da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="instagram-card">
-              <div class="instagram-embed">
-                <iframe src="https://www.instagram.com/p/DJKBksrO_Ax/embed/captioned/" title="Post da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
-              </div>
-            </div>
-            <p class="instagram-note">Desdobramentos sociais da campanha em formatos complementares, preservando capa, legenda e contexto original dos posts.</p>
+        </div>
+        <div class="instagram-card">
+          <div class="instagram-embed">
+            <iframe src="https://www.instagram.com/p/DJKBksrO_Ax/embed/captioned/" title="Post da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="collab-card reveal">
-      <div class="case-tipo">PR · Social · CRM · Branding</div>
-      <h3 class="case-title">WolyCasa &amp; iCasei</h3>
-      <p class="case-desc">A parceria entre WolyCasa e iCasei foi desenhada para fortalecer o branding da WolyCasa ao lado de uma marca consolidada no universo bridal, conectando o momento do casamento ao início da vida em casa nova. A ação combinou troca de benefícios entre marcas, cupons de desconto, ativações digitais, posts collab, régua de CRM e release para imprensa.</p>
-      <p class="case-desc">Com base no relatório de outubro/2025, os conteúdos da collab alcançaram alta visibilidade e boa resposta da audiência: o primeiro post registrou 30.055 visualizações e o terceiro 26.279, reforçando aderência do tema para o público da marca.</p>
-      <div class="collab-tags"><span class="collab-tag">Enxoval de casamento</span><span class="collab-tag">Lista de presentes</span><span class="collab-tag">Cupons cruzados</span><span class="collab-tag">Social collab</span><span class="collab-tag">CRM</span><span class="collab-tag">PR</span></div>
-      <div class="creative-grid collab-gallery">
+    <div class="subsection-block reveal">
+      <div class="subsection-kicker">PR · Social · CRM · Branding</div>
+      <h3 class="subsection-title">WolyCasa &amp; iCasei</h3>
+      <p class="subsection-desc">Collab para fortalecer o branding da WolyCasa no universo bridal, conectando casamento e casa nova com benefícios cruzados, ativações digitais, posts collab, régua de CRM e release para imprensa. Em outubro/2025, os conteúdos alcançaram alta visibilidade, com destaque para 30.055 visualizações no primeiro post e 26.279 no terceiro.</p>
+      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
+      <div class="creative-grid">
         <div class="creative-card"><img src="imagens/icasei-collab-post-01.png" alt="Post collab WolyCasa e iCasei"><div class="creative-caption">Post collab · anúncio da parceria</div></div>
         <div class="creative-card"><img src="imagens/icasei-divulgacao-grupo-vip.png" alt="Divulgação da parceria iCasei e WolyCasa"><div class="creative-caption">Ativação digital · grupo VIP</div></div>
         <div class="creative-card wide"><img src="imagens/icasei-banner-blog.png" alt="Banner iCasei no blog WolyCasa"><div class="creative-caption">Blog banner · benefício cruzado</div></div>
         <div class="video-card reel"><video src="videos/icasei-collab-instagram.mp4" controls preload="metadata"></video><div class="video-caption">Vídeo collab · Instagram</div></div>
       </div>
-      <div class="hero-btns" style="margin-top:1rem">
-        <a href="https://portal.saladanoticia.com.br/noticia/15379/icasei-e-wolycasa-lancam-collab-para-noivos-e-recem-casados" target="_blank" rel="noopener" class="btn btn-g">Ver release →</a>
-      </div>
+      <a href="https://portal.saladanoticia.com.br/noticia/15379/icasei-e-wolycasa-lancam-collab-para-noivos-e-recem-casados" target="_blank" rel="noopener" class="case-cta">Ver release →</a>
     </div>
 
     <div class="subsection-block reveal">
@@ -699,23 +734,6 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
           <div class="video-card featured"><video src="videos/linha-siciliano-copy-02.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 2 · Gancho de ocasião</div></div>
           <div class="video-card featured"><video src="videos/linha-siciliano-copy-03.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 3 · Gancho comercial + CTA</div></div>
         </div>
-      </div>
-    </div>
-
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">Branded content · Social</div>
-      <h3 class="subsection-title">Campanha Vale Tudo — WolyCasa</h3>
-      <p class="subsection-desc">Aproveitando o hype do último capítulo da novela, desenvolvi uma campanha de branded content em tempo real, conectando cultura pop, storytelling e e-commerce. A copy associou produtos aos suspeitos da trama sem depender de venda direta, usando curiosidade, timing e referências visuais como gatilhos de engajamento.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="vt-gallery">
-        <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
-        <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
-        <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
-        <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
-        <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
-        <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
-        <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
-        <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
       </div>
     </div>
 
@@ -864,6 +882,7 @@ footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:cent
         <p class="contato-sub">Busco novos desafios onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, criatividade e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
         <div class="hero-btns">
           <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="btn btn-p">Acessar LinkedIn →</a>
+          <a href="docs/Gustavo-Costa-Curriculo-ATS.pdf" target="_blank" download class="btn btn-g">Baixar CV</a>
           <a href="mailto:guu_costa10@icloud.com" class="btn btn-g">Enviar E-mail</a>
         </div>
       </div>
@@ -945,12 +964,6 @@ document.querySelectorAll('.results-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
     const id = btn.getAttribute('data-target');
     const result = id ? document.getElementById(id) : null;
-    if (btn.classList.contains('smo-toggle')) {
-      if (!result) return;
-      result.classList.toggle('open');
-      btn.textContent = result.classList.contains('open') ? 'Ocultar números' : 'Ver números';
-      return;
-    }
     const card = btn.closest('.case-card');
     if (!result || !card) return;
     card.classList.toggle('results-open');
