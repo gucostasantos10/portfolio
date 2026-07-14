@@ -1,976 +1,613 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gustavo Costa — Profissional de Marketing com foco em SEO, copywriting e estratégia de conteúdo. Passagem por Westwing, Boticário, MAC, Lexly e WolyCasa. Aberto a novos projetos e oportunidades.">
-<meta name="keywords" content="redator SEO, copywriter, estratégia de conteúdo, content strategy, GEO, branding, São Paulo">
-<meta property="og:title" content="Gustavo Costa | SEO · Copywriting · Content Strategy">
-<meta property="og:description" content="Narrativas que equilibram performance e branding.">
-<title>Gustavo Costa | SEO · Copywriting · Content Strategy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#F7F4EF;
-  --bg-dark:#1C1917;
-  --surface:#FFFFFF;
-  --rust:#9B3E1E;
-  --rust-light:#C8622E;
-  --rust-pale:#F2E8E3;
-  --sand:#BFA98A;
-  --sand-light:#E8DFD0;
-  --ink:#1C1917;
-  --ink-60:rgba(28,25,23,0.6);
-  --ink-30:rgba(28,25,23,0.3);
-  --ink-10:rgba(28,25,23,0.1);
-  --white:#FDFCFA;
-  --fd:'Cormorant Garamond',Georgia,serif;
-  --fb:'Epilogue',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-weight:300;line-height:1.7;overflow-x:hidden}
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-thumb{background:var(--sand);border-radius:2px}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3.5rem;background:rgba(247,244,239,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--ink-10)}
-.nav-logo{font-family:var(--fd);font-size:1.2rem;font-weight:600;color:var(--ink);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:0.7rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--rust)}
-.nav-actions{display:flex;align-items:center;gap:0.45rem}
-.nav-cta{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);background:var(--rust);padding:0.55rem 1.3rem;border-radius:1px;text-decoration:none;transition:background 0.2s}
-.nav-cta:hover{background:var(--rust-light)}
-.nav-cta.alt{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
-.nav-cta.alt:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-
-/* HERO */
-.hero{min-height:100vh;padding-top:68px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;right:0;top:0;bottom:0;width:50%;background:var(--rust-pale);z-index:0}
-.hero-left{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 3.5rem}
-.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:0;overflow:hidden;background:var(--rust-pale)}
-.eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.67rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-bottom:1.75rem}
-.eyebrow-dot{width:6px;height:6px;background:var(--rust);border-radius:50%;animation:blink 2s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero-title{font-family:var(--fd);font-size:clamp(2.8rem,5vw,4.8rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;margin-bottom:0.4rem}
-.hero-title2{font-family:var(--fd);font-size:clamp(2.8rem,5vw,4.8rem);font-weight:600;font-style:italic;line-height:1.05;letter-spacing:-0.02em;color:var(--rust);margin-bottom:2rem}
-.hero-desc{font-size:0.9rem;color:var(--ink-60);max-width:400px;line-height:1.9;margin-bottom:2.5rem;border-left:2px solid var(--rust);padding-left:1rem}
-.hero-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:2.75rem}
-.tag{font-size:0.64rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.32rem 0.8rem;border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px;transition:all 0.2s}
-.tag:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.tag.hi{background:var(--rust);color:var(--white);border-color:var(--rust)}
-.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
-.btn{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.82rem 1.7rem;border-radius:1px;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem}
-.btn-p{background:var(--ink);color:var(--white)}
-.btn-p:hover{background:var(--rust);transform:translateY(-2px)}
-.btn-g{background:transparent;color:var(--ink);border:1px solid var(--ink-30)}
-.btn-g:hover{border-color:var(--ink);transform:translateY(-2px)}
-.hero-photo{width:100%;height:100%;min-height:calc(100vh - 68px);border-radius:0;overflow:hidden;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:none}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:none}
-.hero-photo-initials{font-family:var(--fd);font-size:6rem;font-weight:600;color:var(--sand);letter-spacing:-0.05em}
-.hero-photo-note{position:absolute;bottom:1rem;left:1rem;right:1rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-60);text-align:center;background:rgba(255,255,255,0.7);padding:0.5rem}
-
-/* MARCAS */
-.marcas{background:var(--ink);padding:2.25rem 3.5rem;display:flex;align-items:center;gap:3rem;flex-wrap:wrap}
-.marcas-label{font-size:0.58rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(253,252,250,0.3);white-space:nowrap;flex-shrink:0}
-.marcas-div{width:1px;height:20px;background:rgba(255,255,255,0.1);flex-shrink:0}
-.marcas-scroll{display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap}
-.marca{font-family:var(--fd);font-size:0.95rem;font-weight:400;color:rgba(253,252,250,0.3);letter-spacing:0.04em;white-space:nowrap;transition:color 0.2s}
-.marca:hover{color:rgba(253,252,250,0.65)}
-
-/* SECTION */
-.sec{padding:6rem 3.5rem}
-.sec-inner{max-width:1100px;margin:0 auto}
-.slabel{font-size:0.63rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:0.9rem;display:flex;align-items:center;gap:0.75rem}
-.slabel::after{content:'';flex:0 0 22px;height:1px;background:var(--rust)}
-.stitle{font-family:var(--fd);font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:1.2rem}
-.stitle em{font-style:italic;color:var(--rust);font-weight:400}
-.ssub{font-size:0.88rem;color:var(--ink-60);max-width:520px;line-height:1.9}
-
-/* SOBRE */
-.sobre{background:var(--surface)}
-.sobre-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;margin-top:4rem;align-items:start}
-.sobre-card{background:var(--bg);border:1px solid var(--ink-10);padding:1.6rem;border-radius:2px;margin-bottom:1.25rem}
-.sobre-card-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-30);margin-bottom:1rem}
-.form-item{margin-bottom:0.85rem}
-.form-curso{font-size:0.84rem;font-weight:500;color:var(--ink);margin-bottom:0.1rem}
-.form-inst{font-size:0.77rem;color:var(--ink-60)}
-.form-ano{font-size:0.67rem;color:var(--rust);font-weight:500;letter-spacing:0.05em}
-.habs{display:flex;flex-direction:column;gap:0.9rem}
-.hab-row{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.hab-nome{font-size:0.76rem;color:var(--ink-60);white-space:nowrap;min-width:110px}
-.hab-bar{flex:1;height:1px;background:var(--ink-10);position:relative}
-.hab-fill{position:absolute;left:0;top:0;height:100%;background:var(--rust);width:0;transition:width 1.3s cubic-bezier(0.4,0,0.2,1)}
-.hab-pct{font-size:0.67rem;color:var(--ink-30);font-weight:500}
-.sobre-p{font-size:0.93rem;color:var(--ink-60);line-height:1.95;margin-bottom:1.2rem}
-.sobre-p strong{color:var(--ink);font-weight:500}
-.tl{margin:2.5rem 0;border-left:1px solid var(--ink-10);padding-left:2rem}
-.tl-item{position:relative;margin-bottom:2rem}
-.tl-item::before{content:'';position:absolute;left:-2.35rem;top:0.4rem;width:8px;height:8px;border-radius:50%;background:var(--bg);border:1.5px solid var(--rust)}
-.tl-period{font-size:0.63rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin-bottom:0.3rem}
-.tl-title{font-size:0.87rem;font-weight:500;color:var(--ink);margin-bottom:0.3rem}
-.tl-desc{font-size:0.8rem;color:var(--ink-60);line-height:1.7}
-.ferramentas-wrap{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--ink-10)}
-.ftag-label{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-30);margin-bottom:0.7rem}
-.ftags{display:flex;flex-wrap:wrap;gap:0.4rem}
-.ftag{font-size:0.7rem;padding:0.28rem 0.72rem;background:var(--bg);border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px;letter-spacing:0.03em}
-
-/* CASES */
-.cases{background:var(--bg)}
-.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:4rem;align-items:stretch}
-.case-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}
-.case-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(28,25,23,0.07)}
-.case-top{padding:1.7rem 2rem;background:linear-gradient(135deg,var(--rust-pale),var(--surface));border-bottom:1px solid var(--ink-10)}
-.result-number{font-family:var(--fb);font-size:3rem;font-weight:500;line-height:1;color:var(--rust);letter-spacing:-0.02em}
-.result-copy{font-size:0.78rem;line-height:1.55;color:var(--ink-60);margin-top:0.45rem}
-.case-head{padding:2rem;display:flex;flex-direction:column;gap:0.9rem;min-height:320px}
-.case-brand{display:flex;justify-content:flex-end;margin-bottom:0.1rem}
-.case-brand-pill{display:inline-flex;align-items:center;justify-content:center;min-width:122px;height:34px;padding:0 0.8rem;border:1px solid var(--ink-10);background:var(--bg);font-size:0.67rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-60)}
-.case-tipo{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem}
-.case-tipo::before{content:'';width:14px;height:1px;background:var(--rust)}
-.case-title{font-family:var(--fd);font-size:1.4rem;font-weight:400;line-height:1.2;margin-bottom:0.85rem;color:var(--ink)}
-.case-desc{font-size:0.82rem;color:var(--ink-60);line-height:1.8}
-.case-metric{padding:1.4rem 2rem;background:var(--bg);border-top:1px solid var(--ink-10)}
-.metric-label{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-30);margin-bottom:0.4rem}
-.metric-val{font-family:var(--fd);font-size:1.9rem;font-weight:600;color:var(--rust);line-height:1;margin-bottom:0.2rem}
-.metric-desc{font-size:0.77rem;color:var(--ink-60)}
-.results-toggle{display:inline-flex;margin-top:0.8rem;align-items:center;gap:0.45rem;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink-30);background:transparent;padding:0.65rem 0.9rem;border-radius:2px;cursor:pointer}
-.results-toggle:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.case-results{display:none}
-.case-card.results-open .case-results{display:block}
-
-
-.case-cta{display:inline-flex;margin-top:1.2rem;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--rust);text-decoration:none;transition:all 0.2s;align-items:center;gap:0.35rem}
-.case-cta:hover{transform:translateX(3px);color:var(--rust-light)}
-.video-case{display:grid;grid-template-columns:1.15fr 0.85fr;gap:2rem;margin-top:2rem;align-items:start}
-.video-wrapper{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:8px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.22)}
-.video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
-.video-wrapper video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:none}
-.youtube-proof{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
-.proof-card{padding:1.2rem;border:1px solid var(--ink-10);background:var(--bg);border-radius:4px}
-.proof-title{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
-.proof-total{font-size:0.72rem;color:var(--ink-60);margin-bottom:0.9rem}
-.proof-total strong{color:var(--ink);font-weight:600}
-.proof-list{display:flex;flex-direction:column;gap:0.7rem}
-.proof-row{display:grid;grid-template-columns:minmax(90px,1fr) 1.2fr auto;align-items:center;gap:0.7rem}
-.proof-label{font-size:0.75rem;color:var(--ink);line-height:1.35}
-.proof-bar{height:6px;background:var(--ink-10);border-radius:999px;overflow:hidden}
-.proof-fill{height:100%;background:linear-gradient(90deg,var(--rust),var(--rust-light));border-radius:999px}
-.proof-val{font-size:0.72rem;color:var(--ink);font-weight:600}
-.video-insights{display:flex;flex-direction:column;gap:0.85rem}
-.insight-item{padding:1rem;border:1px solid var(--ink-10);background:var(--bg);border-radius:2px}
-.insight-item span{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
-.insight-item strong{font-family:var(--fd);font-size:1.65rem;font-weight:600;color:var(--ink);line-height:1}
-.case-note{font-size:0.72rem;color:var(--ink-60);line-height:1.7;margin-top:0.6rem}
-.campaign-case{margin-bottom:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
-.campaign-copy{padding:2rem}
-.campaign-visual{background:var(--rust-pale);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;border-left:1px solid var(--ink-10)}
-.campaign-big{font-family:var(--fd);font-size:3rem;font-weight:600;color:var(--rust);line-height:1}
-.campaign-small{font-size:0.8rem;color:var(--ink-60);line-height:1.8}
-.campaign-textbox{margin-top:1.5rem;background:var(--surface);border:1px solid var(--ink-10);padding:1.35rem 1.5rem}
-.campaign-textbox p{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:850px}
-.campaign-textbox p + p{margin-top:0.8rem}
-.campaign-textbox strong{color:var(--ink);font-weight:500}
-.campaign-showcase{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--ink-10)}
-.collab-card{margin-top:2rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:2px;padding:2rem}
-.collab-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.1rem}
-.collab-tag{font-size:0.68rem;color:var(--ink-60);background:var(--surface);border:1px solid var(--ink-10);padding:0.45rem 0.75rem;border-radius:100px}
-.collab-gallery{margin-top:1.5rem}
-.subsection-block{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--ink-10)}
-.subsection-kicker{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.65rem}
-.subsection-title{font-family:var(--fd);font-size:clamp(1.55rem,2.5vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--ink)}
-.subsection-desc{font-size:0.84rem;color:var(--ink-60);line-height:1.85;max-width:650px;margin-bottom:1.5rem}
-.creative-grid,.vt-gallery,.banners-grid,.campaign-gallery,.video-gallery{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
-.creative-grid::-webkit-scrollbar,.vt-gallery::-webkit-scrollbar,.banners-grid::-webkit-scrollbar,.campaign-gallery::-webkit-scrollbar,.video-gallery::-webkit-scrollbar{height:6px}
-.creative-grid::-webkit-scrollbar-thumb,.vt-gallery::-webkit-scrollbar-thumb,.banners-grid::-webkit-scrollbar-thumb,.campaign-gallery::-webkit-scrollbar-thumb,.video-gallery::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
-.creative-grid::-webkit-scrollbar-track,.vt-gallery::-webkit-scrollbar-track,.banners-grid::-webkit-scrollbar-track,.campaign-gallery::-webkit-scrollbar-track,.video-gallery::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
-.gallery-hint{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-30);margin:-0.5rem 0 1rem}
-.creative-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;cursor:zoom-in;transition:transform 0.25s,box-shadow 0.25s;flex:0 0 min(300px,72vw);scroll-snap-align:start}
-.creative-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
-.creative-card img{width:100%;height:360px;object-fit:contain;display:block;border-radius:2px;background:var(--surface)}
-.creative-card.wide{flex-basis:min(430px,84vw)}
-.creative-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
-.lightbox{position:fixed;inset:0;background:rgba(28,25,23,0.92);z-index:999;display:none;align-items:center;justify-content:center;padding:2rem}
-.lightbox.active{display:flex}
-.lightbox img{max-width:94vw;max-height:90vh;object-fit:contain;border-radius:4px;background:var(--surface);box-shadow:0 24px 80px rgba(0,0,0,0.35)}
-.lightbox-close{position:fixed;top:1rem;right:1rem;width:42px;height:42px;border:none;border-radius:50%;background:var(--white);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
-.campaign-gallery{margin-top:1rem}
-.campaign-gallery img{width:100%;height:100%;object-fit:contain;border-radius:2px;background:var(--surface)}
-
-/* VALE TUDO */
-.vt-card{grid-column:1/-1;background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;overflow:hidden}
-.vt-inner{display:grid;grid-template-columns:1.1fr 1fr}
-.vt-content{padding:2.5rem}
-.vt-gallery{background:var(--surface);padding:1rem;border:1px solid var(--ink-10);border-radius:4px}
-.vt-gallery img{width:220px;height:330px;object-fit:contain;border-radius:3px;transition:opacity 0.2s,transform 0.2s;background:var(--surface);cursor:zoom-in;flex:0 0 auto;scroll-snap-align:start;border:1px solid var(--ink-10)}
-.vt-gallery img:hover{opacity:0.88;transform:translateY(-2px)}
-.vt-metric-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
-.vt-metric{text-align:center;padding:1rem 1.25rem;background:var(--bg);border-radius:2px;flex:1;min-width:120px}
-.vt-metric-val{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--rust)}
-.vt-metric-lbl{font-size:0.65rem;color:var(--ink-60);letter-spacing:0.06em;text-transform:uppercase;margin-top:0.2rem}
-
-/* BANNERS */
-.banners{background:var(--surface)}
-.banners-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;align-items:end}
-.banners-grid{background:transparent;border:none}
-.banner-item{background:var(--bg);border:1px solid var(--ink-10);padding:0.65rem;overflow:hidden;position:relative;transition:transform 0.3s,box-shadow 0.3s;cursor:zoom-in;border-radius:4px;flex:0 0 min(420px,82vw);scroll-snap-align:start}
-.banner-item:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(28,25,23,0.08)}
-.banner-item img{width:100%;height:260px;object-fit:contain;display:block;border-radius:2px}
-.banner-item.tall{aspect-ratio:auto}
-.banner-item.wide{flex-basis:min(560px,88vw);aspect-ratio:auto}
-.banner-overlay{position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(28,25,23,0.85));opacity:0;transition:opacity 0.3s}
-.banner-item:hover .banner-overlay{opacity:1}
-.banner-overlay-text{font-size:0.7rem;color:rgba(255,255,255,0.8);letter-spacing:0.08em;text-transform:uppercase}
-
-/* PUBLICAÇÕES */
-.pubs{background:var(--bg)}
-.pubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-10);border:1px solid var(--ink-10);margin-top:3.5rem}
-.pub-item{background:var(--surface);padding:1.4rem;transition:background 0.2s;text-decoration:none;color:inherit;display:block}
-.pub-item:hover{background:var(--rust-pale)}
-.pub-item:hover .pub-titulo{color:var(--rust)}
-.pub-veiculo{font-size:0.58rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem}
-.pub-titulo{font-size:0.83rem;color:var(--ink);line-height:1.55}
-.pr{background:var(--surface)}
-.pubs + .pr{padding-top:5rem}
-.instagram-wrap{margin-top:2rem;display:grid;grid-template-columns:repeat(2,minmax(280px,430px));gap:1rem;align-items:start}
-.instagram-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:4px;padding:0.75rem;max-width:430px}
-.instagram-embed{position:relative;width:100%;height:min(680px,78vh);min-height:520px;overflow:hidden;border-radius:3px;background:var(--bg)}
-.instagram-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none;background:var(--bg)}
-.instagram-note{grid-column:1/-1;font-size:0.82rem;color:var(--ink-60);line-height:1.85;padding-top:0.5rem;max-width:760px}
-.vsl-highlight{margin:1.5rem 0 2rem;padding:1.25rem;background:var(--bg);border:1px solid var(--ink-10);border-radius:4px}
-.vsl-highlight-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
-.vsl-highlight-head p{font-size:0.8rem;color:var(--ink-60);line-height:1.7;max-width:560px}
-.video-card{background:var(--bg);border:1px solid var(--ink-10);border-radius:4px;padding:0.65rem;flex:0 0 min(360px,82vw);scroll-snap-align:start}
-.video-card.featured{flex-basis:min(520px,88vw);background:var(--surface)}
-.video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;background:var(--ink)}
-.video-card.reel{flex-basis:min(280px,76vw)}
-.video-card.reel video{aspect-ratio:9/16}
-.video-caption{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-60);margin-top:0.55rem}
-
-/* ESPECIALIDADES */
-.esp{background:var(--surface)}
-.esp .slabel{color:var(--rust)}
-.esp .slabel::after{background:var(--rust)}
-.esp .stitle{color:var(--ink)}
-.esp .ssub{color:var(--ink-60)}
-.esp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-10);margin-top:3.5rem;border:1px solid var(--ink-10)}
-.esp-item{background:var(--bg);padding:2.25rem;transition:background 0.25s}
-.esp-item:hover{background:var(--rust-pale)}
-.esp-num{font-family:var(--fd);font-size:3.5rem;font-weight:300;color:rgba(28,25,23,0.14);line-height:1;margin-bottom:1.25rem}
-.esp-title{font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.65rem;line-height:1.2}
-.esp-desc{font-size:0.8rem;color:var(--ink-60);line-height:1.8;margin-bottom:1.1rem}
-.esp-tags{display:flex;flex-wrap:wrap;gap:0.35rem}
-.esp-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.65rem;border:1px solid var(--ink-10);color:var(--ink-60);border-radius:100px}
-
-/* DEPOIMENTOS */
-.deps{background:var(--surface)}
-.deps-grid{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0.35rem 0 1rem;align-items:stretch;margin-top:3.5rem;scrollbar-width:thin;scrollbar-color:var(--sand) transparent}
-.deps-grid::-webkit-scrollbar{height:6px}
-.deps-grid::-webkit-scrollbar-thumb{background:var(--sand);border-radius:999px}
-.deps-grid::-webkit-scrollbar-track{background:rgba(28,25,23,0.06)}
-.dep-card{padding:2rem;border:1px solid var(--ink-10);border-radius:2px;transition:box-shadow 0.3s;position:relative}
-.dep-card{flex:0 0 min(460px,85vw);scroll-snap-align:start}
-.dep-card:hover{box-shadow:0 8px 32px rgba(28,25,23,0.06)}
-.dep-card::before{content:'"';font-family:var(--fd);font-size:4rem;color:var(--rust);opacity:0.2;position:absolute;top:0.5rem;left:1.5rem;line-height:1}
-.dep-text{font-family:var(--fd);font-size:0.97rem;font-style:italic;line-height:1.75;color:var(--ink);margin-bottom:1.5rem;padding-top:1.5rem}
-.dep-author{display:flex;align-items:center;gap:0.75rem}
-.dep-avatar{width:36px;height:36px;border-radius:50%;background:var(--rust-pale);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:500;color:var(--rust);flex-shrink:0}
-.dep-name a{font-size:0.82rem;font-weight:500;color:var(--ink);text-decoration:none;transition:color 0.2s;display:block}
-.dep-name a:hover{color:var(--rust)}
-.dep-role{font-size:0.73rem;color:var(--ink-60)}
-.dep-empresa{font-size:0.68rem;color:var(--rust);font-weight:500;letter-spacing:0.04em;margin-top:0.1rem}
-
-/* CONTATO */
-.contato{background:var(--rust-pale)}
-.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:center}
-.disponivel{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.67rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#2C6E41;background:#E5F2EA;padding:0.42rem 1rem;border-radius:100px;margin-bottom:2rem}
-.disponivel-dot{width:6px;height:6px;background:#2C6E41;border-radius:50%;animation:blink 2s ease-in-out infinite}
-.contato-title{font-family:var(--fd);font-size:clamp(2rem,3.8vw,3.3rem);font-weight:300;line-height:1.1;margin-bottom:1.1rem}
-.contato-title em{font-style:italic;color:var(--rust)}
-.contato-sub{font-size:0.88rem;color:var(--ink-60);line-height:1.9;margin-bottom:2.5rem}
-.contato-card{background:var(--surface);border:1px solid var(--ink-10);border-radius:2px;padding:2.25rem}
-.c-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--ink-10);text-decoration:none;transition:gap 0.2s}
-.c-item:last-child{border-bottom:none}
-.c-item:hover{gap:1.25rem}
-.c-icon{width:34px;height:34px;border-radius:1px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0}
-.c-label{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-30);display:block;margin-bottom:0.12rem}
-.c-value{font-size:0.86rem;color:var(--ink);font-weight:400}
-
-/* FOOTER */
-footer{background:var(--ink);padding:1.6rem 3.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:var(--fd);font-size:0.95rem;color:rgba(253,252,250,0.3)}
-.footer-text{font-size:0.7rem;color:rgba(253,252,250,0.2);letter-spacing:0.07em}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1),transform 0.8s cubic-bezier(0.4,0,0.2,1)}
-.reveal.visible{opacity:1;transform:none}
-.reveal.d1{transition-delay:0.1s}
-.reveal.d2{transition-delay:0.2s}
-.reveal.d3{transition-delay:0.3s}
-
-/* RESPONSIVE */
-@media(max-width:960px){
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .hero{grid-template-columns:1fr}
-  .hero::before{display:none}
-  .hero-left{padding:4rem 1.5rem 2.5rem}
-  .hero-right{align-items:flex-start;padding:0 1.5rem 3rem;background:var(--rust-pale)}
-  .hero-photo{width:100%;max-width:320px;min-height:360px;aspect-ratio:4/5}
-  .marcas{padding:2rem 1.5rem;gap:1.5rem}
-  .sec{padding:4rem 1.5rem}
-  .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
-  .video-case{grid-template-columns:1fr}
-  .youtube-proof{grid-template-columns:1fr}
-  .campaign-case{grid-template-columns:1fr}
-  .campaign-visual{border-left:none;border-top:1px solid var(--ink-10)}
-  .instagram-wrap{grid-template-columns:1fr}
-  .cases-grid{grid-template-columns:1fr}
-  .case-head{min-height:auto}
-  .vt-inner{grid-template-columns:1fr}
-  .banners-intro{grid-template-columns:1fr}
-  .pubs-grid{grid-template-columns:1fr 1fr}
-  .esp-grid{grid-template-columns:1fr}
-  .deps-grid{grid-template-columns:1fr}
-  .contato-grid{grid-template-columns:1fr;gap:2.5rem}
-  footer{padding:1.5rem;flex-direction:column;text-align:center}
-}
-@media(max-width:600px){
-  .pubs-grid{grid-template-columns:1fr}
-  .proof-row{grid-template-columns:1fr}
-  .proof-bar{order:3}
-  .proof-val{order:2}
-}
-
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="description" content="Gustavo Costa — estrategista de conteúdo e SEO. Voz humana na era das máquinas. Tera, Westwing, WolyCasa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#8A5636;color:#F1E7D6;font-family:'Newsreader',Georgia,serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:#2B3A78;color:#F1E7D6}
+  ::-webkit-scrollbar{width:11px}
+  ::-webkit-scrollbar-track{background:#6E4429}
+  ::-webkit-scrollbar-thumb{background:#2E1B10;border:3px solid #6E4429}
+  a{color:#2B3A78}
+  a:hover{color:#3E56A8}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+  @keyframes roll{to{transform:translateX(-50%)}}
+  @keyframes tick{0%,100%{transform:rotate(var(--r,-7deg))}50%{transform:rotate(calc(var(--r,-7deg) + 2.5deg))}}
+  @keyframes caret{0%,100%{opacity:1}50%{opacity:0}}
+  @keyframes floatUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media(max-width:820px){
+    .nav-links{display:none!important}
+    .hero-collage{grid-template-columns:1fr!important}
+    .two-col{grid-template-columns:1fr!important}
+    .manuscript{grid-template-columns:1fr!important}
+    .specimens{grid-template-columns:1fr!important}
+    .col-grid{grid-template-columns:1fr!important}
+    .databar{grid-template-columns:1fr!important}
+    .hero-photo{margin:0 auto!important}
+  }
+</style>
+</helmet>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Gustavo Costa</a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#cases">Cases</a></li>
-    <li><a href="#publicacoes">Publicações</a></li>
-    <li><a href="#copies">Copies e campanhas</a></li>
-    <li><a href="#depoimentos">Depoimentos</a></li>
-    <li><a href="#contato">Contato</a></li>
+<!-- duotone filter (terroso) -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <filter id="duo" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0.33 0.34 0.33 0 0 0.33 0.34 0.33 0 0 0.33 0.34 0.33 0 0 0 0 0 1 0"></feColorMatrix>
+    <feComponentTransfer><feFuncR type="table" tableValues="0.16 0.93"></feFuncR><feFuncG type="table" tableValues="0.10 0.85"></feFuncG><feFuncB type="table" tableValues="0.06 0.70"></feFuncB></feComponentTransfer>
+  </filter>
+</svg>
+
+<!-- paper grain -->
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.5;mix-blend-mode:overlay;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E&quot;)"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 2.4rem;background:rgba(138,86,54,.82);backdrop-filter:blur(8px);border-bottom:1px solid #2E1B10">
+  <a href="#top" style="display:flex;align-items:baseline;gap:.55rem;text-decoration:none;color:#F1E7D6">
+    <span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;background:#2B3A78;color:#F1E7D6;padding:.18rem .42rem;letter-spacing:.05em">GC</span>
+    <span style="font-family:'Instrument Serif',serif;font-size:1.35rem">Gustavo Costa</span>
+  </a>
+  <ul class="nav-links" style="display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;align-items:center">
+    <li><a href="#sobre" data-en="about" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">sobre</a></li>
+    <li><a href="#trabalho" data-en="work" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">trabalho</a></li>
+    <li><a href="#campanhas" data-en="campaigns" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">campanhas</a></li>
+    <li><a href="#arquivo" data-en="archive" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">arquivo</a></li>
+    <li><a href="#vozes" data-en="voices" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">vozes</a></li>
+    <li><a href="#contato" data-en="contact" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;color:#EBD9BE;text-decoration:none">contato</a></li>
   </ul>
-  <div class="nav-actions">
-    <a href="docs/Gustavo-Costa-Curriculo-ATS.pdf" target="_blank" download class="nav-cta alt">Baixar CV</a>
-    <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="nav-cta">LinkedIn →</a>
+  <div style="display:flex;align-items:center;gap:.6rem">
+    <button id="langbtn" style="font-family:'Spline Sans Mono',monospace;font-size:.68rem;font-weight:600;background:transparent;color:#F1E7D6;border:1px solid #F1E7D6;padding:.4rem .6rem;cursor:pointer;letter-spacing:.05em">EN</button>
+    <a href="docs/Gustavo-Costa-CV-ATS-2026.pdf" target="_blank" data-en="&#8595; CV" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;background:#2B3A78;color:#F1E7D6;padding:.45rem .9rem;text-decoration:none;letter-spacing:.03em;box-shadow:2px 2px 0 #2E1B10">&#8595; CV</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-left">
-    <div class="eyebrow"><span class="eyebrow-dot"></span> Aberto a oportunidades</div>
-    <h1 class="hero-title">Narrativas que</h1>
-    <div class="hero-title2">performam.</div>
-    <p class="hero-desc">Profissional de marketing com foco em SEO, copywriting e estratégia de conteúdo — construindo narrativas que equilibram performance e branding em startups e grandes marcas.</p>
-    <div class="hero-tags">
-      <span class="tag hi">SEO · GEO</span>
-      <span class="tag">Copywriting</span>
-      <span class="tag">Content Strategy</span>
-      <span class="tag">Branding</span>
-      <span class="tag">Social Media</span>
-    </div>
-    <div class="hero-btns">
-      <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="btn btn-p">Ver LinkedIn →</a>
-      <a href="#cases" class="btn btn-g">Ver Cases</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-photo">
-      <img src="imagens/hero-gustavo-costa-4k.jpeg" alt="Gustavo Costa">
-    </div>
-  </div>
-</div>
+<!-- ══════════ HERO ══════════ -->
+<header id="top" style="position:relative;padding:7.5rem 0 0;overflow:hidden">
+  <div data-px="-0.05" aria-hidden="true" style="position:absolute;top:2rem;right:-2rem;font-family:'Instrument Serif',serif;font-size:26rem;line-height:.7;color:rgba(43,58,120,.12);pointer-events:none;z-index:0">voz</div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem;position:relative;z-index:1">
 
-<!-- MARCAS -->
-<div class="marcas">
-  <span class="marcas-label">Marcas onde atuei</span>
-  <div class="marcas-div"></div>
-  <div class="marcas-scroll">
-    <span class="marca">Grupo Boticário</span>
-    <span class="marca">MAC Cosmetics</span>
-    <span class="marca">Westwing</span>
-    <span class="marca">Lexly Brasil</span>
-    <span class="marca">Grupo Rojemac</span>
-    <span class="marca">WolyCasa</span>
-    <span class="marca">Archtrends Portobello</span>
-    <span class="marca">BlaBlaCar</span>
-    <span class="marca">Jusbrasil</span>
-  </div>
-</div>
+    <!-- masthead clipping -->
+    <div data-rev style="background:#E9DABB;color:#3A2A18;padding:.9rem 1.6rem;transform:rotate(-.8deg);box-shadow:0 12px 30px -12px rgba(0,0,0,.5);position:relative;max-width:820px;margin:0 auto">
+      <div style="position:absolute;top:-12px;left:46%;width:78px;height:24px;background:rgba(241,231,214,.6);transform:rotate(4deg);box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-family:'Spline Sans Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5a38;margin-bottom:.4rem">
+        <span data-en="Dossier nº 01">Dossiê nº 01</span><span>São Paulo · BR — 2026</span><span data-en="The right words">A palavra certa</span>
+      </div>
+      <div style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,7vw,4.4rem);line-height:.86;text-align:center;letter-spacing:.01em">A GAZETA DO REDATOR</div>
+      <div style="text-align:center;font-family:'Spline Sans Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#3A2A18;margin-top:.5rem;border-top:1px solid #3A2A18;padding-top:.5rem" data-en="Content Strategist · SEO · Copywriting">Estrategista de conteúdo · SEO · Copywriting</div>
+    </div>
 
-<!-- SOBRE -->
-<section class="sobre sec" id="sobre">
-  <div class="sec-inner">
-    <div class="slabel">Sobre mim</div>
-    <h2 class="stitle">Comunicação com <em>estratégia</em> e senso crítico</h2>
-    <div class="sobre-grid">
+    <!-- collage -->
+    <div class="hero-collage" style="display:grid;grid-template-columns:1.35fr .65fr;gap:2.5rem;align-items:start;margin-top:3rem">
       <div>
-        <div class="sobre-card reveal">
-          <div class="sobre-card-label">Formação</div>
-          <div class="form-item">
-            <div class="form-curso">Marketing</div>
-            <div class="form-inst">Universidade Anhembi Morumbi</div>
-            <div class="form-ano">2021 – 2023</div>
-          </div>
-          <div class="form-item">
-            <div class="form-curso">MBA em Marketing, Branding &amp; Growth</div>
-            <div class="form-inst">PUCRS</div>
-            <div class="form-ano">2026 – 2027</div>
-          </div>
-        </div>
-        <div class="sobre-card reveal d1">
-          <div class="sobre-card-label">Habilidades</div>
-          <div class="habs">
-            <div class="hab-row"><span class="hab-nome">SEO &amp; GEO</span><div class="hab-bar"><div class="hab-fill" data-w="93%"></div></div><span class="hab-pct">93%</span></div>
-            <div class="hab-row"><span class="hab-nome">Copywriting</span><div class="hab-bar"><div class="hab-fill" data-w="91%"></div></div><span class="hab-pct">91%</span></div>
-            <div class="hab-row"><span class="hab-nome">Content Strategy</span><div class="hab-bar"><div class="hab-fill" data-w="88%"></div></div><span class="hab-pct">88%</span></div>
-            <div class="hab-row"><span class="hab-nome">Social Media</span><div class="hab-bar"><div class="hab-fill" data-w="85%"></div></div><span class="hab-pct">85%</span></div>
-            <div class="hab-row"><span class="hab-nome">Branded Content</span><div class="hab-bar"><div class="hab-fill" data-w="89%"></div></div><span class="hab-pct">89%</span></div>
+        <div data-rev style="font-family:'Spline Sans Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:#2B3A78;font-weight:600;margin-bottom:.6rem" data-en="// content &amp; SEO strategist">// estrategista de conteúdo &amp; SEO</div>
+        <h1 data-rev style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.94;letter-spacing:-.01em;margin:0;color:#F1E7D6" data-en="The right words,<br>in the right place,<br>for the <span style=&quot;position:relative;display:inline-block&quot;>right reason.<svg viewBox=&quot;0 0 240 90&quot; style=&quot;position:absolute;left:-4%;top:-8%;width:108%;height:120%;overflow:visible&quot;><ellipse cx=&quot;120&quot; cy=&quot;45&quot; rx=&quot;112&quot; ry=&quot;38&quot; fill=&quot;none&quot; stroke=&quot;#2B3A78&quot; stroke-width=&quot;3&quot; transform=&quot;rotate(-3 120 45)&quot;></ellipse></svg></span>">
+          A palavra certa,<br>no lugar certo,<br><span style="position:relative;display:inline-block">pelo motivo certo.<svg viewBox="0 0 300 90" style="position:absolute;left:-3%;top:-6%;width:106%;height:118%;overflow:visible"><ellipse cx="150" cy="45" rx="142" ry="38" fill="none" stroke="#2B3A78" stroke-width="3" transform="rotate(-3 150 45)"></ellipse></svg></span>
+        </h1>
+
+        <div class="two-col" style="display:grid;grid-template-columns:1.1fr .9fr;gap:1.8rem;align-items:end;margin-top:1.8rem">
+          <p data-rev style="font-size:1.12rem;line-height:1.5;max-width:34ch;margin:0;color:#F6EEDD" data-en="No machine decides <em style=&quot;color:#EAD9BB;font-style:italic&quot;>what deserves to be said</em>. I work on that frontier — between the data that points the way and the voice that makes a brand memorable.">
+            Máquina nenhuma decide <em style="color:#EAD9BB;font-style:italic">o que merece ser dito</em>. Eu trabalho nessa fronteira — entre o dado que aponta a direção e a voz que faz a marca ser lembrada.
+          </p>
+          <div data-rev style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;line-height:1.7;color:#EBD9BE;border-left:2px solid #2B3A78;padding-left:1rem" data-en="<b style=&quot;color:#F1E7D6&quot;>// now</b><br>YouTube/SEO — Organic Channels at Tera, Brazil's biggest tech &amp; AI school.<br><br><b style=&quot;color:#F1E7D6&quot;>// before</b><br>Westwing · WolyCasa · Lexly · +9 years.">
+            <b style="color:#F1E7D6">// agora</b><br>YouTube/SEO — Canais Orgânicos na Tera, a maior escola de tecnologia e IA do Brasil.<br><br><b style="color:#F1E7D6">// antes</b><br>Westwing · WolyCasa · Lexly · +9 anos.
           </div>
         </div>
-        <div class="sobre-card reveal d2">
-          <div class="sobre-card-label">Ferramentas</div>
-          <div class="ftags">
-            <span class="ftag">Semrush</span><span class="ftag">Ahrefs</span><span class="ftag">Google Search Console</span><span class="ftag">Google Analytics / GA4</span><span class="ftag">Google Trends</span><span class="ftag">WordPress</span><span class="ftag">Notion</span><span class="ftag">Canva</span><span class="ftag">Monday</span><span class="ftag">Trello</span><span class="ftag">Github</span><span class="ftag">Gemini</span><span class="ftag">ChatGPT / Claude</span>
-          </div>
+
+        <div data-rev style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.2rem">
+          <a href="#trabalho" data-en="see the work &#8594;" style="font-family:'Spline Sans Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.5rem;text-decoration:none;background:#2B3A78;color:#F1E7D6;box-shadow:3px 3px 0 #2E1B10">ver o trabalho &#8594;</a>
+          <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.5rem;text-decoration:none;background:transparent;color:#F1E7D6;border:1px solid #F1E7D6">linkedin &#8599;</a>
         </div>
       </div>
-      <div>
-        <p class="sobre-p reveal">Sou um profissional de marketing com foco em <strong>SEO, copywriting e estratégia de conteúdo</strong> — construindo narrativas que equilibram performance e branding.</p>
-        <p class="sobre-p reveal">Minha trajetória passa por startups e grandes marcas, experiências que me deram repertório, visão estratégica e agilidade para atuar em <strong>ambientes dinâmicos</strong>.</p>
-        <p class="sobre-p reveal">Atuo da pauta ao CTA: transformo intenção de busca, contexto cultural e objetivo de marca em conteúdos, campanhas e peças que fazem sentido para quem lê e para o negócio.</p>
-        <p class="sobre-p reveal">Estou em constante evolução no uso de <strong>IA e ferramentas de marketing</strong> para ganhar eficiência, testar hipóteses e escalar resultados. Sou movido por comunicação com storytelling, curiosidade e senso crítico.</p>
-        <div class="tl reveal">
-          <div class="tl-item">
-            <div class="tl-period">Início de carreira · 9 anos</div>
-            <div class="tl-title">Varejo de beleza — Vendedor, Maquiador e Gerente</div>
-            <div class="tl-desc">Começou aos 18 anos em grandes marcas nacionais e internacionais como Boticário e MAC. Gerência de equipes e treinamento com foco em experiência do cliente.</div>
+
+      <!-- photo + clippings column -->
+      <div style="position:relative">
+        <div class="hero-photo" data-rev data-px="-0.04" style="position:relative;width:260px;max-width:100%;transform:rotate(3deg)">
+          <div style="position:absolute;top:-13px;left:38%;width:74px;height:26px;background:rgba(233,218,187,.72);transform:rotate(-6deg);box-shadow:0 1px 3px rgba(0,0,0,.2);z-index:3"></div>
+          <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#2E1B10,#8a5a38 55%,#C9A876);position:relative;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);overflow:hidden">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 8px,rgba(46,27,16,.16) 8px 9px)"></div>
+            <div style="position:absolute;bottom:10px;left:10px;right:10px;font-family:'Spline Sans Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#F1E7D6;text-transform:uppercase" data-en="[ portrait · duotone ]">[ retrato · duotone ]</div>
           </div>
-          <div class="tl-item">
-            <div class="tl-period">Transição · Área Comercial</div>
-            <div class="tl-title">Prospecção, Vendas e Funil — Grande rede de universidades</div>
-            <div class="tl-desc">Gerenciamento de equipes, ativações e desenvolvimento completo do funil de vendas.</div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-period">Marketing · Atual</div>
-            <div class="tl-title">SEO, Copywriting, Estratégia e Conteúdo</div>
-            <div class="tl-desc">Iniciou em startup sueca e desde então vem construindo narrativas, estratégias 360º e campanhas para marcas como Westwing, WolyCasa, Lexly e Grupo Rojemac.</div>
+          <div style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;color:#EBD9BE;text-align:center;margin-top:.5rem;font-style:italic" data-en="&#8593; the guy who writes">&#8593; o cara que escreve</div>
+        </div>
+        <!-- stamp -->
+        <div data-rev style="--r:-8deg;position:absolute;right:-4px;bottom:34px;font-family:'Spline Sans Mono',monospace;font-size:.62rem;font-weight:600;color:#2B3A78;border:2px solid #2B3A78;border-radius:50%;width:88px;height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.3;background:rgba(233,218,187,.35);animation:tick 5s ease-in-out infinite" data-en="+9 YRS<br>OF<br>VOICE">+9 ANOS<br>DE<br>VOZ</div>
+      </div>
+    </div>
+
+    <!-- dossier meta -->
+    <div data-rev style="display:flex;flex-wrap:wrap;gap:1rem 2.5rem;font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#EBD9BE;letter-spacing:.02em;text-transform:uppercase;padding:1.4rem 0;margin-top:2.6rem;border-top:1px solid #2E1B10;border-bottom:1px solid #2E1B10">
+      <span><b style="color:#F1E7D6">Dossiê</b> — Gustavo Costa</span>
+      <span>SEO · Conteúdo · Copywriting</span>
+      <span>São Paulo / BR</span>
+      <span style="color:#8FA0D8"><span style="animation:blink 1.6s infinite">●</span> <span data-en="At Tera since Jun/2026">Na Tera desde jun/2026</span></span>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div style="margin-top:2.6rem;border-top:1px solid #2E1B10;border-bottom:1px solid #2E1B10;background:#2B3A78;overflow:hidden;padding:.7rem 0">
+    <div style="display:flex;gap:2.5rem;width:max-content;animation:roll 32s linear infinite;font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:#F1E7D6;letter-spacing:.04em;white-space:nowrap">
+      <span>Tera&nbsp;&nbsp;✳&nbsp;&nbsp;Westwing&nbsp;&nbsp;✳&nbsp;&nbsp;WolyCasa&nbsp;&nbsp;✳&nbsp;&nbsp;Grupo Rojemac&nbsp;&nbsp;✳&nbsp;&nbsp;Lexly Brasil&nbsp;&nbsp;✳&nbsp;&nbsp;Grupo Boticário&nbsp;&nbsp;✳&nbsp;&nbsp;MAC Cosmetics&nbsp;&nbsp;✳&nbsp;&nbsp;Archtrends&nbsp;&nbsp;✳&nbsp;&nbsp;BlaBlaCar&nbsp;&nbsp;✳&nbsp;&nbsp;Jusbrasil&nbsp;&nbsp;✳&nbsp;&nbsp;</span>
+      <span>Tera&nbsp;&nbsp;✳&nbsp;&nbsp;Westwing&nbsp;&nbsp;✳&nbsp;&nbsp;WolyCasa&nbsp;&nbsp;✳&nbsp;&nbsp;Grupo Rojemac&nbsp;&nbsp;✳&nbsp;&nbsp;Lexly Brasil&nbsp;&nbsp;✳&nbsp;&nbsp;Grupo Boticário&nbsp;&nbsp;✳&nbsp;&nbsp;MAC Cosmetics&nbsp;&nbsp;✳&nbsp;&nbsp;Archtrends&nbsp;&nbsp;✳&nbsp;&nbsp;BlaBlaCar&nbsp;&nbsp;✳&nbsp;&nbsp;Jusbrasil&nbsp;&nbsp;✳&nbsp;&nbsp;</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ SOBRE ══════════ -->
+<section id="sobre" style="background:#F1E7D6;color:#3A2A18;padding:6rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem">
+    <div data-rev style="margin-bottom:3.2rem;position:relative">
+      <span style="position:absolute;top:-1.4rem;right:0;font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#8a6a48;letter-spacing:.05em" data-en="01 / six">01 / seis</span>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;color:#2B3A78;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem"><span style="color:#B5401C">§</span><span data-en="who writes">quem escreve</span></div>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0" data-en="A writer who learned<br>to <em style=&quot;font-style:italic;color:#2B3A78&quot;>listen</em> first">Um redator que<br>aprendeu a <em style="font-style:italic;color:#2B3A78">ouvir</em> primeiro</h2>
+    </div>
+
+    <div class="manuscript" style="display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start">
+      <div data-rev>
+        <p style="font-size:1.14rem;line-height:1.75;margin:0 0 1.4rem" data-en="<span style=&quot;font-family:'Instrument Serif',serif;float:left;font-size:4.6rem;line-height:.7;padding:.35rem .7rem 0 0;color:#B5401C&quot;>I</span> started at 18 selling makeup at a counter. I spent about six years there — service, CRM, window displays — and it taught me the most useful thing in my career: <span style=&quot;color:#2B3A78;font-style:italic;border-bottom:1.5px solid #2B3A78&quot;>listening to what a person needs</span> before trying to convince them of anything. It never left me."><span style="font-family:'Instrument Serif',serif;float:left;font-size:4.6rem;line-height:.7;padding:.35rem .7rem 0 0;color:#B5401C">C</span>omecei aos 18 vendendo maquiagem no balcão. Passei uns seis anos ali, entre atendimento, CRM e vitrine — e foi onde aprendi a coisa mais útil da minha carreira: <span style="color:#2B3A78;font-style:italic;border-bottom:1.5px solid #2B3A78">ouvir o que a pessoa precisa</span> antes de tentar convencer ela de qualquer coisa. Isso nunca mais saiu.</p>
+        <p style="font-size:1.14rem;line-height:1.75;margin:0 0 1.4rem" data-en="From the counter I moved into digital. I <span style=&quot;color:#B5401C;font-family:'Spline Sans Mono',monospace;font-weight:600&quot;>&#8250;</span> <span style=&quot;color:#2B3A78;font-style:italic;border-bottom:1.5px solid #2B3A78&quot;>built</span> a path in SEO, copywriting and content strategy — Lexly, then Westwing, then a year leading content and SEO at WolyCasa as a senior writer.">Do balcão fui pro digital. <span style="text-decoration:line-through;text-decoration-color:#B5401C;text-decoration-thickness:2px;color:#8a6a48">Aos poucos virei</span> <span style="color:#B5401C;font-family:'Spline Sans Mono',monospace;font-weight:600">&#8250;</span> <span style="color:#2B3A78;font-style:italic;border-bottom:1.5px solid #2B3A78">construí</span> uma trajetória em SEO, copywriting e estratégia de conteúdo — Lexly, depois Westwing, depois um ano liderando o conteúdo e o SEO da WolyCasa como redator sênior.</p>
+        <p style="font-size:1.14rem;line-height:1.75;margin:0 0 1.4rem" data-en="Today I run organic channels at Tera: YouTube, SEO, blog, social and newsletter. I write about AI every day at an AI school — a rare seat to think about this human-and-machine conversation without hype or fear.">Hoje estou na Tera cuidando dos canais orgânicos: YouTube, SEO, blog, social e newsletter. Escrevo sobre IA todo dia numa escola de IA — o que me dá um lugar raro pra pensar essa conversa entre <span style="color:#2B3A78;font-style:italic;border-bottom:1.5px solid #2B3A78">humano e máquina</span> sem hype e sem medo.</p>
+        <p style="font-size:1.14rem;line-height:1.75;margin:0" data-en="I use AI in my flow, of course. But the final text always passes through my head. <span style=&quot;color:#B5401C;font-family:'Spline Sans Mono',monospace;font-weight:600&quot;>&#10007;</span> I'd rather a text that is simple and true than a beautiful one that says nothing.">Uso IA no fluxo, claro. Mas o texto final passa pela minha cabeça — sempre. <span style="text-decoration:line-through;text-decoration-color:#B5401C;text-decoration-thickness:2px;color:#8a6a48">Prefiro um texto bonito e vazio</span> <span style="color:#B5401C;font-family:'Spline Sans Mono',monospace;font-weight:600">&#10007;</span> Prefiro um texto simples e verdadeiro a um bonito que não diz nada.</p>
+      </div>
+
+      <aside data-rev style="display:flex;flex-direction:column;gap:1rem">
+        <div style="border:1px solid #3A2A18;background:#E4D3B2;padding:1.4rem;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+          <div style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2B3A78;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px dashed rgba(58,42,24,.3)" data-en="Education">Formação</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.4rem 0;border-bottom:1px dotted rgba(58,42,24,.2)"><span style="font-size:.92rem">MBA Marketing, Branding &amp; Growth</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#2B3A78;font-weight:600">PUCRS · 26–27</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.4rem 0"><span style="font-size:.92rem" data-en="Marketing Technologist">Tecnólogo em Marketing</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#2B3A78;font-weight:600">Anhembi · 23</span></div>
+        </div>
+        <div style="border:1px solid #3A2A18;background:#E4D3B2;padding:1.4rem;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+          <div style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2B3A78;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px dashed rgba(58,42,24,.3)" data-en="Where I deliver most">Onde entrego mais</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.36rem 0;border-bottom:1px dotted rgba(58,42,24,.2)"><span style="font-size:.92rem">SEO &amp; GEO</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#B5401C;font-weight:600">core</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.36rem 0;border-bottom:1px dotted rgba(58,42,24,.2)"><span style="font-size:.92rem">Copywriting</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#B5401C;font-weight:600">core</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.36rem 0;border-bottom:1px dotted rgba(58,42,24,.2)"><span style="font-size:.92rem">Content Strategy</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#B5401C;font-weight:600">core</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.36rem 0;border-bottom:1px dotted rgba(58,42,24,.2)"><span style="font-size:.92rem">YouTube &amp; Social</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#2B3A78;font-weight:600" data-en="strong">forte</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:.36rem 0"><span style="font-size:.92rem">Branded Content</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#2B3A78;font-weight:600" data-en="strong">forte</span></div>
+        </div>
+        <div style="border:1px solid #3A2A18;background:#E4D3B2;padding:1.4rem;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+          <div style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2B3A78;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px dashed rgba(58,42,24,.3)" data-en="Tools">Ferramentas</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+            <span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Semrush</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Ahrefs</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">GSC</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">GA4</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Trends</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">WordPress</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Shopify</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Notion</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Canva</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">Claude</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;padding:.24rem .52rem;border:1px solid rgba(58,42,24,.3);color:#5a4530">ChatGPT</span>
           </div>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ESPECIALIDADES -->
-<section class="esp sec" id="especialidades">
-  <div class="sec-inner">
-    <div class="slabel">O que faço</div>
-    <h2 class="stitle">Especialidades</h2>
-    <p class="ssub">Domínio profundo nos pilares que fazem uma estratégia de conteúdo funcionar de verdade — do dado à narrativa.</p>
-    <div class="esp-grid">
-      <div class="esp-item reveal">
-        <div class="esp-num">01</div>
-        <h3 class="esp-title">SEO, GEO &amp; SMO</h3>
-        <p class="esp-desc">Pesquisa de palavras-chave, otimização on-page e estratégias de GEO e SMO para melhorar descoberta orgânica, relevância editorial e distribuição de conteúdo.</p>
-        <div class="esp-tags"><span class="esp-tag">SEO on-page</span><span class="esp-tag">GEO</span><span class="esp-tag">SMO</span><span class="esp-tag">Keywords</span><span class="esp-tag">Otimização editorial</span></div>
-      </div>
-      <div class="esp-item reveal d1">
-        <div class="esp-num">02</div>
-        <h3 class="esp-title">Copywriting &amp; Branded Content</h3>
-        <p class="esp-desc">Copy para redes sociais, anúncios e campanhas integradas. Narrativas que conectam cultura pop, produto e audiência com criatividade, intenção estratégica e CTA orientado a resultado.</p>
-        <div class="esp-tags"><span class="esp-tag">Copy de anúncio</span><span class="esp-tag">Social media</span><span class="esp-tag">Branded content</span><span class="esp-tag">Real-time marketing</span><span class="esp-tag">Tom de voz</span></div>
-      </div>
-      <div class="esp-item reveal d2">
-        <div class="esp-num">03</div>
-        <h3 class="esp-title">Content Strategy &amp; Branding</h3>
-        <p class="esp-desc">Planejamento editorial, pesquisa de tendências, collabs com marcas e influenciadores. Estratégias 360º que alinham performance e identidade com repertório para mudar o ponteiro do negócio.</p>
-        <div class="esp-tags"><span class="esp-tag">Pauta editorial</span><span class="esp-tag">Branding</span><span class="esp-tag">Influência</span><span class="esp-tag">PR &amp; Link building</span><span class="esp-tag">Trends</span></div>
-      </div>
+<!-- ══════════ TRABALHO ══════════ -->
+<section id="trabalho" style="background:#8A5636;color:#F1E7D6;padding:6rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem">
+    <div data-rev style="margin-bottom:3.2rem;position:relative">
+      <span style="position:absolute;top:-1.4rem;right:0;font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#EBD9BE;letter-spacing:.05em" data-en="02 / six">02 / seis</span>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;color:#2B3A78;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem"><span style="color:#F1E7D6">§</span><span data-en="case studies">estudos de caso</span></div>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0" data-en="The <em style=&quot;font-style:italic;color:#2B3A78&quot;>work</em>, with context">O <em style="font-style:italic;color:#2B3A78">trabalho</em>, com contexto</h2>
+      <p style="font-size:1.02rem;color:#EBD9BE;max-width:52ch;margin-top:1rem;line-height:1.55" data-en="Not a metric floating in the air — the problem, what I did, and what happened next. The way I'd tell you in a conversation.">Não é a métrica solta no ar — é o problema, o que fiz e o que aconteceu depois. Do jeito que eu contaria pra você numa conversa.</p>
+    </div>
+
+    <div class="specimens" style="display:grid;grid-template-columns:1fr 1fr;gap:1.4rem">
+
+      <!-- CASE 01 -->
+      <article data-rev style="border:1px solid #2E1B10;background:#E9DABB;color:#3A2A18;padding:2rem;box-shadow:5px 5px 0 rgba(46,27,16,.25)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem">
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;max-width:70%;line-height:1.5" data-en="SEO Writing · Westwing">Redação SEO · Westwing</span>
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:#8a6a48">CASE—01</span>
+        </div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:1.7rem;line-height:1.05;margin:0 0 .8rem" data-en="I rewrote the zodiac article and it became the site's most clicked page">Reescrevi o texto de signos e ele virou o mais clicado do site</h3>
+        <p style="font-size:.96rem;line-height:1.55;color:#5a4530;margin:0 0 1.5rem" data-en="I noticed the zodiac content was the top performer on the blog. When performance dropped, I rewrote it around a strong keyword and fixed URL, meta title and description.">Percebi que o conteúdo sobre signos era o que mais performava no blog. Quando a performance caiu, reescrevi em cima de uma palavra-chave forte e ajustei URL, meta title e description.</p>
+        <div style="display:flex;gap:1.8rem;flex-wrap:wrap;padding-top:1.2rem;border-top:1px solid rgba(58,42,24,.25)">
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">#1</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="most clicked">mais clicado</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">2º</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="in impressions">em impressões</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">3/5</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="top keywords">kws de topo</span></div>
+        </div>
+        <a href="https://www.westwing.com.br/guiar/signos/" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#2B3A78;text-decoration:none;margin-top:1.3rem;display:inline-flex;align-items:center;gap:.4rem;border-bottom:2px solid #B5401C;padding-bottom:2px" data-en="see content &#8594;">ver conteúdo &#8594;</a>
+      </article>
+
+      <!-- CASE 02 -->
+      <article data-rev style="border:1px solid #2E1B10;background:#E9DABB;color:#3A2A18;padding:2rem;box-shadow:5px 5px 0 rgba(46,27,16,.25)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem">
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;max-width:70%;line-height:1.5" data-en="PR · Link Building · Lexly">PR · Link Building · Lexly</span>
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:#8a6a48">CASE—02</span>
+        </div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:1.7rem;line-height:1.05;margin:0 0 .8rem" data-en="Link building through PR with the right story at the right time">Link building por PR com pauta certa na hora certa</h3>
+        <p style="font-size:.96rem;line-height:1.55;color:#5a4530;margin:0 0 1.5rem" data-en="I wrote articles for news portals as a backlink strategy, targeting lawyers and HR. I spotted the '4-day work week' as a hot topic and published it in major outlets.">Escrevi matérias pra portais como estratégia de backlink, mirando advogados e RH. Bati o olho na "Semana de 4 dias úteis" como pauta quente e publiquei em veículos de peso.</p>
+        <div style="display:flex;gap:1.8rem;flex-wrap:wrap;padding-top:1.2rem;border-top:1px solid rgba(58,42,24,.25)">
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">+120%</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="traffic">tráfego</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78" data-en="High">Alta</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="authority">autoridade</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">B2B</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="legal">jurídico</span></div>
+        </div>
+        <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#2B3A78;text-decoration:none;margin-top:1.3rem;display:inline-flex;align-items:center;gap:.4rem;border-bottom:2px solid #B5401C;padding-bottom:2px" data-en="see article &#8594;">ver matéria &#8594;</a>
+      </article>
+
+      <!-- CASE 03 full (video) -->
+      <article data-rev style="grid-column:1/-1;border:1px solid #2E1B10;background:#E9DABB;color:#3A2A18;padding:2rem;box-shadow:5px 5px 0 rgba(46,27,16,.25)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem">
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;line-height:1.5">SMO · GEO · SEO + Social · Westwing</span>
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:#8a6a48">CASE—03</span>
+        </div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1.03;margin:0 0 .8rem" data-en="I made Google Search the biggest doorway into a video">Fiz o Google Search virar a maior porta de entrada de um vídeo</h3>
+        <p style="font-size:1rem;line-height:1.55;color:#5a4530;margin:0 0 1.4rem;max-width:60ch" data-en="I built the SMO strategy with trend and keyword research to bring SEO, content and social together on YouTube. After optimization, Google Search became the video's main external channel — 48.5% of all off-platform traffic.">Montei a estratégia de SMO com pesquisa de tendência e keyword pra aproximar SEO, conteúdo e social no YouTube. Depois da otimização, o Google Search virou o principal canal externo de acesso ao vídeo — 48,5% de todo o tráfego que veio de fora.</p>
+
+        <div style="background:#2E1B10;border:1px solid #2E1B10;margin:0 0 1.5rem">
+          <iframe src="https://www.youtube.com/embed/IVsQBRstUrE" title="Homestories Westwing" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy" style="width:100%;aspect-ratio:16/9;display:block;border:none"></iframe>
+        </div>
+
+        <div class="databar" data-databar style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(58,42,24,.3)">
+          <div style="padding:1.3rem;border-right:1px solid rgba(58,42,24,.3)">
+            <h4 style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48;margin:0 0 1rem" data-en="YouTube search terms · 13.7% of traffic">Termos de busca no YouTube · 13,7% do tráfego</h4>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">farmhouse</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.68" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">6,8%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">westwing</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.51" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .1s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">5,1%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem" data-en="home decor">decoração de casa</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.50" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .2s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">5,0%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem" data-en="country house">casa de campo</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.39" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .3s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">3,9%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center"><span style="font-size:.8rem">casa vogue</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.26" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .4s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">2,6%</span></div>
+          </div>
+          <div style="padding:1.3rem">
+            <h4 style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48;margin:0 0 1rem" data-en="External sites · 3.2% of traffic">Sites externos · 3,2% do tráfego</h4>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">Google Search</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="1.0" style="position:absolute;inset:0;background:#B5401C;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#B5401C;font-weight:600;text-align:right">48,5%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">whatsapp.com</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.34" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .1s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">16,4%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">instagram.com</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.27" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .2s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">12,9%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center;margin-bottom:.6rem"><span style="font-size:.8rem">WhatsApp</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.23" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .3s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">11,3%</span></div>
+            <div style="display:grid;grid-template-columns:96px 1fr 42px;gap:.6rem;align-items:center"><span style="font-size:.8rem">YouTube</span><div style="height:9px;background:#d6c39f;border:1px solid rgba(58,42,24,.25);position:relative;overflow:hidden"><div data-w="0.02" style="position:absolute;inset:0;background:#2B3A78;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .4s"></div></div><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;font-weight:600;text-align:right">1,1%</span></div>
+          </div>
+        </div>
+        <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#2B3A78;text-decoration:none;margin-top:1.3rem;display:inline-flex;align-items:center;gap:.4rem;border-bottom:2px solid #B5401C;padding-bottom:2px" data-en="watch on youtube &#8594;">ver no youtube &#8594;</a>
+      </article>
+
+      <!-- CASE 04 -->
+      <article data-rev style="border:1px solid #2E1B10;background:#E9DABB;color:#3A2A18;padding:2rem;box-shadow:5px 5px 0 rgba(46,27,16,.25)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem">
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;max-width:70%;line-height:1.5" data-en="Semantic SEO · CRO · WolyCasa">SEO Semântico · CRO · WolyCasa</span>
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:#8a6a48">CASE—04</span>
+        </div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:1.7rem;line-height:1.05;margin:0 0 .8rem" data-en="Wolff Anniversary: organic pulling high-ticket sales">Aniversário Wolff: orgânico puxando venda de high ticket</h3>
+        <p style="font-size:.96rem;line-height:1.55;color:#5a4530;margin:0 0 1.5rem" data-en="I rewrote the sales copy, description and FAQ of the campaign's 10 key products. I split transactional keywords (e-commerce) from informational ones (blog), with internal links connecting the two.">Reescrevi texto de venda, descrição e FAQ dos 10 produtos-chave da campanha. Separei keyword transacional (e-commerce) de informacional (blog), com link interno conectando os dois.</p>
+        <div style="display:flex;gap:1.8rem;flex-wrap:wrap;padding-top:1.2rem;border-top:1px solid rgba(58,42,24,.25)">
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">10</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48">pdps</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78" data-en="Sell-out">Sell-out</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="via search">via search</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">2</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="sales via GSC">vendas via GSC</span></div>
+        </div>
+        <a href="https://www.wolycasa.com.br/blogs/news/garrafa-termica-wolff" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#2B3A78;text-decoration:none;margin-top:1.3rem;display:inline-flex;align-items:center;gap:.4rem;border-bottom:2px solid #B5401C;padding-bottom:2px" data-en="see article &#8594;">ver artigo &#8594;</a>
+      </article>
+
+      <!-- CASE 05 -->
+      <article data-rev style="border:1px solid #2E1B10;background:#E9DABB;color:#3A2A18;padding:2rem;box-shadow:5px 5px 0 rgba(46,27,16,.25)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem">
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;max-width:70%;line-height:1.5">YouTube · SEO · CRM · Tera</span>
+          <span style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:#8a6a48">CASE—05</span>
+        </div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:1.7rem;line-height:1.05;margin:0 0 .8rem" data-en="Organic channels at an AI school">Canais orgânicos numa escola de IA</h3>
+        <p style="font-size:.96rem;line-height:1.55;color:#5a4530;margin:0 0 1.5rem" data-en="Today I lead Tera's organic discovery: YouTube strategy, blog SEO, newsletter and social support. I write about AI, careers and the future of work — with SEO in mind from the very first brief.">Hoje toco a frente de descoberta orgânica da Tera: estratégia de YouTube, SEO de blog, newsletter e apoio ao social. Escrevo sobre IA, carreira e futuro do trabalho — com foco em SEO desde a pauta.</p>
+        <div style="display:flex;gap:1.8rem;flex-wrap:wrap;padding-top:1.2rem;border-top:1px solid rgba(58,42,24,.25)">
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">4</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="organic fronts">frentes orgânicas</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">12+</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="articles published">artigos publicados</span></div>
+          <div style="display:flex;flex-direction:column;gap:.15rem"><span style="font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1;color:#2B3A78">2026</span><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:#8a6a48" data-en="current">atual</span></div>
+        </div>
+        <a href="https://somostera.com/autores/gustavo-costa" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#2B3A78;text-decoration:none;margin-top:1.3rem;display:inline-flex;align-items:center;gap:.4rem;border-bottom:2px solid #B5401C;padding-bottom:2px" data-en="see on tera's blog &#8594;">ver no blog da tera &#8594;</a>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- CASES -->
-<section class="cases sec" id="cases">
-  <div class="sec-inner">
-    <div class="slabel">Portfólio</div>
-    <h2 class="stitle">Cases e <em>resultados</em></h2>
-    <p class="ssub">Primeiro, o contexto estratégico de cada case. Os resultados ficam disponíveis no botão “ver números”.</p>
-    <div class="cases-grid">
-
-      <!-- SEO -->
-      <div class="case-card reveal">
-        <div class="case-top">
-          <div class="result-number">#1</div>
-          <div class="result-copy">Case de redação SEO com melhor resultado no período</div>
-        </div>
-        <div class="case-head">
-          <div class="case-brand"><span class="case-brand-pill">Westwing</span></div>
-          <div class="case-tipo">Redação SEO</div>
-          <h3 class="case-title">Reestruturação SEO de conteúdo sobre signos</h3>
-          <p class="case-desc">Na minha passagem como redator no e-commerce Westwing, identifiquei que os textos sobre signos tinham o melhor desempenho no blog. Após uma queda de performance, reestruturei o conteúdo com foco em uma palavra-chave forte e ajustes técnicos de SEO, incluindo URL, meta title e meta description.</p>
-          <p class="case-desc">Desde a publicação em setembro/24, o artigo se tornou o mais clicado no site, o segundo em impressões e ainda gerou 3 das 5 principais palavras-chave de entrada orgânica.</p>
-          <a href="https://www.westwing.com.br/guiar/signos/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
-          <button class="results-toggle" type="button" data-target="seo-results">Ver números</button>
-        </div>
-        <div class="case-metric case-results" id="seo-results">
-          <div class="metric-label">Resultado desde set/24</div>
-          <div class="metric-val">#1</div>
-          <div class="metric-desc">Artigo mais clicado do site · 2º em impressões · gerou 3 das 5 principais palavras-chave de tráfego</div>
-        </div>
-      </div>
-
-      <!-- PR Lexly -->
-      <div class="case-card reveal d1">
-        <div class="case-top">
-          <div class="result-number">+120%</div>
-          <div class="result-copy">Aumento de tráfego com estratégia de PR + backlinks</div>
-        </div>
-        <div class="case-head">
-          <div class="case-brand"><span class="case-brand-pill">Lexly</span></div>
-          <div class="case-tipo">PR · Link Building · SEO Off-page · GEO</div>
-          <h3 class="case-title">Link building via PR para a Lexly Brasil</h3>
-          <p class="case-desc">Na Lexly Brasil, legaltech focada em públicos B2C, B2B e SaaS, redigi matérias e publicações em portais de notícia como parte da estratégia de backlinks. O objetivo era alcançar advogados e profissionais de RH com pautas de interesse real para essas audiências.</p>
-          <p class="case-desc">A partir de pesquisas de tendência, escolhi o tema “Semana de 4 Dias Úteis”, que estava em alta no período. A publicação ajudou a ampliar alcance e autoridade, contribuindo para um aumento de mais de 120% no tráfego do site.</p>
-          <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" rel="noopener" class="case-cta">Visualizar conteúdo →</a>
-          <button class="results-toggle" type="button" data-target="pr-results">Ver números</button>
-        </div>
-        <div class="case-metric case-results" id="pr-results">
-          <div class="metric-label">Impacto direto</div>
-          <div class="metric-val">+120%</div>
-          <div class="metric-desc">Crescimento no tráfego do site · backlinks qualificados em portais de autoridade</div>
-        </div>
-      </div>
-
-      <div class="case-card reveal d2">
-        <div class="case-top">
-          <div class="result-number">48,5%</div>
-          <div class="result-copy">Google Search como principal fonte externa no case de SMO/GEO</div>
-        </div>
-        <div class="case-head">
-          <div class="case-brand"><span class="case-brand-pill">Westwing</span></div>
-          <div class="case-tipo">SMO · GEO · SEO + Social</div>
-          <h3 class="case-title">Westwing: descoberta orgânica em vídeo</h3>
-          <p class="case-desc">Estruturei a estratégia de SMO com base em tendências e pesquisa de palavras-chave para conectar SEO, conteúdo e social no YouTube.</p>
-          <p class="case-desc">A otimização ampliou descoberta orgânica e consolidou Google Search como principal canal externo do vídeo.</p>
-          <a href="https://www.youtube.com/watch?v=IVsQBRstUrE" target="_blank" rel="noopener" class="case-cta">Visualizar vídeo no YouTube →</a>
-          <button class="results-toggle" type="button" data-target="smo-results">Ver números</button>
-        </div>
-        <div class="case-metric case-results" id="smo-results">
-          <div class="metric-label">Detalhamento do case</div>
-          <div class="metric-val">13,7%</div>
-          <div class="metric-desc">Proporção do tráfego total via pesquisa no YouTube.</div>
-          <div class="youtube-proof">
-            <div class="proof-card">
-              <div class="proof-title">Termos de pesquisa do YouTube</div>
-              <div class="proof-total">Proporção do seu tráfego total: <strong>13,7%</strong></div>
-              <div class="proof-list">
-                <div class="proof-row"><span class="proof-label">farmhouse</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">6,8%</span></div>
-                <div class="proof-row"><span class="proof-label">westwing</span><div class="proof-bar"><div class="proof-fill" style="width:75%"></div></div><span class="proof-val">5,1%</span></div>
-                <div class="proof-row"><span class="proof-label">decoração de casa</span><div class="proof-bar"><div class="proof-fill" style="width:73.5%"></div></div><span class="proof-val">5,0%</span></div>
-                <div class="proof-row"><span class="proof-label">casa de campo</span><div class="proof-bar"><div class="proof-fill" style="width:57.4%"></div></div><span class="proof-val">3,9%</span></div>
-                <div class="proof-row"><span class="proof-label">casa vogue</span><div class="proof-bar"><div class="proof-fill" style="width:38.2%"></div></div><span class="proof-val">2,6%</span></div>
-              </div>
-            </div>
-            <div class="proof-card">
-              <div class="proof-title">Sites ou apps externos</div>
-              <div class="proof-total">Proporção do seu tráfego total: <strong>3,2%</strong></div>
-              <div class="proof-list">
-                <div class="proof-row"><span class="proof-label">Google Search</span><div class="proof-bar"><div class="proof-fill" style="width:100%"></div></div><span class="proof-val">48,5%</span></div>
-                <div class="proof-row"><span class="proof-label">whatsapp.com</span><div class="proof-bar"><div class="proof-fill" style="width:33.8%"></div></div><span class="proof-val">16,4%</span></div>
-                <div class="proof-row"><span class="proof-label">instagram.com</span><div class="proof-bar"><div class="proof-fill" style="width:26.6%"></div></div><span class="proof-val">12,9%</span></div>
-                <div class="proof-row"><span class="proof-label">WhatsApp</span><div class="proof-bar"><div class="proof-fill" style="width:23.3%"></div></div><span class="proof-val">11,3%</span></div>
-                <div class="proof-row"><span class="proof-label">YouTube</span><div class="proof-bar"><div class="proof-fill" style="width:2.3%"></div></div><span class="proof-val">1,1%</span></div>
-              </div>
-            </div>
-          </div>
-          <p class="case-note">A partir de análise de tendências e alinhamento entre SEO, conteúdo e social, a estratégia de SMO ampliou a audiência e potencializou a descoberta via Google Search.</p>
-          <div class="video-wrapper" style="margin-top:1rem">
-            <iframe width="1455" height="818" src="https://www.youtube.com/embed/IVsQBRstUrE" title="TOUR em CASA DE CAMPO com DECORAÇÃO FARMHOUSE em VALINHOS | Homestories #WestwingBR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal d3">
-        <div class="case-top">
-          <div class="result-number">10 PDPs</div>
-          <div class="result-copy">Otimização semântica e arquitetura da informação em produtos prioritários</div>
-        </div>
-        <div class="case-head">
-          <div class="case-brand"><span class="case-brand-pill">WolyCasa</span></div>
-          <div class="case-tipo">SEO Semântico · Arquitetura da Informação · CRO</div>
-          <h3 class="case-title">Wolff 131 anos: orgânico + conversão comercial</h3>
-          <p class="case-desc">Otimizei textos de venda, descrições e FAQ dos 10 principais produtos da campanha para elevar tráfego orgânico e persuasão comercial.</p>
-          <p class="case-desc">A estratégia separou KWs transacionais no e-commerce e informacionais no blog, com links internos para categorias.</p>
-          <a href="https://www.wolycasa.com.br/blogs/news/garrafa-termica-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Garrafa térmica Wolff →</a>
-          <a href="https://www.wolycasa.com.br/blogs/news/faqueiros-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Faqueiros Wolff →</a>
-          <a href="https://www.wolycasa.com.br/blogs/news/colecoes-e-linhas-wolff" target="_blank" rel="noopener" class="case-cta">Ver artigo: Coleções e linhas Wolff →</a>
-          <button class="results-toggle" type="button" data-target="wolff-results">Ver números</button>
-        </div>
-        <div class="case-metric case-results" id="wolff-results">
-          <div class="metric-label">Impacto direto</div>
-          <div class="metric-val">Sell-out</div>
-          <div class="metric-desc">PDP do Faqueiro Croise (high ticket) voltou a vender e esgotou estoque, com 2 vendas vindas de Google Search (Shopify).</div>
-          <div class="creative-grid" style="margin-top:1rem">
-            <div class="creative-card wide"><img src="imagens/banner-wolff-131-1.webp" alt="Banner aniversário Wolff 131 anos - seleção"><div class="creative-caption">Wolff 131 anos · Banner de seleção</div></div>
-            <div class="creative-card wide"><img src="imagens/banner-wolff-131-2.webp" alt="Banner aniversário Wolff 131 anos - oportunidades"><div class="creative-caption">Wolff 131 anos · Banner de oportunidades</div></div>
-          </div>
-          <div class="video-wrapper" style="margin-top:1rem">
-            <video src="videos/otimizacao-pdp-faqueiro-wolff.mp4" controls preload="metadata"></video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BANNERS -->
-<section class="banners sec" id="copies">
-  <div class="sec-inner">
-    <div class="banners-intro">
-      <div>
-        <div class="slabel">Visual &amp; Copy</div>
-        <h2 class="stitle">Copies e <em>campanhas</em></h2>
-      </div>
-      <p class="ssub">Responsável por conceito criativo, copywriting, CTAs, CRM e direção de conteúdo em campanhas integradas — da ação sazonal ao branded content com influenciadores.</p>
+<!-- ══════════ CAMPANHAS ══════════ -->
+<section id="campanhas" style="background:#F1E7D6;color:#3A2A18;padding:6rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem">
+    <div data-rev style="margin-bottom:2.6rem;position:relative">
+      <span style="position:absolute;top:-1.4rem;right:0;font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#8a6a48;letter-spacing:.05em" data-en="03 / six">03 / seis</span>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;color:#2B3A78;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem"><span style="color:#B5401C">§</span><span data-en="copy &amp; campaigns">copy &amp; campanhas</span></div>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0" data-en="Concept, <em style=&quot;font-style:italic;color:#2B3A78&quot;>copy</em> and timing">Conceito, <em style="font-style:italic;color:#2B3A78">copy</em> e timing</h2>
+      <p style="font-size:1.02rem;color:#8a6a48;max-width:52ch;margin-top:1rem;line-height:1.55" data-en="From seasonal activations to branded content in the heat of the moment. Pick a folder.">Da ação sazonal ao branded content no calor do momento. Escolha uma pasta.</p>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">Branded content · Social</div>
-      <h3 class="subsection-title">Campanha Vale Tudo — WolyCasa</h3>
-      <p class="subsection-desc">Aproveitando o hype do último capítulo da novela, desenvolvi uma campanha de branded content em tempo real, conectando cultura pop, storytelling e e-commerce. A copy associou produtos aos suspeitos da trama sem depender de venda direta, usando curiosidade, timing e referências visuais como gatilhos de engajamento.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="vt-gallery">
-        <img src="imagens/vale-tudo-01.webp" alt="Vale Tudo - Comunicado WolyCasa">
-        <img src="imagens/vale-tudo-02.webp" alt="Vale Tudo - Quem é o culpado?">
-        <img src="imagens/vale-tudo-03.webp" alt="Vale Tudo - Celina">
-        <img src="imagens/vale-tudo-04.webp" alt="Vale Tudo - Marco Aurélio">
-        <img src="imagens/vale-tudo-05.webp" alt="Vale Tudo - Maria de Fátima">
-        <img src="imagens/vale-tudo-06.webp" alt="Vale Tudo - Heleninha">
-        <img src="imagens/vale-tudo-07.webp" alt="Vale Tudo - Cesar">
-        <img src="imagens/vale-tudo-08.webp" alt="Vale Tudo - Cupom Valetudo21">
+    <div style="display:flex;flex-wrap:wrap;gap:0;border:1px solid #3A2A18;margin-bottom:2.4rem">
+      <div data-tab data-group="camp" data-tab-key="vt" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.1rem;cursor:pointer;color:#F1E7D6;background:#2B3A78;border-right:1px solid #3A2A18;text-transform:uppercase;letter-spacing:.02em" data-en="Branded Content">Branded Content</div>
+      <div data-tab data-group="camp" data-tab-key="maes" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.1rem;cursor:pointer;color:#5a4530;background:transparent;border-right:1px solid #3A2A18;text-transform:uppercase;letter-spacing:.02em" data-en="Seasonal">Sazonal</div>
+      <div data-tab data-group="camp" data-tab-key="icasei" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.1rem;cursor:pointer;color:#5a4530;background:transparent;border-right:1px solid #3A2A18;text-transform:uppercase;letter-spacing:.02em">PR &amp; Collab</div>
+      <div data-tab data-group="camp" data-tab-key="crm" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.1rem;cursor:pointer;color:#5a4530;background:transparent;border-right:1px solid #3A2A18;text-transform:uppercase;letter-spacing:.02em">CRM &amp; E-mail</div>
+      <div data-tab data-group="camp" data-tab-key="ads" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.1rem;cursor:pointer;color:#5a4530;background:transparent;text-transform:uppercase;letter-spacing:.02em">Ads</div>
+    </div>
+
+    <div data-panel data-group="camp" data-key="vt">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem">
+        <div><div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;margin-bottom:.5rem" data-en="Branded content · social">Branded content · social</div><div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1">Vale Tudo — WolyCasa</div></div>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#B5401C;font-weight:600;border:1.5px solid #B5401C;padding:.4rem .7rem;white-space:nowrap;transform:rotate(-3deg)" data-en="real-time · Oct/24">real-time · out/24</div>
+      </div>
+      <p style="font-size:1rem;line-height:1.6;color:#5a4530;max-width:68ch;margin:0 0 1.6rem" data-en="I caught the hype of the soap opera's final episode and built the campaign the same day. The copy linked a WolyCasa product to the plot's suspects without forcing a sale — <b style=&quot;color:#3A2A18&quot;>curiosity and timing as the hook</b>. I did concept, copy, product pick and publishing.">Peguei o hype do último capítulo da novela e montei a campanha no mesmo dia. A copy associou produto da WolyCasa aos suspeitos da trama sem forçar venda — <b style="color:#3A2A18">curiosidade e timing como gancho</b>. Fiz conceito, copy, escolha de produto e publicação.</p>
+      <div style="display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.7rem">
+        <img src="imagens/vale-tudo-01.webp" alt="Comunicado" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-02.webp" alt="Quem é o culpado" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-03.webp" alt="Celina" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-04.webp" alt="Marco Aurélio" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-05.webp" alt="Maria de Fátima" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-06.webp" alt="Heleninha" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-07.webp" alt="Cesar" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/vale-tudo-08.webp" alt="Cupom" loading="lazy" style="flex:0 0 auto;width:190px;aspect-ratio:9/16;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">CRM · Copywriting · Campanha Sazonal</div>
-      <h3 class="subsection-title">Dia das Mães WolyCasa 2025</h3>
-      <p class="subsection-desc">Campanha criada para aumentar a intenção de compra em uma categoria com objeção cultural: itens para casa. O objetivo foi elevar valor percebido e gerar novas ocasiões de consumo com narrativa emocional, desdobrada em landing page, blog, social e CRM.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="creative-grid">
-        <div class="creative-card wide"><img src="imagens/maes-wolycasa-06.webp" alt="Banner da landing page Dia das Mães WolyCasa"><div class="creative-caption">Dia das Mães · Banner da LP</div></div>
-        <div class="creative-card wide"><img src="imagens/maes-wolycasa-05.webp" alt="Campanha Dia das Mães WolyCasa - Storytelling"><div class="creative-caption">Dia das Mães · Storytelling</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-01.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama festejar"><div class="creative-caption">Estilos de mãe · Festejar</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-02.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama organizar"><div class="creative-caption">Estilos de mãe · Organizar</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-03.webp" alt="Campanha Dia das Mães WolyCasa - Mãe que ama decorar"><div class="creative-caption">Estilos de mãe · Decorar</div></div>
-        <div class="creative-card"><img src="imagens/maes-wolycasa-04.webp" alt="Campanha Dia das Mães WolyCasa - Estilo de mãe"><div class="creative-caption">Estilos de mãe · Inspiração</div></div>
+    <div data-panel data-group="camp" data-key="maes" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem">
+        <div><div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;margin-bottom:.5rem" data-en="CRM · copy · seasonal">CRM · copy · sazonal</div><div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1" data-en="Mother's Day — WolyCasa 2025">Dia das Mães — WolyCasa 2025</div></div>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#B5401C;font-weight:600;border:1.5px solid #B5401C;padding:.4rem .7rem;white-space:nowrap;transform:rotate(-3deg)">LP · blog · social · CRM</div>
       </div>
-      <div class="instagram-wrap">
-        <div class="instagram-card">
-          <div class="instagram-embed">
-            <iframe src="https://www.instagram.com/reel/DJRcC2cxeLD/embed/captioned/" title="Reel da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="instagram-card">
-          <div class="instagram-embed">
-            <iframe src="https://www.instagram.com/p/DJKBksrO_Ax/embed/captioned/" title="Post da campanha Dia das Mães WolyCasa no Instagram" loading="lazy" allowtransparency="true" allowfullscreen></iframe>
-          </div>
-        </div>
+      <p style="font-size:1rem;line-height:1.6;color:#5a4530;max-width:68ch;margin:0 0 1.6rem" data-en="The problem was clear: a home item isn't the obvious Mother's Day gift — there's cultural resistance there. I reframed the moments around the table with emotional narrative, tying mom archetypes to real products. I handled concept and copy for LP, blog, email and posts. Highlight: <b style=&quot;color:#3A2A18&quot;>'Give more than flowers, give memories'</b> — flower + vase to raise the ticket.">O problema era claro: item pra casa não é o presente óbvio de Dia das Mães, tem resistência cultural aí. Ressignifiquei os momentos à mesa com narrativa emocional, ligando estilos de mãe a produtos reais. Cuidei do conceito e da copy de LP, blog, e-mail e posts. Destaque pra <b style="color:#3A2A18">"Dê mais do que flores, dê lembranças"</b> — flor + vaso pra subir o ticket.</p>
+      <div style="display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.7rem">
+        <img src="imagens/maes-wolycasa-06.webp" alt="LP" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/maes-wolycasa-05.webp" alt="Storytelling" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/maes-wolycasa-01.webp" alt="Festejar" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/maes-wolycasa-02.webp" alt="Organizar" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/maes-wolycasa-03.webp" alt="Decorar" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">PR · Social · CRM · Branding</div>
-      <h3 class="subsection-title">WolyCasa &amp; iCasei</h3>
-      <p class="subsection-desc">Collab para fortalecer o branding da WolyCasa no universo bridal, conectando casamento e casa nova com benefícios cruzados, ativações digitais, posts collab, régua de CRM e release para imprensa. Em outubro/2025, os conteúdos alcançaram alta visibilidade, com destaque para 30.055 visualizações no primeiro post e 26.279 no terceiro.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="creative-grid">
-        <div class="creative-card"><img src="imagens/icasei-collab-post-01.png" alt="Post collab WolyCasa e iCasei"><div class="creative-caption">Post collab · anúncio da parceria</div></div>
-        <div class="creative-card"><img src="imagens/icasei-divulgacao-grupo-vip.png" alt="Divulgação da parceria iCasei e WolyCasa"><div class="creative-caption">Ativação digital · grupo VIP</div></div>
-        <div class="creative-card wide"><img src="imagens/icasei-banner-blog.png" alt="Banner iCasei no blog WolyCasa"><div class="creative-caption">Blog banner · benefício cruzado</div></div>
-        <div class="video-card reel"><video src="videos/icasei-collab-instagram.mp4" controls preload="metadata"></video><div class="video-caption">Vídeo collab · Instagram</div></div>
+    <div data-panel data-group="camp" data-key="icasei" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem">
+        <div><div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;margin-bottom:.5rem">PR · social · CRM · branding</div><div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1">WolyCasa &amp; iCasei</div></div>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#B5401C;font-weight:600;border:1.5px solid #B5401C;padding:.4rem .7rem;white-space:nowrap;transform:rotate(-3deg)" data-en="30,055 views · Oct/25">30.055 views · out/25</div>
       </div>
-      <a href="https://portal.saladanoticia.com.br/noticia/15379/icasei-e-wolycasa-lancam-collab-para-noivos-e-recem-casados" target="_blank" rel="noopener" class="case-cta">Ver release →</a>
-    </div>
-
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">CRM · E-mail marketing</div>
-      <h3 class="subsection-title">Estratégia de CRM e conteúdo para e-mail marketing</h3>
-      <p class="subsection-desc">Atuação como copywriter no direcionamento de conteúdo, criação dos textos, estruturação dos CTAs e validação de tom de voz para campanhas de CRM. As peças conectam datas sazonais, benefícios comerciais e narrativa de marca com foco em clique, compra e recorrência.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="creative-grid">
-        <div class="creative-card wide"><img src="imagens/email-dia-dos-pais.webp" alt="E-mail marketing Dia dos Pais WolyCasa"><div class="creative-caption">Dia dos Pais · CRM · Copy + CTA</div></div>
-        <div class="creative-card"><img src="imagens/email-dia-da-pizza.webp" alt="E-mail marketing Dia Mundial da Pizza WolyCasa"><div class="creative-caption">Dia da Pizza · CRM · Conteúdo sazonal</div></div>
-        <div class="creative-card"><img src="imagens/email-namorados.webp" alt="E-mail marketing Dia dos Namorados WolyCasa"><div class="creative-caption">Dia dos Namorados · CRM · Storytelling</div></div>
-        <div class="creative-card"><img src="imagens/email-festa-junina.webp" alt="E-mail marketing Festa Junina WolyCasa"><div class="creative-caption">Festa Junina · CRM · Conteúdo de ocasião</div></div>
+      <p style="font-size:1rem;line-height:1.6;color:#5a4530;max-width:68ch;margin:0 0 1.6rem" data-en="I wanted to bring WolyCasa closer to the wedding world, connecting 'new home' to the couple's moment. I built a collab with iCasei with cross-benefits, a digital activation, a collab post, a CRM flow and a press release. The first post hit <b style=&quot;color:#3A2A18&quot;>30,055 views</b> and the third, 26,279. I owned concept, all copy and the release.">Quis aproximar a WolyCasa do universo de casamento, conectando "casa nova" ao momento do casal. Montei collab com a iCasei com benefício cruzado, ativação digital, post collab, régua de CRM e release pra imprensa. O primeiro post bateu <b style="color:#3A2A18">30.055 visualizações</b> e o terceiro, 26.279. Fiquei no conceito, na copy de tudo e no release.</p>
+      <div style="display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.7rem">
+        <img src="imagens/icasei-collab-post-01.png" alt="Post collab" loading="lazy" style="flex:0 0 auto;width:250px;aspect-ratio:1;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/icasei-divulgacao-grupo-vip.png" alt="Divulgação" loading="lazy" style="flex:0 0 auto;width:250px;aspect-ratio:1;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/icasei-banner-blog.png" alt="Banner blog" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">VSL · Copy para vídeo</div>
-      <h3 class="subsection-title">Variações de copy, ganchos e CTAs para vídeo</h3>
-      <p class="subsection-desc">Desenvolvimento de copies para vídeos comerciais em diferentes formatos, explorando aberturas, argumentos e chamadas para ação de acordo com objetivo, produto e canal.</p>
-      <div class="vsl-highlight">
-        <div class="vsl-highlight-head">
-          <div>
-            <div class="case-tipo">Linha Siciliano · 3 variações</div>
-            <h3 class="case-title">Mesmo vídeo, três caminhos de copy</h3>
-          </div>
-          <p>Para o lançamento da linha de louças Limão Siciliano da Lyor, trabalhei copies para VSLs com diferentes ganchos. No último vídeo, o gancho segue uma abordagem mais comercial, com CTA direto de conversão.</p>
-        </div>
-        <div class="video-gallery">
-          <div class="video-card featured"><video src="videos/linha-siciliano-copy-01.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 1 · Gancho de produto</div></div>
-          <div class="video-card featured"><video src="videos/linha-siciliano-copy-02.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 2 · Gancho de ocasião</div></div>
-          <div class="video-card featured"><video src="videos/linha-siciliano-copy-03.mp4" controls preload="metadata"></video><div class="video-caption">Linha Siciliano · Variação 3 · Gancho comercial + CTA</div></div>
-        </div>
+    <div data-panel data-group="camp" data-key="crm" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem">
+        <div><div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;margin-bottom:.5rem">CRM · e-mail marketing</div><div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1" data-en="Copy for e-mail">Copy pra e-mail</div></div>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#B5401C;font-weight:600;border:1.5px solid #B5401C;padding:.4rem .7rem;white-space:nowrap;transform:rotate(-3deg)" data-en="click · buy · recurrence">clique · compra · recorrência</div>
+      </div>
+      <p style="font-size:1rem;line-height:1.6;color:#5a4530;max-width:68ch;margin:0 0 1.6rem" data-en="I owned the copy, CTA and tone of voice for CRM campaigns. Each piece joins the date, the commercial benefit and the brand's language without sounding generic. I handle subject, pre-header, body and the main CTA.">Fiquei responsável pelo texto, CTA e tom de voz das campanhas de CRM. Cada peça junta a data, o benefício comercial e a linguagem da marca sem soar genérico. Cuido de assunto, pré-header, corpo e o CTA principal.</p>
+      <div style="display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.7rem">
+        <img src="imagens/email-dia-dos-pais.webp" alt="Dia dos Pais" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/email-dia-da-pizza.webp" alt="Dia da Pizza" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/email-namorados.webp" alt="Namorados" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/email-festa-junina.webp" alt="Festa Junina" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
       </div>
     </div>
 
-    <div class="subsection-block reveal">
-      <div class="subsection-kicker">Anúncios · Ads</div>
-      <h3 class="subsection-title">Copies para anúncios e campanhas de performance</h3>
-      <p class="subsection-desc">Criação de chamadas, CTAs e ângulos criativos para peças de mídia paga, com foco em clareza da oferta, diferenciação visual e aderência ao momento de compra.</p>
-      <div class="gallery-hint">Arraste para ver mais · clique para ampliar</div>
-      <div class="creative-grid">
-        <div class="creative-card"><img src="imagens/ads-carrinho-black-friday.webp" alt="Anúncio Black Friday WolyCasa carrinho"><div class="creative-caption">Black Friday · Copy de conversão</div></div>
-        <div class="creative-card wide"><img src="imagens/ads-pmax-mesa-posta.webp" alt="PMAX Mesa Posta WolyCasa"><div class="creative-caption">PMAX · Mesa posta</div></div>
-        <div class="creative-card wide"><img src="imagens/ads-pmax-faqueiros.webp" alt="PMAX Faqueiros WolyCasa"><div class="creative-caption">PMAX · Faqueiros</div></div>
-        <div class="creative-card wide"><img src="imagens/ads-pmax-decoracao.webp" alt="PMAX Decoração WolyCasa"><div class="creative-caption">PMAX · Decoração</div></div>
-        <div class="creative-card wide"><img src="imagens/ads-pmax-bazar.webp" alt="PMAX Bazar WolyCasa"><div class="creative-caption">PMAX · Bazar</div></div>
+    <div data-panel data-group="camp" data-key="ads" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem">
+        <div><div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2B3A78;margin-bottom:.5rem" data-en="ads · performance">anúncios · performance</div><div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1" data-en="Copy for paid media">Copy pra mídia paga</div></div>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.66rem;color:#B5401C;font-weight:600;border:1.5px solid #B5401C;padding:.4rem .7rem;white-space:nowrap;transform:rotate(-3deg)" data-en="clarity · conversion">clareza · conversão</div>
+      </div>
+      <p style="font-size:1rem;line-height:1.6;color:#5a4530;max-width:68ch;margin:0 0 1.6rem" data-en="Headline, CTA and creative angle for paid media pieces — always thinking about making the offer clear and hitting the right buying moment. Pieces for Google PMAX, Meta Ads and Black Friday.">Chamada, CTA e ângulo criativo pra peças de mídia paga — sempre pensando em deixar a oferta clara e no momento certo de compra. Peças pra Google PMAX, Meta Ads e Black Friday.</p>
+      <div style="display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.7rem">
+        <img src="imagens/ads-carrinho-black-friday.webp" alt="Black Friday" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/ads-pmax-mesa-posta.webp" alt="Mesa posta" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/ads-pmax-faqueiros.webp" alt="Faqueiros" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/ads-pmax-decoracao.webp" alt="Decoração" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
+        <img src="imagens/ads-pmax-bazar.webp" alt="Bazar" loading="lazy" style="flex:0 0 auto;width:340px;aspect-ratio:16/9;object-fit:cover;border:1px solid #3A2A18;filter:url(#duo)">
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- PUBLICAÇÕES -->
-<section class="pubs sec" id="publicacoes">
-  <div class="sec-inner">
-    <div class="slabel">Publicações</div>
-    <h2 class="stitle">Posts de <em>blog</em> e conteúdo editorial</h2>
-    <p class="ssub">Conteúdos publicados em blogs, e-commerces e portais editoriais, com foco em SEO, utilidade e linguagem de marca.</p>
-    <div class="pubs-grid">
-      <a class="pub-item reveal" href="https://www.wolycasa.com.br/blogs/news/o-que-levar-para-um-piquenique" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">O que levar para um piquenique</div></a>
-      <a class="pub-item reveal d1" href="https://www.wolycasa.com.br/blogs/news/como-montar-ceia-de-natal" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Como montar uma ceia de natal</div></a>
-      <a class="pub-item reveal d2" href="https://www.wolycasa.com.br/blogs/news/lembrancinhas-e-brindes-corporativos" target="_blank" rel="noopener"><div class="pub-veiculo">WolyCasa</div><div class="pub-titulo">Ideias de lembrancinhas e brindes corporativos</div></a>
-      <a class="pub-item reveal" href="https://blog.archtrends.com/design-feito-mao-sustentabilidade/" target="_blank" rel="noopener"><div class="pub-veiculo">Archtrends Portobello</div><div class="pub-titulo">Design feito à mão: mais sustentabilidade e personalidade</div></a>
-      <a class="pub-item reveal d1" href="https://blog.blablacar.com.br/dicas/mochila-impermeavel-viagens-com-estilo-e-sem-preocupacao" target="_blank" rel="noopener"><div class="pub-veiculo">BlaBlaCar</div><div class="pub-titulo">Mochila impermeável: viagens com estilo e sem preocupação</div></a>
-      <a class="pub-item reveal d2" href="https://www.jusbrasil.com.br/artigos/saiba-como-fazer-um-termo-de-autorizacao-de-uso-de-imagem/1862661630" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Saiba como fazer um termo de autorização de uso de imagem</div></a>
-      <a class="pub-item reveal" href="https://www.jusbrasil.com.br/artigos/multa-contrato-de-aluguel-como-calcular/1862581749" target="_blank" rel="noopener"><div class="pub-veiculo">Jusbrasil</div><div class="pub-titulo">Multa contrato de aluguel: como calcular</div></a>
-      <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/tipos-de-granito/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tipos de granito: beleza e funcionalidade na sua decoração</div></a>
-      <a class="pub-item reveal" href="https://revistahaus.com.br/sem-categoria/tapete-terra-diatomacea/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Tapete de terra diatomácea: o mineral natural que une bem-estar e design</div></a>
-      <a class="pub-item reveal d1" href="https://revistahaus.com.br/haus/decoracao/sala-simples-e-elegante/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Sala simples e elegante: como decorar em poucos passos</div></a>
-      <a class="pub-item reveal d2" href="https://revistahaus.com.br/haus/conteudo-publicitario/posicao-dos-talheres/" target="_blank" rel="noopener"><div class="pub-veiculo">Revista Haus</div><div class="pub-titulo">Posição dos talheres: como organizar a mesa posta</div></a>
-      <a class="pub-item reveal" href="https://blog.blablacar.com.br/dicas/viagens-de-carro-dicas-para-economizar-e-aproveitar-o-trajeto" target="_blank" rel="noopener"><div class="pub-veiculo">BlaBlaCar</div><div class="pub-titulo">Viagens de carro: dicas para economizar e aproveitar o trajeto</div></a>
+<!-- ══════════ ARQUIVO ══════════ -->
+<section id="arquivo" style="background:#8A5636;color:#F1E7D6;padding:6rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem">
+    <div data-rev style="margin-bottom:2.6rem;position:relative">
+      <span style="position:absolute;top:-1.4rem;right:0;font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#EBD9BE;letter-spacing:.05em" data-en="04 / six">04 / seis</span>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;color:#8FA0D8;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem"><span style="color:#F1E7D6">§</span><span data-en="published archive">arquivo publicado</span></div>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0" data-en="Everything that ran with <em style=&quot;font-style:italic;color:#8FA0D8&quot;>my name</em>">Tudo o que já saiu com <em style="font-style:italic;color:#8FA0D8">meu nome</em></h2>
+      <p style="font-size:1.02rem;color:#EBD9BE;max-width:52ch;margin-top:1rem;line-height:1.55" data-en="Tera's blog, editorial content and PR articles. A record of what was published.">Blog da Tera, conteúdo editorial e matérias de PR. Um registro do que foi publicado.</p>
+    </div>
+
+    <div style="display:flex;gap:0;border-bottom:1px solid #2E1B10;margin-bottom:0">
+      <div data-tab data-group="led" data-tab-key="tera" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.2rem;cursor:pointer;color:#F1E7D6;background:#2B3A78;text-transform:uppercase;letter-spacing:.02em">Blog Tera</div>
+      <div data-tab data-group="led" data-tab-key="blog" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.2rem;cursor:pointer;color:#EBD9BE;background:transparent;text-transform:uppercase;letter-spacing:.02em" data-en="Blog &amp; Editorial">Blog &amp; Editorial</div>
+      <div data-tab data-group="led" data-tab-key="pr" data-onbg="#2B3A78" data-oncolor="#F1E7D6" style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:500;padding:.7rem 1.2rem;cursor:pointer;color:#EBD9BE;background:transparent;text-transform:uppercase;letter-spacing:.02em" data-en="News &amp; PR">Notícias &amp; PR</div>
+    </div>
+
+    <div data-panel data-group="led" data-key="tera" style="display:table;width:100%;border-collapse:collapse">
+      <a href="https://somostera.com/blog/multiagentes-rotina-de-produto" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Multiagentes na rotina de produto: como PMs orquestram agentes de IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/prd-com-claude" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · Carreiras</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como escrever um PRD com Claude: o framework CRIA na prática</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/como-aprender-inteligencia-artificial" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · Futuro</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como aprender inteligência artificial: os 3 erros de quem tenta sozinho</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/ia-no-mercado-de-trabalho" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · Futuro</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">O vale da produtividade com IA no mercado de trabalho</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/o-que-e-vibe-coding-na-era-da-imaginacao" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">O que é vibe coding: como criar com IA sem saber programar</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/aula-aberta-pos-ia-tera" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Tudo o que rolou na aula aberta da pós em IA com Leandro Herrera</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/cursos-de-inteligencia-artificial" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Cursos de inteligência artificial: por que a busca cresceu 95%</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/conteudo-de-ia-generico-voz-autoral" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Conteúdo de IA genérico vs. voz autoral: como se destacar</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/letramento-em-ia" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Letramento em IA: a diferença entre usar e construir com IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/como-aprender-estudar-com-ia" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como aprender e usar IA na educação sem virar dependente</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/claude-code-imersao-for-devs" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Claude Code: o que é e como usar na prática (imersão for Devs)</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://somostera.com/blog/trends-copa-do-mundo-2026" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Tera · IA</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Trends e prompts de IA para a torcida da Copa do Mundo 2026</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+    </div>
+
+    <div data-panel data-group="led" data-key="blog" style="display:none;width:100%;border-collapse:collapse">
+      <a href="https://www.wolycasa.com.br/blogs/news/o-que-levar-para-um-piquenique" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">WolyCasa</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">O que levar para um piquenique</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.wolycasa.com.br/blogs/news/como-montar-ceia-de-natal" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">WolyCasa</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como montar uma ceia de natal</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.wolycasa.com.br/blogs/news/lembrancinhas-e-brindes-corporativos" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">WolyCasa</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Ideias de lembrancinhas e brindes corporativos</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://blog.archtrends.com/design-feito-mao-sustentabilidade/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Archtrends</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Design feito à mão: mais sustentabilidade e personalidade</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://blog.blablacar.com.br/dicas/mochila-impermeavel-viagens-com-estilo-e-sem-preocupacao" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">BlaBlaCar</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Mochila impermeável: viagens com estilo e sem preocupação</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.jusbrasil.com.br/artigos/saiba-como-fazer-um-termo-de-autorizacao-de-uso-de-imagem/1862661630" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Jusbrasil</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como fazer um termo de autorização de uso de imagem</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.jusbrasil.com.br/artigos/multa-contrato-de-aluguel-como-calcular/1862581749" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Jusbrasil</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Multa contrato de aluguel: como calcular</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://revistahaus.com.br/haus/decoracao/tipos-de-granito/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Revista Haus</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Tipos de granito: beleza e funcionalidade na decoração</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://revistahaus.com.br/sem-categoria/tapete-terra-diatomacea/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Revista Haus</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Terra diatomácea: bem-estar e design</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://revistahaus.com.br/haus/decoracao/sala-simples-e-elegante/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Revista Haus</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Como fazer uma decoração de sala simples e elegante</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://revistahaus.com.br/haus/conteudo-publicitario/posicao-dos-talheres/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Revista Haus</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Posição dos talheres: como organizar a mesa posta</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+    </div>
+
+    <div data-panel data-group="led" data-key="pr" style="display:none;width:100%;border-collapse:collapse">
+      <a href="https://meioenegocio.com.br/Demissoes_em_massa_afetam_mais_de_6_mil_brasileiros_de_janeiro_a_marco_deste_ano/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Meio &amp; Negócio</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Demissões em massa afetam mais de 6 mil brasileiros</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.folhavitoria.com.br/geral/numero-de-familias-brasileiras-endividadas-aumenta-em-3-3/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Folha Vitória</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Número de famílias endividadas aumenta em 3,3%</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.folhavitoria.com.br/geral/semana-de-4-dias-uteis-empresas-comecam-a-adotar-novos-modelos-de-trabalho/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Folha Vitória</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Semana de 4 dias úteis: empresas adotam novos modelos</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://abefin.org.br/problemas-financeiros-do-colaborador-impactam-a-produtividade-no-trabalho/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Abefin</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Problemas financeiros impactam a produtividade no trabalho</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://horacampinas.com.br/stf-aprova-projeto-de-revisao-de-aposentadoria-para-beneficiar-aposentados/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Hora Campinas</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">STF aprova projeto de revisão de aposentadoria</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.jusbrasil.com.br/noticias/empresas-abracam-a-comunidade-lgbtqiap-e-buscam-aumentar-a-diversidade/1874044777" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Jusbrasil</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Empresas abraçam a comunidade LGBTQIAP+ e a diversidade</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://www.conquistadefato.com.br/noticia/31116/empresas-brasileiras-utilizam-tecnologia-para-melhorar-o-setor-juridico" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">Conquista de Fato</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Empresas usam tecnologia para melhorar o setor jurídico</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+      <a href="https://saopaulosao.com.br/Mulheres_sao_maioria_no_setor_juridico_mas_ainda_ganham_menos_que_homens/" target="_blank" style="display:table-row;text-decoration:none"><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#2B3A78;white-space:nowrap;width:1%">São Paulo São</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-size:1rem;color:#F1E7D6;line-height:1.35">Mulheres são maioria no jurídico mas ainda ganham menos</span><span style="display:table-cell;padding:.9rem 1rem;border-bottom:1px solid #2E1B10;font-family:'Spline Sans Mono',monospace;font-size:.9rem;color:#EBD9BE;text-align:right;width:1%">↗</span></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ VOZES ══════════ -->
+<section id="vozes" style="background:#F1E7D6;color:#3A2A18;padding:6rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem">
+    <div data-rev style="margin-bottom:3.2rem;position:relative">
+      <span style="position:absolute;top:-1.4rem;right:0;font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:#8a6a48;letter-spacing:.05em" data-en="05 / six">05 / seis</span>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;color:#2B3A78;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem"><span style="color:#B5401C">§</span><span data-en="what they say">o que dizem</span></div>
+      <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0" data-en="Recommendations from people who<br>worked <em style=&quot;font-style:italic;color:#2B3A78&quot;>with me</em>">Recomendações de quem<br>trabalhou <em style="font-style:italic;color:#2B3A78">comigo</em></h2>
+    </div>
+
+    <div style="columns:2;column-gap:1.5rem">
+      <div data-rev style="break-inside:avoid;border:1px solid #3A2A18;padding:1.6rem;margin-bottom:1.5rem;background:#E9DABB;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+        <p style="font-size:1.05rem;line-height:1.6;font-style:italic;margin:0 0 1.3rem" data-en="I highlight his level of knowledge and strategic vision in SEO and SMO. He was essential in building the content strategy — not just planning, but making it happen day to day."><span style="font-family:'Instrument Serif',serif;color:#B5401C;font-size:1.4em;line-height:0;margin-right:.05em">“</span>Destaco o nível de conhecimento e visão estratégica que ele tem de SEO e SMO. Foi essencial na construção da estratégia de conteúdo, não só no planejamento, mas fazendo acontecer no dia a dia.</p>
+        <div style="display:flex;align-items:center;gap:.7rem;padding-top:1rem;border-top:1px solid rgba(58,42,24,.25)"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#F1E7D6;background:#2B3A78;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0">RP</span><div><a href="https://www.linkedin.com/in/rafaela-pissinatti-a3b889168/" target="_blank" style="font-size:.92rem;font-weight:500;color:#3A2A18;text-decoration:none;border-bottom:1px solid #B5401C">Rafaela Pissinatti</a><div style="font-family:'Spline Sans Mono',monospace;font-size:.62rem;color:#8a6a48;line-height:1.4;margin-top:.15rem" data-en="Digital Mkt Coord. · Grupo Rojemac">Coord. Marketing Digital · Grupo Rojemac</div></div></div>
+      </div>
+      <div data-rev style="break-inside:avoid;border:1px solid #3A2A18;padding:1.6rem;margin-bottom:1.5rem;background:#E9DABB;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+        <p style="font-size:1.05rem;line-height:1.6;font-style:italic;margin:0 0 1.3rem" data-en="His strong analytical sense and command of SEO and AI take his work far beyond producing texts. As a result, the brand's organic positioning grew consistently and sustainably."><span style="font-family:'Instrument Serif',serif;color:#B5401C;font-size:1.4em;line-height:0;margin-right:.05em">“</span>Seu forte senso analítico e domínio em SEO e IA fazem sua atuação ir muito além da produção de textos. Como resultado, o posicionamento orgânico da marca cresceu de forma consistente e sustentável.</p>
+        <div style="display:flex;align-items:center;gap:.7rem;padding-top:1rem;border-top:1px solid rgba(58,42,24,.25)"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#F1E7D6;background:#2B3A78;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0">TR</span><div><a href="https://www.linkedin.com/in/thalita-real/" target="_blank" style="font-size:.92rem;font-weight:500;color:#3A2A18;text-decoration:none;border-bottom:1px solid #B5401C">Thalita Real</a><div style="font-family:'Spline Sans Mono',monospace;font-size:.62rem;color:#8a6a48;line-height:1.4;margin-top:.15rem" data-en="Mkt, CRM &amp; Growth Manager · Grupo Rojemac">Gerente de Mkt, CRM e Growth · Grupo Rojemac</div></div></div>
+      </div>
+      <div data-rev style="break-inside:avoid;border:1px solid #3A2A18;padding:1.6rem;margin-bottom:1.5rem;background:#E9DABB;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+        <p style="font-size:1.05rem;line-height:1.6;font-style:italic;margin:0 0 1.3rem" data-en="He's always attentive to detail and SEO best practices. What I admire most is his drive to learn and evolve constantly, always open to feedback."><span style="font-family:'Instrument Serif',serif;color:#B5401C;font-size:1.4em;line-height:0;margin-right:.05em">“</span>Ele está sempre atento aos detalhes e às melhores práticas de SEO. O que mais admiro é a vontade de aprender e evoluir constantemente, sempre aberto a feedbacks.</p>
+        <div style="display:flex;align-items:center;gap:.7rem;padding-top:1rem;border-top:1px solid rgba(58,42,24,.25)"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#F1E7D6;background:#2B3A78;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0">GV</span><div><a href="https://www.linkedin.com/in/giulia-vibosi/" target="_blank" style="font-size:.92rem;font-weight:500;color:#3A2A18;text-decoration:none;border-bottom:1px solid #B5401C">Giulia Vibosi</a><div style="font-family:'Spline Sans Mono',monospace;font-size:.62rem;color:#8a6a48;line-height:1.4;margin-top:.15rem" data-en="SEO Coord. · Westwing">Coord. de SEO · Westwing</div></div></div>
+      </div>
+      <div data-rev style="break-inside:avoid;border:1px solid #3A2A18;padding:1.6rem;margin-bottom:1.5rem;background:#E9DABB;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+        <p style="font-size:1.05rem;line-height:1.6;font-style:italic;margin:0 0 1.3rem" data-en="He quickly delivered relevant, high-quality content. A committed professional with great temperament — collaborative, creative, always ready to help. I strongly recommend him."><span style="font-family:'Instrument Serif',serif;color:#B5401C;font-size:1.4em;line-height:0;margin-right:.05em">“</span>Rapidamente entregou conteúdo relevante e de qualidade. Profissional comprometido, ótimo temperamento — colaborativo, criativo, sempre pronto a ajudar. Recomendo fortemente.</p>
+        <div style="display:flex;align-items:center;gap:.7rem;padding-top:1rem;border-top:1px solid rgba(58,42,24,.25)"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#F1E7D6;background:#2B3A78;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0">JB</span><div><a href="https://www.linkedin.com/in/jubarbiero/" target="_blank" style="font-size:.92rem;font-weight:500;color:#3A2A18;text-decoration:none;border-bottom:1px solid #B5401C">Juliana Barbiero</a><div style="font-family:'Spline Sans Mono',monospace;font-size:.62rem;color:#8a6a48;line-height:1.4;margin-top:.15rem">CRO &amp; Growth Architect · Lexly</div></div></div>
+      </div>
+      <div data-rev style="break-inside:avoid;border:1px solid #3A2A18;padding:1.6rem;margin-bottom:1.5rem;background:#E9DABB;box-shadow:4px 4px 0 rgba(58,42,24,.12)">
+        <p style="font-size:1.05rem;line-height:1.6;font-style:italic;margin:0 0 1.3rem" data-en="I learned from him that writing goes far beyond a pretty text. He's dedicated and strategic. I learned the importance of SEO and of communicating the brand with clarity, intention and the right details."><span style="font-family:'Instrument Serif',serif;color:#B5401C;font-size:1.4em;line-height:0;margin-right:.05em">“</span>Aprendi com ele que escrever vai muito além de um texto bonito. É dedicado e estratégico. Aprendi a importância do SEO e de comunicar a marca com clareza, intenção e nos detalhes certos.</p>
+        <div style="display:flex;align-items:center;gap:.7rem;padding-top:1rem;border-top:1px solid rgba(58,42,24,.25)"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;color:#F1E7D6;background:#2B3A78;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0">GP</span><div><a href="https://www.linkedin.com/in/glauciapenas/" target="_blank" style="font-size:.92rem;font-weight:500;color:#3A2A18;text-decoration:none;border-bottom:1px solid #B5401C">Glaucia Penas</a><div style="font-family:'Spline Sans Mono',monospace;font-size:.62rem;color:#8a6a48;line-height:1.4;margin-top:.15rem" data-en="Commercial Specialist · Grupo Rojemac">Especialista Comercial · Grupo Rojemac</div></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PR -->
-<section class="pr sec" id="pr">
-  <div class="sec-inner">
-    <div class="slabel">Notícias &amp; PR</div>
-    <h2 class="stitle">Portais de notícia e <em>link building</em></h2>
-    <p class="ssub">Publicações em veículos de imprensa e portais parceiros, conectando pautas de negócio, comportamento e dados a estratégias de PR e SEO off-page.</p>
-    <div class="pubs-grid">
-      <a class="pub-item reveal" href="https://meioenegocio.com.br/Demissoes_em_massa_afetam_mais_de_6_mil_brasileiros_de_janeiro_a_marco_deste_ano/#google_vignette" target="_blank" rel="noopener"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Demissões em massa afetam mais de 6 mil brasileiros de janeiro a março</div></a>
-      <a class="pub-item reveal d1" href="https://www.folhavitoria.com.br/geral/numero-de-familias-brasileiras-endividadas-aumenta-em-3-3/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Número de famílias brasileiras endividadas aumenta em 3,3%</div></a>
-      <a class="pub-item reveal d2" href="https://abefin.org.br/problemas-financeiros-do-colaborador-impactam-a-produtividade-no-trabalho/" target="_blank" rel="noopener"><div class="pub-veiculo">Abefin</div><div class="pub-titulo">Problemas financeiros do colaborador impactam a produtividade no trabalho</div></a>
-      <a class="pub-item reveal" href="https://horacampinas.com.br/stf-aprova-projeto-de-revisao-de-aposentadoria-para-beneficiar-aposentados/" target="_blank" rel="noopener"><div class="pub-veiculo">Hora Campinas</div><div class="pub-titulo">STF aprova projeto de revisão de aposentadoria para beneficiar aposentados</div></a>
-      <a class="pub-item reveal d1" href="https://portalfnt.com.br/278433-numero-de-divorcios-diminuiu-apos-o-periodo-de-pandemia/" target="_blank" rel="noopener"><div class="pub-veiculo">Portal FNT</div><div class="pub-titulo">Número de divórcios diminuiu após o período de pandemia</div></a>
-      <a class="pub-item reveal d2" href="https://www.conquistadefato.com.br/noticia/31116/empresas-brasileiras-utilizam-tecnologia-para-melhorar-o-setor-juridico" target="_blank" rel="noopener"><div class="pub-veiculo">Conquista de Fato</div><div class="pub-titulo">Empresas brasileiras utilizam tecnologia para melhorar o setor jurídico</div></a>
-      <a class="pub-item reveal" href="https://saopaulosao.com.br/Mulheres_sao_maioria_no_setor_juridico_mas_ainda_ganham_menos_que_homens/" target="_blank" rel="noopener"><div class="pub-veiculo">São Paulo São</div><div class="pub-titulo">Mulheres são maioria no setor jurídico mas ainda ganham menos que homens</div></a>
-      <a class="pub-item reveal d1" href="https://www.folhauberaba.com.br/Estrategias_de_ESG_impactam_empresas_e_os_recursos_humanos/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Uberaba</div><div class="pub-titulo">Estratégias de ESG impactam empresas e os recursos humanos</div></a>
-      <a class="pub-item reveal d2" href="https://www.folhavitoria.com.br/geral/lei-14-45722-empresas-com-cipa-sao-obrigadas-a-dar-treinamentos-sobre-assedio/" target="_blank" rel="noopener"><div class="pub-veiculo">Folha Vitória</div><div class="pub-titulo">Empresas com CIPA são obrigadas a dar treinamentos sobre assédio</div></a>
-      <a class="pub-item reveal" href="https://meioenegocio.com.br/Empresas_buscam_ampliar_a_diversidade_atraves_de_vagas_afirmativas/" target="_blank" rel="noopener"><div class="pub-veiculo">Meio &amp; Negócio</div><div class="pub-titulo">Empresas buscam ampliar a diversidade através de vagas afirmativas</div></a>
-      <a class="pub-item reveal d1" href="https://www.dmanapolis.com.br/noticia/43089/sudeste-lidera-ranking-de-incidencia-de-cancer-de-mama" target="_blank" rel="noopener"><div class="pub-veiculo">DM Anápolis</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
-      <a class="pub-item reveal d2" href="https://www.agenciaoglobo.com.br/dinonews/Default.aspx?idnot=95833&amp;tit=Sudeste+lidera+ranking+de+incid%C3%AAncia+de+c%C3%A2ncer+de+mama" target="_blank" rel="noopener"><div class="pub-veiculo">Agência O Globo</div><div class="pub-titulo">Sudeste lidera ranking de incidência de câncer de mama</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section class="deps sec" id="depoimentos">
-  <div class="sec-inner">
-    <div class="slabel">Depoimentos</div>
-    <h2 class="stitle">O que dizem<br>sobre o meu <em>trabalho</em></h2>
-    <p class="ssub">Recomendações reais do LinkedIn — de gestoras e colegas que trabalharam diretamente comigo.</p>
-    <div class="deps-grid">
-
-      <div class="dep-card reveal">
-        <p class="dep-text">"Tive o prazer de trabalhar com o Gustavo e destaco muito o nível de conhecimento e visão estratégica que ele tem de SEO e SMO. Ele foi essencial na construção da estratégia de conteúdo, trazendo consistência e alinhamento com os objetivos do negócio, não só no planejamento, mas principalmente fazendo acontecer no dia a dia."</p>
-        <div class="dep-author">
-          <div class="dep-avatar">RP</div>
-          <div class="dep-name">
-            <a href="https://www.linkedin.com/in/rafaela-pissinatti-a3b889168/" target="_blank">Rafaela Pissinatti ↗</a>
-            <div class="dep-role">Coordenadora de Marketing Digital · B2B B2C D2C | Performance</div>
-            <div class="dep-empresa">Grupo Rojemac / WolyCasa</div>
-          </div>
+<!-- ══════════ CONTATO ══════════ -->
+<section id="contato" style="background:#2A1810;color:#F1E7D6;padding:5.5rem 0;position:relative;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;font-family:'Instrument Serif',serif;font-size:30rem;line-height:.6;color:rgba(43,58,120,.12);right:-2rem;top:-5rem;pointer-events:none">✳</div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem;position:relative">
+    <div class="col-grid" style="display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center">
+      <div data-rev>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#2B3A78;letter-spacing:.04em;margin-bottom:1.4rem"><span style="animation:blink 1.6s infinite">●</span> <span data-en="available to talk">disponível pra conversar</span></div>
+        <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,5vw,4rem);line-height:.98;margin:0 0 1.3rem" data-en="Let's write the<br><em style=&quot;font-style:italic;color:#2B3A78&quot;>next chapter?</em>">Vamos escrever<br>o <em style="font-style:italic;color:#2B3A78">próximo capítulo?</em></h2>
+        <p style="font-size:1.05rem;line-height:1.6;color:rgba(241,231,214,.8);margin:0 0 1rem;max-width:46ch" data-en="If you're looking for someone to add to content, SEO and strategy — and who thinks before writing — let's talk.">Se você busca alguém pra somar em conteúdo, SEO e estratégia — e que pensa antes de escrever — bora trocar uma ideia.</p>
+        <div style="font-family:'Spline Sans Mono',monospace;font-size:.78rem;line-height:1.7;color:rgba(241,231,214,.85);border-left:2px solid #2B3A78;padding-left:1rem;margin-bottom:2rem;max-width:46ch" data-en="<b style=&quot;color:#2B3A78&quot;>// freelance:</b> beyond Tera, I take on one-off social media, content strategy and copywriting projects. Reach out to talk about yours."><b style="color:#2B3A78">// freelas:</b> além da Tera, pego demandas pontuais de social media, estratégia de conteúdo e redação. Me chama pra falar do seu projeto.</div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a href="/cdn-cgi/l/email-protection#553220200a363a2621346465153c36393a20317b363a38" data-en="send e-mail &#8594;" style="font-family:'Spline Sans Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.5rem;text-decoration:none;background:#2B3A78;color:#F1E7D6;box-shadow:3px 3px 0 rgba(241,231,214,.25)">enviar e-mail &#8594;</a>
+          <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" style="font-family:'Spline Sans Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.5rem;text-decoration:none;background:transparent;color:#F1E7D6;border:1px solid rgba(241,231,214,.4)">linkedin &#8599;</a>
+          <a href="docs/Gustavo-Costa-CV-ATS-2026.pdf" target="_blank" data-en="&#8595; download cv" style="font-family:'Spline Sans Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.5rem;text-decoration:none;background:transparent;color:#F1E7D6;border:1px solid rgba(241,231,214,.4)">&#8595; baixar cv</a>
         </div>
       </div>
-
-      <div class="dep-card reveal d1">
-        <p class="dep-text">"Destaco seu forte senso analítico e profundo domínio em SEO e Inteligência Artificial, o que faz com que sua atuação como redator vá muito além da produção de textos. Suas entregas são sempre orientadas por estratégia, dados e objetivos claros de negócio. Como resultado, o posicionamento orgânico da marca apresentou crescimento consistente e sustentável."</p>
-        <div class="dep-author">
-          <div class="dep-avatar">TR</div>
-          <div class="dep-name">
-            <a href="https://www.linkedin.com/in/thalita-real/" target="_blank">Thalita Real ↗</a>
-            <div class="dep-role">Gerente de Marketing, Comunicação, CRM e Growth</div>
-            <div class="dep-empresa">Grupo Rojemac / WolyCasa</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card reveal">
-        <p class="dep-text">"Tenho o prazer de trabalhar com o Gustavo e ele tem sido uma peça fundamental para o nosso time. Além de escrever conteúdos que realmente entregam resultado, ele está sempre atento aos detalhes e às melhores práticas de SEO. O que mais admiro no Gustavo é a vontade de aprender e evoluir constantemente, sempre aberto a feedbacks e disposto a ir além para entregar o melhor."</p>
-        <div class="dep-author">
-          <div class="dep-avatar">GV</div>
-          <div class="dep-name">
-            <a href="https://www.linkedin.com/in/giulia-vibosi/" target="_blank">Giulia Vibosi ↗</a>
-            <div class="dep-role">Coordenadora de SEO | Growth Marketing | Inteligência Artificial</div>
-            <div class="dep-empresa">Westwing</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card reveal d1">
-        <p class="dep-text">"Gustavo trabalhou na Lexly na área de produção de conteúdo e redes sociais e rapidamente conseguiu aprender os pontos chaves da posição e entregar um conteúdo relevante e de qualidade para nós. Gustavo é um profissional muito comprometido e tem um ótimo temperamento para trabalhar — colaborativo, bem humorado, criativo, sempre pronto a ajudar. Adorei ter o Gustavo em nosso time e recomendo fortemente."</p>
-        <div class="dep-author">
-          <div class="dep-avatar">JB</div>
-          <div class="dep-name">
-            <a href="https://www.linkedin.com/in/jubarbiero/" target="_blank">Juliana Barbiero ↗</a>
-            <div class="dep-role">Chief Revenue Officer &amp; Growth Architect @ Nexforce</div>
-            <div class="dep-empresa">Lexly Brasil</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-card reveal">
-        <p class="dep-text">"Tive o privilégio de aprender sobre copywriting com Gustavo e a principal lição que ficou para mim foi entender que escrever vai muito além de um texto bonito. Ele é extremamente dedicado e estratégico. Com ele aprendi a importância do SEO e, principalmente, de comunicar a marca com clareza, intenção e nos detalhes certos exatamente da forma que queremos ser percebidos. Recomendo para qualquer empresa ou profissional que queira transformar comunicação em posicionamento e resultado."</p>
-        <div class="dep-author">
-          <div class="dep-avatar">GP</div>
-          <div class="dep-name">
-            <a href="https://www.linkedin.com/in/glauciapenas/" target="_blank">Glaucia Penas ↗</a>
-            <div class="dep-role">Especialista Comercial | Análise de Dados &amp; Performance em Marketplace | Estratégia &amp; Liderança</div>
-            <div class="dep-empresa">Grupo Rojemac / WolyCasa</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section class="contato sec" id="contato">
-  <div class="sec-inner">
-    <div class="contato-grid">
-      <div class="reveal">
-        <div class="disponivel"><span class="disponivel-dot"></span> Aberto a oportunidades</div>
-        <h2 class="contato-title">Pronto para o<br>próximo <em>desafio.</em></h2>
-        <p class="contato-sub">Busco novos desafios onde possa crescer junto com um time, contribuir com consistência estratégica — conteúdo, criatividade e narrativa — e ajudar uma marca a ter uma voz que as pessoas reconheçam e confiem.</p>
-        <div class="hero-btns">
-          <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="btn btn-p">Acessar LinkedIn →</a>
-          <a href="docs/Gustavo-Costa-Curriculo-ATS.pdf" target="_blank" download class="btn btn-g">Baixar CV</a>
-          <a href="mailto:guu_costa10@icloud.com" class="btn btn-g">Enviar E-mail</a>
-        </div>
-      </div>
-      <div class="reveal d1">
-        <div class="contato-card">
-          <a href="mailto:guu_costa10@icloud.com" class="c-item" style="color:inherit">
-            <div class="c-icon">✉️</div>
-            <div><span class="c-label">E-mail</span><span class="c-value">guu_costa10@icloud.com</span></div>
-          </a>
-          <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" class="c-item" style="color:inherit">
-            <div class="c-icon">💼</div>
-            <div><span class="c-label">LinkedIn</span><span class="c-value">linkedin.com/in/gustavo-costa-09492b21a</span></div>
-          </a>
-          <a href="tel:+5511977220151" class="c-item" style="color:inherit">
-            <div class="c-icon">📱</div>
-            <div><span class="c-label">WhatsApp</span><span class="c-value">(11) 9 7722-0151</span></div>
-          </a>
-          <div class="c-item" style="cursor:default">
-            <div class="c-icon">📍</div>
-            <div><span class="c-label">Localização</span><span class="c-value">São Paulo, SP — Brasil</span></div>
-          </div>
+      <div data-rev>
+        <div style="border:1px solid rgba(241,231,214,.25)">
+          <a href="/cdn-cgi/l/email-protection#9ef9ebebc1fdf1edeaffafaedef7fdf2f1ebfab0fdf1f3" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border-bottom:1px solid rgba(241,231,214,.15);text-decoration:none;color:#F1E7D6"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#8FA0D8;width:34px;flex-shrink:0">@</span><div><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(241,231,214,.5);display:block;margin-bottom:.15rem">e-mail</span><span style="font-size:.92rem"><span class="__cf_email__" data-cfemail="f5928080aa969a868194c4c5b59c96999a8091db969a98">[email&#160;protected]</span></span></div></a>
+          <a href="https://www.linkedin.com/in/gustavo-costa-09492b21a" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border-bottom:1px solid rgba(241,231,214,.15);text-decoration:none;color:#F1E7D6"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#8FA0D8;width:34px;flex-shrink:0">in</span><div><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(241,231,214,.5);display:block;margin-bottom:.15rem">linkedin</span><span style="font-size:.92rem">/in/gustavo-costa-09492b21a</span></div></a>
+          <a href="tel:+5511977220151" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border-bottom:1px solid rgba(241,231,214,.15);text-decoration:none;color:#F1E7D6"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#8FA0D8;width:34px;flex-shrink:0">tel</span><div><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(241,231,214,.5);display:block;margin-bottom:.15rem">whatsapp</span><span style="font-size:.92rem">(11) 9 7722-0151</span></div></a>
+          <div style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem"><span style="font-family:'Spline Sans Mono',monospace;font-size:.7rem;color:#8FA0D8;width:34px;flex-shrink:0">geo</span><div><span style="font-family:'Spline Sans Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(241,231,214,.5);display:block;margin-bottom:.15rem">base</span><span style="font-size:.92rem" data-en="São Paulo, SP — Brazil">São Paulo, SP — Brasil</span></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><img src="" alt=""></div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Gustavo Costa</div>
-  <div class="footer-text">SEO · Copywriting · Content Strategy · Branding · São Paulo, SP</div>
+<footer style="background:#2A1810;border-top:1px solid rgba(241,231,214,.15);padding:1.5rem 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+    <div style="font-family:'Instrument Serif',serif;font-size:1.1rem;color:rgba(241,231,214,.6)">Gustavo Costa</div>
+    <div style="font-family:'Spline Sans Mono',monospace;font-size:.64rem;color:rgba(241,231,214,.4);letter-spacing:.03em" data-en="// printed in code · são paulo · 2026 · the right words, in the right place">// impresso em código · são paulo · 2026 · a palavra certa, no lugar certo</div>
+  </div>
 </footer>
 
-<script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      e.target.querySelectorAll('.hab-fill[data-w]').forEach(b => b.style.width = b.dataset.w);
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const q = (s) => Array.from(document.querySelectorAll(s));
+    const EIO = 'cubic-bezier(.2,.7,.2,1)';
+
+    // ── reveals ──
+    const revs = q('[data-rev]');
+    revs.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .7s ' + EIO + ', transform .7s ' + EIO;
+    });
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          e.target.querySelectorAll('[data-w]').forEach(f => f.style.transform = 'scaleX(' + f.dataset.w + ')');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revs.forEach(el => io.observe(el));
+
+    // ── databars (trigger even if not wrapped in a data-rev) ──
+    const dbio = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-w]').forEach(f => f.style.transform = 'scaleX(' + f.dataset.w + ')');
+          dbio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    q('[data-databar]').forEach(el => dbio.observe(el));
+
+    // ── parallax ──
+    const px = q('[data-px]').map(el => ({ el, s: parseFloat(el.dataset.px), base: el.style.transform || '' }));
+    let ticking = false;
+    const apply = () => {
+      const y = window.scrollY;
+      px.forEach(p => { p.el.style.transform = p.base + ' translateY(' + (y * p.s) + 'px)'; });
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+    }, { passive: true });
+    apply();
+
+    // ── tabs (campaigns + ledger) ──
+    q('[data-tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const g = tab.dataset.group;
+        q('[data-tab][data-group="' + g + '"]').forEach(x => {
+          const on = x === tab;
+          x.style.background = on ? (x.dataset.onbg || '#2E1B10') : 'transparent';
+          x.style.color = on ? (x.dataset.oncolor || '#F1E7D6') : (g === 'led' ? '#EBD9BE' : '#5a4530');
+        });
+        q('[data-panel][data-group="' + g + '"]').forEach(p => {
+          p.style.display = p.dataset.key === tab.dataset.tabKey ? (g === 'led' ? 'table' : '') : 'none';
+        });
+      });
+    });
+
+    // ── PT / EN ──
+    const btn = document.getElementById('langbtn');
+    let en = false;
+    if (btn) {
+      btn.addEventListener('click', () => {
+        en = !en;
+        btn.textContent = en ? 'PT' : 'EN';
+        document.documentElement.lang = en ? 'en' : 'pt-BR';
+        q('[data-en]').forEach(el => {
+          if (en) {
+            if (el.dataset._pt === undefined) el.dataset._pt = el.innerHTML;
+            el.innerHTML = el.dataset.en;
+          } else if (el.dataset._pt !== undefined) {
+            el.innerHTML = el.dataset._pt;
+          }
+        });
+      });
     }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-// Animate bars already visible
-setTimeout(() => {
-  document.querySelectorAll('.hab-fill[data-w]').forEach(b => {
-    const r = b.getBoundingClientRect();
-    if (r.top < window.innerHeight) b.style.width = b.dataset.w;
-  });
-}, 400);
-
-// Lightbox para expandir criativos sem cortar a imagem
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
-const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
-document.querySelectorAll('.creative-card img, .vt-gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    if (!lightbox || !lightboxImg) return;
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt || '';
-    lightbox.classList.add('active');
-    lightbox.setAttribute('aria-hidden', 'false');
-  });
-});
-function closeLightbox(){
-  if (!lightbox || !lightboxImg) return;
-  lightbox.classList.remove('active');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImg.src = '';
+  }
 }
-if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-// Toggle de resultados por case
-document.querySelectorAll('.results-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const id = btn.getAttribute('data-target');
-    const result = id ? document.getElementById(id) : null;
-    const card = btn.closest('.case-card');
-    if (!result || !card) return;
-    card.classList.toggle('results-open');
-    btn.textContent = card.classList.contains('results-open') ? 'Ocultar números' : 'Ver números';
-  });
-});
-
 </script>
 </body>
 </html>
